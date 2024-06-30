@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: template.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+The style file: ./bib-cilamce.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Database file #1: bibliography.bib
+I was expecting a `,' or a `}'---line 31 of file bibliography.bib
+ :  
+ :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 138 of file bibliography.bib
+ :  
+ :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Wriggers"
+Warning--I didn't find a database entry for "Bely"
+Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
+while executing---line 991 of file ./bib-cilamce.bst
+Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
+while executing---line 1066 of file ./bib-cilamce.bst
+You've used 17 entries,
+            1926 wiz_defined-function locations,
+            588 strings with 6823 characters,
+and the built_in function-call counts, 5531 in all, are:
+= -- 526
+> -- 133
+< -- 16
++ -- 55
+- -- 35
+* -- 464
+:= -- 874
+add.period$ -- 54
+call.type$ -- 17
+change.case$ -- 67
+chr.to.int$ -- 15
+cite$ -- 17
+duplicate$ -- 274
+empty$ -- 471
+format.name$ -- 65
+if$ -- 1153
+int.to.chr$ -- 3
+int.to.str$ -- 17
+missing$ -- 13
+newline$ -- 88
+num.names$ -- 32
+pop$ -- 69
+preamble$ -- 1
+purify$ -- 68
+quote$ -- 0
+skip$ -- 177
+stack$ -- 0
+substring$ -- 428
+swap$ -- 78
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 51
+warning$ -- 0
+while$ -- 35
+width$ -- 0
+write$ -- 230
+(There were 4 error messages)
