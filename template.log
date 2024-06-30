@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  30 JUN 2024 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  30 JUN 2024 18:58
 entering extended mode
 **./template.tex
 (template.tex
@@ -147,6 +147,9 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 ))
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
 ("C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty"
 Package: inputenc 2020/08/01 v1.3d Input encoding file
@@ -452,7 +455,7 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count290
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-67.
+70.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -484,22 +487,22 @@ LaTeX Warning: Label `sec:format@cref' multiply defined.
 )
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -561,7 +564,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 )
-Package hyperref Info: Link coloring OFF on input line 167.
+Package hyperref Info: Link coloring OFF on input line 170.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -575,9 +578,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 167.
-LaTeX Info: Redefining \pageref on input line 167.
-LaTeX Info: Redefining \nameref on input line 167.
+LaTeX Info: Redefining \ref on input line 170.
+LaTeX Info: Redefining \pageref on input line 170.
+LaTeX Info: Redefining \nameref on input line 170.
  (template.out) (template.out)
 \@outlinefile=\write3
 \openout3 = `template.out'.
@@ -587,72 +590,101 @@ Package caption Info: End \AtBeginDocument code.
 <Figures/logo.png, id=51, 218.31563pt x 135.50626pt>
 File: Figures/logo.png Graphic file (type png)
 <use Figures/logo.png>
-Package pdftex.def Info: Figures/logo.png  used on input line 176.
+Package pdftex.def Info: Figures/logo.png  used on input line 179.
 (pdftex.def)             Requested size: 122.34692pt x 75.9388pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 193
+LaTeX Font Info:    Trying to load font information for U+msa on input line 196
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 193
+LaTeX Font Info:    Trying to load font information for U+msb on input line 196
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 19
-3.
+6.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-93.
+96.
 
-(C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stmaryrd\ustmry.fd) [1
+(C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 239.
+
+[1
 
 {C:/Users/fel_q/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Figures/logo.
 png>]
+<Figures/Mesh1.pdf, id=95, 873.38435pt x 532.69443pt>
+File: Figures/Mesh1.pdf Graphic file (type pdf)
+<use Figures/Mesh1.pdf>
+Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 297.
+(pdftex.def)             Requested size: 480.36288pt x 292.98283pt.
 
-LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 237.
+Overfull \hbox (25.11877pt too wide) in paragraph at lines 297--298
+ [][] 
+ []
 
-<Figures/Elastic-plastic-viscoplastic domains.pdf, id=98, 341.08398pt x 213.320
-77pt>
-File: Figures/Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
-<use Figures/Elastic-plastic-viscoplastic domains.pdf>
-Package pdftex.def Info: Figures/Elastic-plastic-viscoplastic domains.pdf  used
- on input line 286.
-(pdftex.def)             Requested size: 272.86755pt x 170.65683pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2] [3 <./Figures/Elastic-plastic-viscoplastic domains.pdf>]
-<Figures/Figure1.png, id=165, 222.8325pt x 216.81pt>
+[2]
+<Figures/Diagram of excavations.pdf, id=110, 326.31583pt x 150.96735pt>
+File: Figures/Diagram of excavations.pdf Graphic file (type pdf)
+<use Figures/Diagram of excavations.pdf>
+Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
+ 306.
+(pdftex.def)             Requested size: 391.57701pt x 181.15991pt.
+ [3 <./Figures/Mesh1.pdf> <./Figures/Diagram of excavations.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Figures/Diagram of excavations.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>]
+<Figures/MA_Comparisions_plastic_zones.pdf, id=160, 659.7156pt x 200.03043pt>
+File: Figures/MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
+<use Figures/MA_Comparisions_plastic_zones.pdf>
+Package pdftex.def Info: Figures/MA_Comparisions_plastic_zones.pdf  used on inp
+ut line 365.
+(pdftex.def)             Requested size: 461.79778pt x 140.02032pt.
+
+Overfull \hbox (6.55367pt too wide) in paragraph at lines 365--366
+ [][] 
+ []
+
+[4 <./Figures/MA_Comparisions_plastic_zones.pdf>]
+<Figures/MA_stresspaths.pdf, id=478, 657.88791pt x 677.71976pt>
+File: Figures/MA_stresspaths.pdf Graphic file (type pdf)
+<use Figures/MA_stresspaths.pdf>
+Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 375.
+(pdftex.def)             Requested size: 394.7358pt x 406.63498pt.
+ [5 <./Figures/MA_stresspaths.pdf>]
+<Figures/Figure1.png, id=3633, 222.8325pt x 216.81pt>
 File: Figures/Figure1.png Graphic file (type png)
 <use Figures/Figure1.png>
-Package pdftex.def Info: Figures/Figure1.png  used on input line 400.
+Package pdftex.def Info: Figures/Figure1.png  used on input line 473.
 (pdftex.def)             Requested size: 222.83195pt x 216.80946pt.
+ [6]
+
+Package natbib Warning: Citation `Wriggers' on page 7 undefined on input line 4
+93.
 
 
-Package natbib Warning: Citation `Wriggers' on page 4 undefined on input line 4
-20.
+Package natbib Warning: Citation `Bely' on page 7 undefined on input line 493.
 
-
-Package natbib Warning: Citation `Bely' on page 4 undefined on input line 420.
-
-
-Underfull \vbox (badness 1377) has occurred while \output is active []
-
- [4]
-(template.bbl [5 <./Figures/Figure1.png>])
+[7 <./Figures/Figure1.png>] (template.bbl)
 
 Package natbib Warning: There were undefined citations.
 
-[6] (template.aux)
+[8] (template.aux)
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 738404A31E988EB25CA0185CF3165DC0;846.
+(rerunfilecheck)             Checksum: EF730A0E8B2D590EF3F6268534969E34;830.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -662,13 +694,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12266 strings out of 479697
- 198053 string characters out of 2877010
- 534457 words of memory out of 3000000
- 29073 multiletter control sequences out of 15000+200000
+ 12310 strings out of 479697
+ 199048 string characters out of 2877010
+ 529088 words of memory out of 3000000
+ 29106 multiletter control sequences out of 15000+200000
  422481 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,13n,72p,1392b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,13n,72p,2626b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
@@ -676,13 +708,14 @@ onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
 7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/tim
-es/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (6 pages, 282951 bytes).
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
+><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/M
+iKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on template.pdf (8 pages, 1298597 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3713 PDF objects out of 4296 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 
