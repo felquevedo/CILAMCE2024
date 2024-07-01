@@ -1,0 +1,1739 @@
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       16:59:39
+
+ *** WARNING ***                         CP =       0.953   TIME= 16:59:44
+ Assembly A0 is deleted.                                                 
+
+ *** WARNING ***                         CP =       4.875   TIME= 16:59:48
+ Assembly VD8 is deleted.                                                
+
+ *** WARNING ***                         CP =       4.875   TIME= 16:59:48
+ Assembly VD7 is deleted.                                                
+
+ *** WARNING ***                         CP =       5.609   TIME= 16:59:49
+ Assembly VD52 is deleted.                                               
+
+ *** WARNING ***                         CP =       5.609   TIME= 16:59:49
+ Assembly VD51 is deleted.                                               
+
+ *** WARNING ***                         CP =       5.609   TIME= 16:59:49
+ Assembly VD62 is deleted.                                               
+
+ *** WARNING ***                         CP =       5.609   TIME= 16:59:49
+ Assembly VD61 is deleted.                                               
+
+ *** WARNING ***                         CP =      14.984   TIME= 16:59:53
+ Structural elements without mid nodes usually produce much more         
+ accurate results in quad or brick shape.                                
+
+ *** WARNING ***                         CP =      20.688   TIME= 16:59:54
+ Shape testing revealed that 1 of the 10583 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      26.547   TIME= 16:59:55
+ Shape testing revealed that 1 of the 24126 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      26.922   TIME= 16:59:55
+ Concatenation of line 240 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      27.297   TIME= 16:59:55
+ Concatenation of area 166 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      27.297   TIME= 16:59:55
+ Concatenation of line 228 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      31.422   TIME= 16:59:55
+ Concatenation of line 225 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      32.594   TIME= 16:59:55
+ Shape testing revealed that 2 of the 34709 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      36.719   TIME= 16:59:56
+ After NUMMRG,NODE, node 68572 (and possibly others) is associated with  
+ more than one solid model entity.  Future commands which depend on the  
+ node to solid model connectivity (meshing, mesh clearing, solid         
+ boundary condition transfer, etc.) may not operate properly.            
+ NUMMRG,KP may correct this problem.                                     
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 174 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 178 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 148 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 176 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 177 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 172 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 171 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 173 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 42 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 169 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 55 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 45 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 54 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.984   TIME= 16:59:56
+ Due to merge, line 41 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.000   TIME= 16:59:56
+ Due to merge, area 99 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.000   TIME= 16:59:56
+ Due to merge, area 112 is now meshed.                                   
+
+ *** WARNING ***                         CP =      38.000   TIME= 16:59:56
+ Due to merge, area 58 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.000   TIME= 16:59:56
+ Due to merge, area 53 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.000   TIME= 16:59:56
+ Due to merge, area 28 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.000   TIME= 16:59:56
+ Due to merge, area 18 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.875   TIME= 16:59:56
+ Shape testing revealed that 232 of the 12213 new or modified elements   
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      44.938   TIME= 16:59:57
+ Shape testing revealed that 48 of the 26432 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      58.562   TIME= 16:59:59
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      59.688   TIME= 17:00:00
+ Shape testing revealed that 2 of the 10184 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      64.562   TIME= 17:00:00
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      98.688   TIME= 17:00:01
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =     113.156   TIME= 17:00:02
+ SOLID185 wedges are recommended only in regions of relatively low       
+ stress gradients.                                                       
+
+ *** WARNING ***                         CP =     114.281   TIME= 17:00:02
+ Previous testing revealed that 286 of the 182996 selected elements      
+ violate shape warning limits.  To review warning messages, please see   
+ the output or error file, or issue the CHECK command.                   
+
+ *** WARNING ***                         CP =    4559.438   TIME= 17:04:07
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    4565.625   TIME= 17:04:07
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =  206508.781   TIME= 20:07:13
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206512.156   TIME= 20:07:16
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206512.812   TIME= 20:07:17
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206515.469   TIME= 20:07:20
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206516.125   TIME= 20:07:20
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206518.781   TIME= 20:07:23
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206519.438   TIME= 20:07:24
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206522.062   TIME= 20:07:26
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206522.719   TIME= 20:07:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206525.375   TIME= 20:07:30
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206526.031   TIME= 20:07:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206528.656   TIME= 20:07:33
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206529.328   TIME= 20:07:34
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206531.953   TIME= 20:07:36
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206532.609   TIME= 20:07:37
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206535.234   TIME= 20:07:40
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206535.891   TIME= 20:07:40
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206538.516   TIME= 20:07:43
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206539.172   TIME= 20:07:43
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206541.812   TIME= 20:07:46
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206542.469   TIME= 20:07:47
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206545.078   TIME= 20:07:49
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206545.750   TIME= 20:07:50
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206548.359   TIME= 20:07:53
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206549.016   TIME= 20:07:53
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206551.625   TIME= 20:07:56
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206552.281   TIME= 20:07:57
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206554.891   TIME= 20:07:59
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206555.547   TIME= 20:08:00
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206558.156   TIME= 20:08:02
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206558.812   TIME= 20:08:03
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206561.422   TIME= 20:08:06
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206562.078   TIME= 20:08:06
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206564.688   TIME= 20:08:09
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206565.359   TIME= 20:08:10
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206567.953   TIME= 20:08:12
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206568.609   TIME= 20:08:13
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206571.203   TIME= 20:08:16
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206571.859   TIME= 20:08:16
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206574.453   TIME= 20:08:19
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206575.109   TIME= 20:08:19
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206577.703   TIME= 20:08:22
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206578.359   TIME= 20:08:23
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206580.953   TIME= 20:08:25
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206581.625   TIME= 20:08:26
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206584.203   TIME= 20:08:29
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206584.875   TIME= 20:08:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206587.469   TIME= 20:08:32
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206588.125   TIME= 20:08:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206590.719   TIME= 20:08:35
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206591.375   TIME= 20:08:36
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206593.969   TIME= 20:08:38
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206594.625   TIME= 20:08:39
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206597.203   TIME= 20:08:42
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206597.859   TIME= 20:08:42
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206600.438   TIME= 20:08:45
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206601.094   TIME= 20:08:45
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206603.672   TIME= 20:08:48
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206604.328   TIME= 20:08:49
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206606.906   TIME= 20:08:51
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206607.562   TIME= 20:08:52
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206610.141   TIME= 20:08:54
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206610.812   TIME= 20:08:55
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206613.375   TIME= 20:08:58
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206614.031   TIME= 20:08:58
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206616.594   TIME= 20:09:01
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206617.266   TIME= 20:09:02
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206619.828   TIME= 20:09:04
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206620.484   TIME= 20:09:05
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206623.047   TIME= 20:09:07
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206623.703   TIME= 20:09:08
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206626.281   TIME= 20:09:11
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206626.938   TIME= 20:09:11
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206629.484   TIME= 20:09:14
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206630.156   TIME= 20:09:14
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206632.719   TIME= 20:09:17
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206633.375   TIME= 20:09:18
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206635.938   TIME= 20:09:20
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206636.594   TIME= 20:09:21
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206639.141   TIME= 20:09:23
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206639.797   TIME= 20:09:24
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206642.344   TIME= 20:09:27
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206643.000   TIME= 20:09:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206645.547   TIME= 20:09:30
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206646.203   TIME= 20:09:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206648.734   TIME= 20:09:33
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206649.375   TIME= 20:09:34
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206651.891   TIME= 20:09:36
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206652.531   TIME= 20:09:37
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206655.047   TIME= 20:09:39
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206655.672   TIME= 20:09:40
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206658.188   TIME= 20:09:42
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206658.797   TIME= 20:09:43
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206661.312   TIME= 20:09:46
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206661.922   TIME= 20:09:46
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206664.422   TIME= 20:09:49
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206665.047   TIME= 20:09:49
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206667.531   TIME= 20:09:52
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206668.141   TIME= 20:09:52
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206670.625   TIME= 20:09:55
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206671.234   TIME= 20:09:56
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206673.719   TIME= 20:09:58
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206674.312   TIME= 20:09:59
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206676.797   TIME= 20:10:01
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206677.391   TIME= 20:10:02
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206679.859   TIME= 20:10:04
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206680.438   TIME= 20:10:05
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206682.891   TIME= 20:10:07
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206683.469   TIME= 20:10:08
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206685.938   TIME= 20:10:10
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206686.516   TIME= 20:10:11
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206688.984   TIME= 20:10:13
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206689.562   TIME= 20:10:14
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206692.031   TIME= 20:10:16
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206692.609   TIME= 20:10:17
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206695.078   TIME= 20:10:19
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206695.656   TIME= 20:10:20
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206698.141   TIME= 20:10:22
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206698.703   TIME= 20:10:23
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206701.172   TIME= 20:10:25
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206701.750   TIME= 20:10:26
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206704.219   TIME= 20:10:29
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206704.781   TIME= 20:10:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206707.266   TIME= 20:10:32
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206707.844   TIME= 20:10:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206710.297   TIME= 20:10:35
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206710.875   TIME= 20:10:35
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206713.328   TIME= 20:10:38
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206713.906   TIME= 20:10:38
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206716.359   TIME= 20:10:41
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206716.922   TIME= 20:10:41
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206719.391   TIME= 20:10:44
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206719.953   TIME= 20:10:44
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206722.438   TIME= 20:10:47
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206723.000   TIME= 20:10:47
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206725.453   TIME= 20:10:50
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206726.016   TIME= 20:10:50
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206728.484   TIME= 20:10:53
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206729.031   TIME= 20:10:53
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206731.500   TIME= 20:10:56
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206732.062   TIME= 20:10:56
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206734.516   TIME= 20:10:59
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206735.078   TIME= 20:10:59
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206737.531   TIME= 20:11:02
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206738.078   TIME= 20:11:02
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206740.547   TIME= 20:11:05
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206741.094   TIME= 20:11:05
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206743.562   TIME= 20:11:08
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206744.109   TIME= 20:11:08
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206746.562   TIME= 20:11:11
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206747.125   TIME= 20:11:11
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206749.578   TIME= 20:11:14
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206750.125   TIME= 20:11:14
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206752.578   TIME= 20:11:17
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206753.125   TIME= 20:11:17
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206755.578   TIME= 20:11:20
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206756.125   TIME= 20:11:20
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206758.578   TIME= 20:11:23
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206759.125   TIME= 20:11:23
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206761.578   TIME= 20:11:26
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206762.125   TIME= 20:11:26
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206764.578   TIME= 20:11:29
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206765.125   TIME= 20:11:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206767.562   TIME= 20:11:32
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206768.125   TIME= 20:11:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206770.578   TIME= 20:11:35
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206771.109   TIME= 20:11:35
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206773.562   TIME= 20:11:38
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206774.094   TIME= 20:11:38
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206776.562   TIME= 20:11:41
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206777.109   TIME= 20:11:41
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206779.562   TIME= 20:11:44
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206780.094   TIME= 20:11:44
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206782.531   TIME= 20:11:47
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206783.078   TIME= 20:11:47
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206785.516   TIME= 20:11:50
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206786.062   TIME= 20:11:50
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206788.500   TIME= 20:11:53
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206789.031   TIME= 20:11:53
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206791.469   TIME= 20:11:56
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206792.000   TIME= 20:11:56
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206794.438   TIME= 20:11:59
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206794.969   TIME= 20:11:59
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206797.406   TIME= 20:12:02
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206797.938   TIME= 20:12:02
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206800.375   TIME= 20:12:05
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206800.906   TIME= 20:12:05
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206803.344   TIME= 20:12:08
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206803.875   TIME= 20:12:08
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206806.312   TIME= 20:12:11
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206806.844   TIME= 20:12:11
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206809.266   TIME= 20:12:14
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206809.797   TIME= 20:12:14
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206812.234   TIME= 20:12:16
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206812.750   TIME= 20:12:17
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206812.812   TIME= 20:12:17
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =  206814.203   TIME= 20:12:19
+ Parameter N_SEL already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  206821.125   TIME= 20:12:22
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206824.391   TIME= 20:12:25
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206825.047   TIME= 20:12:26
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206827.672   TIME= 20:12:28
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206828.312   TIME= 20:12:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206830.938   TIME= 20:12:32
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206831.594   TIME= 20:12:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206834.219   TIME= 20:12:35
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206834.875   TIME= 20:12:36
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206837.484   TIME= 20:12:38
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206838.141   TIME= 20:12:39
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206840.766   TIME= 20:12:41
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206841.422   TIME= 20:12:42
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206844.016   TIME= 20:12:45
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206844.688   TIME= 20:12:45
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206847.297   TIME= 20:12:48
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206847.953   TIME= 20:12:49
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206850.562   TIME= 20:12:51
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206851.219   TIME= 20:12:52
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206853.812   TIME= 20:12:54
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206854.469   TIME= 20:12:55
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206857.078   TIME= 20:12:58
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206857.734   TIME= 20:12:58
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206860.328   TIME= 20:13:01
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206860.984   TIME= 20:13:02
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206863.594   TIME= 20:13:04
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206864.250   TIME= 20:13:05
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206866.844   TIME= 20:13:07
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206867.500   TIME= 20:13:08
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206870.109   TIME= 20:13:11
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206870.766   TIME= 20:13:11
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206873.359   TIME= 20:13:14
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206874.016   TIME= 20:13:15
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206876.609   TIME= 20:13:17
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206877.266   TIME= 20:13:18
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206879.859   TIME= 20:13:20
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206880.516   TIME= 20:13:21
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206883.094   TIME= 20:13:24
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206883.750   TIME= 20:13:24
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206886.328   TIME= 20:13:27
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206886.984   TIME= 20:13:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206889.562   TIME= 20:13:30
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206890.219   TIME= 20:13:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206892.797   TIME= 20:13:33
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206893.469   TIME= 20:13:34
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206896.047   TIME= 20:13:37
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206896.703   TIME= 20:13:37
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206899.266   TIME= 20:13:40
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206899.922   TIME= 20:13:41
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206902.500   TIME= 20:13:43
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206903.156   TIME= 20:13:44
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206905.734   TIME= 20:13:46
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206906.375   TIME= 20:13:47
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206908.953   TIME= 20:13:50
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206909.609   TIME= 20:13:50
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206912.172   TIME= 20:13:53
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206912.828   TIME= 20:13:53
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206915.391   TIME= 20:13:56
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206916.047   TIME= 20:13:57
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206918.609   TIME= 20:13:59
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206919.250   TIME= 20:14:00
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206921.812   TIME= 20:14:02
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206922.469   TIME= 20:14:03
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206925.031   TIME= 20:14:06
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206925.688   TIME= 20:14:06
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206928.234   TIME= 20:14:09
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206928.891   TIME= 20:14:10
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206931.453   TIME= 20:14:12
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206932.109   TIME= 20:14:13
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206934.656   TIME= 20:14:15
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206935.312   TIME= 20:14:16
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206937.859   TIME= 20:14:18
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206938.516   TIME= 20:14:19
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206941.062   TIME= 20:14:22
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206941.719   TIME= 20:14:22
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206944.266   TIME= 20:14:25
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206944.922   TIME= 20:14:26
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206947.453   TIME= 20:14:28
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206948.109   TIME= 20:14:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206950.656   TIME= 20:14:31
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206951.312   TIME= 20:14:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206953.844   TIME= 20:14:34
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206954.516   TIME= 20:14:35
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206957.031   TIME= 20:14:38
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206957.672   TIME= 20:14:38
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206960.188   TIME= 20:14:41
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206960.828   TIME= 20:14:41
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206963.328   TIME= 20:14:44
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206963.969   TIME= 20:14:45
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206966.469   TIME= 20:14:47
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206967.094   TIME= 20:14:48
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206969.594   TIME= 20:14:50
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206970.219   TIME= 20:14:51
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206972.703   TIME= 20:14:53
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206973.328   TIME= 20:14:54
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206975.812   TIME= 20:14:56
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206976.422   TIME= 20:14:57
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206978.906   TIME= 20:15:00
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206979.516   TIME= 20:15:00
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206981.984   TIME= 20:15:03
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206982.594   TIME= 20:15:03
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206985.062   TIME= 20:15:06
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206985.656   TIME= 20:15:06
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206988.125   TIME= 20:15:09
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206988.719   TIME= 20:15:09
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206991.172   TIME= 20:15:12
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206991.750   TIME= 20:15:12
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206994.219   TIME= 20:15:15
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206994.781   TIME= 20:15:15
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206997.250   TIME= 20:15:18
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  206997.828   TIME= 20:15:18
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207000.297   TIME= 20:15:21
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207000.859   TIME= 20:15:21
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207003.328   TIME= 20:15:24
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207003.906   TIME= 20:15:24
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207006.375   TIME= 20:15:27
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207006.938   TIME= 20:15:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207009.406   TIME= 20:15:30
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207009.984   TIME= 20:15:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207012.438   TIME= 20:15:33
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207013.016   TIME= 20:15:34
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207015.484   TIME= 20:15:36
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207016.047   TIME= 20:15:37
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207018.516   TIME= 20:15:39
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207019.078   TIME= 20:15:40
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207021.562   TIME= 20:15:42
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207022.125   TIME= 20:15:43
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207024.578   TIME= 20:15:45
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207025.141   TIME= 20:15:46
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207027.609   TIME= 20:15:48
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207028.172   TIME= 20:15:49
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207030.625   TIME= 20:15:51
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207031.188   TIME= 20:15:52
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207033.641   TIME= 20:15:54
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207034.203   TIME= 20:15:55
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207036.656   TIME= 20:15:57
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207037.219   TIME= 20:15:58
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207039.672   TIME= 20:16:00
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207040.234   TIME= 20:16:01
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207042.703   TIME= 20:16:03
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207043.250   TIME= 20:16:04
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207045.703   TIME= 20:16:06
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207046.250   TIME= 20:16:07
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207048.703   TIME= 20:16:09
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207049.266   TIME= 20:16:10
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207051.719   TIME= 20:16:12
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207052.266   TIME= 20:16:13
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207054.719   TIME= 20:16:15
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207055.281   TIME= 20:16:16
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207057.734   TIME= 20:16:18
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207058.281   TIME= 20:16:19
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207060.734   TIME= 20:16:21
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207061.281   TIME= 20:16:22
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207063.734   TIME= 20:16:24
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207064.297   TIME= 20:16:25
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207066.734   TIME= 20:16:27
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207067.281   TIME= 20:16:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207069.734   TIME= 20:16:30
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207070.281   TIME= 20:16:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207072.719   TIME= 20:16:33
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207073.266   TIME= 20:16:34
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207075.719   TIME= 20:16:36
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207076.266   TIME= 20:16:37
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207078.719   TIME= 20:16:39
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207079.266   TIME= 20:16:40
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207081.703   TIME= 20:16:42
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207082.250   TIME= 20:16:43
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207084.688   TIME= 20:16:45
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207085.234   TIME= 20:16:46
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207087.672   TIME= 20:16:48
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207088.219   TIME= 20:16:49
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207090.656   TIME= 20:16:51
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207091.188   TIME= 20:16:52
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207093.625   TIME= 20:16:54
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207094.156   TIME= 20:16:55
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207096.594   TIME= 20:16:57
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207097.141   TIME= 20:16:58
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207099.578   TIME= 20:17:00
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207100.109   TIME= 20:17:01
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207102.547   TIME= 20:17:03
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207103.078   TIME= 20:17:04
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207105.516   TIME= 20:17:06
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207106.047   TIME= 20:17:07
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207108.484   TIME= 20:17:09
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207109.016   TIME= 20:17:10
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207111.453   TIME= 20:17:12
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207111.984   TIME= 20:17:13
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207114.406   TIME= 20:17:15
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207114.938   TIME= 20:17:16
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207117.359   TIME= 20:17:18
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207117.891   TIME= 20:17:18
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207120.328   TIME= 20:17:21
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207120.859   TIME= 20:17:21
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207123.281   TIME= 20:17:24
+ The selected element set contains mixed element stiffness types.        
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207123.812   TIME= 20:17:24
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =  207127.312   TIME= 20:17:28
+ During this session a solution was performed using 24 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 24).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 24).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     

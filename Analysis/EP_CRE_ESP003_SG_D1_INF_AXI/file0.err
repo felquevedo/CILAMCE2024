@@ -1,0 +1,61 @@
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       20:33:44
+
+ *** WARNING ***                         CP =      20.219   TIME= 20:34:32
+ Shape testing revealed that 26 of the 30 new or modified elements       
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      20.531   TIME= 20:34:32
+ Shape testing revealed that 200 of the 200 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      70.438   TIME= 20:36:00
+ Shape testing revealed that 7 of the 15 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =     114.422   TIME= 20:36:41
+ Previous testing revealed that 7 of the 3105 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =     114.656   TIME= 20:36:44
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     121.047   TIME= 20:36:50
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =     121.094   TIME= 20:36:50
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       20:55:53
+
+ *** WARNING ***                         CP =      20.234   TIME= 20:56:22
+ Shape testing revealed that 7 of the 15 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      26.906   TIME= 20:56:27
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      47.875   TIME= 20:56:46
+ Previous testing revealed that 7 of the 3205 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =      48.125   TIME= 20:56:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =      55.125   TIME= 20:56:56
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =      55.172   TIME= 20:56:56
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    

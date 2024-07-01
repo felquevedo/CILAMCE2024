@@ -1,0 +1,419 @@
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       17:43:41
+
+ *** WARNING ***                         CP =       0.531   TIME= 17:43:47
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =       2.422   TIME= 17:43:47
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =       9.922   TIME= 17:43:47
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      11.422   TIME= 17:43:47
+ Previous testing revealed that 6 of the 3428 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =      70.109   TIME= 17:43:51
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =      70.109   TIME= 17:43:51
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    2118.547   TIME= 17:45:26
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2120.047   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2120.812   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2120.859   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2120.906   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2120.969   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.031   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.078   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.141   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.188   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.250   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.297   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.359   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.406   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.453   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.516   TIME= 17:45:27
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.578   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.625   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.672   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.719   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.766   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.812   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.859   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.906   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2121.969   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.016   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.062   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.109   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.156   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.203   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.250   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.297   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.344   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.375   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.422   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.469   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.516   TIME= 17:45:28
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.562   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.609   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.656   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.703   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.750   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.797   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.828   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.875   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.922   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2122.969   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.016   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.062   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.109   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.141   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.188   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.234   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.281   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.328   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.391   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.438   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.484   TIME= 17:45:29
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.547   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.594   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.641   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.703   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.750   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.797   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.844   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.906   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2123.953   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.016   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.062   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.125   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.188   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.250   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.344   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.391   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.484   TIME= 17:45:30
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.547   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.609   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.672   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.734   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.797   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.844   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.906   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2124.953   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.016   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.062   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.125   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.188   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.234   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.297   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.344   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.406   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.469   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.516   TIME= 17:45:31
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.578   TIME= 17:45:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.641   TIME= 17:45:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.703   TIME= 17:45:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.750   TIME= 17:45:32
+ The selected element set contains mixed materials.                      
+  This could invalidate error estimation.                                
+
+ *** WARNING ***                         CP =    2125.750   TIME= 17:45:32
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               

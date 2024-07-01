@@ -1,0 +1,2509 @@
+!************************************************************!
+!** PROGRAMA ANÁLISE TUNEL DUPLO (MODELO 3D) 		   **!
+!** Versão: 2023.5 					   **!
+!** 							   **!
+!** Objetivo: faz análise da convergência de túneis 	   **!
+!** profundos com seção circular dupla (gêmeos)		   **!
+!** com/sem galerias transversais			   **!
+!** considerando um modelo 3D 				   **!
+!** 							   **!
+!** Programador: Felipe Quevedo e Carlos Alberto	   **!
+!** Situação : OK (11/07/2020) 				   **!
+!** Unidades : [F/A, L, t] = MPa, m, dias		   **!
+!** 							   **!
+!************************************************************!
+!
+!************************************************************!
+!****_ 1. INICIALIZANDO O ANSYS 		        _****!
+!************************************************************!
+FINISH
+/CLEAR,NOSTART
+!
+!************************************************************!
+!****_ 2. DADOS DE ENTRADA DO PROBLEMA 			_****!
+!************************************************************!
+!
+! Nessa seção define-se todos os dados de entrada necessarios
+!
+!************************************************************!
+!****_ 		2.1 Parâmetros geométricos		_****!
+!************************************************************!
+! referente aos tuneis longitudinais
+Re 		= 1 		! [m] raio da interface entre o túnel e o maciço
+esp		= 0.1		! [m] espessura do revestimento
+Lp 		= 1/3*re 	! [m] comprimento do passo de escavação
+nd0 		= 0 		! [Lp] dimensão não suportada (deve ser multiplo de Lp)
+npi 		= 3 		! [un] numero de passos escavados na primeira escavação
+Vp 		= 10 		! [m/dia] velocidade do passo de escavação
+revested0 	= 1 		! 0 - não reveste ultimo d0+Lp, 1 - reveste ultimo d0+Lp
+revesteface 	= 1 		! 0 - não reveste a face, 1 - reveste a face
+!
+! referente as galeiras transversais
+Re1 		= 2*Lp 		! [m] raio externo da galeria (deve multiplo de Lp)
+esp1		= 0.1		! [m] espessura do revestimento
+Lp1 		= 1/3*re1 	! [m] passo de escavação das galerias transversais (tem que ser multiplo de (d1/2+re))
+nd01 		= 2 		! [Lp1] dimensão não suportada (deve ser multiplo de Lp1)
+npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
+Vp1 		= 1 		! [m/dia] velocidade de escavação
+escavagaleria 	= 0 		! escavação das galerias: 0 - não escava, 1 - escava
+revestegaleria 	= 0 		! revestimento da galeria: 0 - não reveste, 1 - reveste
+pig1 		= 5 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
+!
+! referente ao restante do domínio
+l1 		= 10 		! [Re] comprimento do trecho não escavado (deve ser suficiente para captar os efeitos na última frente de escavação)
+l2 		= 80 		! [Lp] comprimento do trecho escavado
+d3 		= 20 		! [Re] altura do domínio (profundidade do eixo do túnel longitudinal)
+d4 		= 20 		! [Re] distância das bordas laterais do domínio até o eixo do tunel longitudinal
+d1 		= 16		! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
+!
+! distância adjacente a galeria com malha livre [Lp]
+*IF,d1,EQ,16,THEN
+	d5		= 6			! 6
+*ELSEIF,d1,EQ,4,THEN
+	d5		= 2
+*ENDIF
+
+!
+!
+!************************************************************!
+!****_  	2.2 Parâmetros constitutivos do maciço 	_****!
+!************************************************************! 		   
+! Tipo de material do maciço (matmacico)
+!
+! 	1  - elastico do ANSYS
+! 	2  - elastoplastico VM do ANSYS (BISO)
+! 	22 - elastoplastico VM do ANSYS (MISO)
+!	23 - viscoplastico Perzyna VM do ANSYS
+!	4  - usermat3D_VM do ANSYS (BISO)
+!	5  - usermat3D_elastico
+!	6  - usermat3D_EP
+!	7  - usermat3D_VP
+!	8  - usermat3D_EPVP	                 
+!
+matmacico	= 8
+!                                
+! Parâmetros de todos os modelos 
+E1 		= 1000		 ! [MPa] modulo elasticidade (1,2,22,23,4,5,6,7,8)
+nu1 		= 0.498		 ! [adm] coeficiente de poisson (1,2,22,23,4,5,6,7,8)
+!                                
+! Parametros para o modelo 2, 22, 6 e 8
+superficief	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (6,8)
+superficieg 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (6,8)
+fi	    	= 0		 ! [graus] angulo de atrito (0 - VM ou TR) (6,8)
+psi	    	= 0		 ! [graus] angulo de dilatância (6,8)
+c1	    	= 3*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
+c2	    	= 3*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
+c3	    	= 3*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
+eps1	    	= 0.010		 ! [adm] deformação equiv. limite da zona 1 (22,6,8)
+eps2	    	= 0.020		 ! [adm] deformação equiv. limite da zona 2 (22,6,8)
+eps3	    	= 0.025		 ! [adm] deformação equiv. limite da zona 3 (22,6,8)
+Dalg		= 0		 ! 0 - módulo elastico, 1 - módulo algoritmíco (6,8)
+!                                
+! Parametros para o modelo 23, 7 e 8
+superficiefvp 	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (7,8)
+superficiegvp 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (7,8)
+fivp          	= 0		 ! [graus] angulo de atrito (0 - VM ou TR)(7,8)
+psivp         	= 0		 ! [graus] angulo de dilatância (7,8)
+cvp 	      	= 1000 !1*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
+n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
+eta           	= 4*10000 !1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
+f0     	      	= 1		 ! [MPa] valor de referência (23,7,8)
+thetavp       	= 0		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
+!
+!********************************************************************!
+!****_ 		2.3 Parâmetros constitutivos do revest	_****!
+!********************************************************************!
+! Tipo de material
+!	0 - Sem revestimento
+!	1 - Ansys_Elástico
+!	2 - Usermat_Viscoelastico_CEB-MC90
+!
+matrev 		= 0		! Tipo de material (0-SR,1-E,2-VE)
+!
+! Parâmetros para os modelos 1 e 2
+E2 		= 3000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
+nu2 		= 0.3    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
+!
+! Parâmetros para o modelo 2
+fck 		= 20		! [MPa] resistência característica do concreto (2)
+s 		= 0.2		! [adm] coef. que depende do tipo de concreto (2)
+ti 		= 0		! [dias] início do concreto (2)
+rh 		= 70		! [%] umidade relativa do ambiente (2)
+hf 		= 0.4083	! [m] espessura fictítica (2)
+ts 		= 7		! [dias] idade do concreto no início da secagem (2)
+t0		= 1		! [dias] idade do concreto no início do carregamento (2)
+tinf		= 3000		! [dias] tempo final da análise (2)
+betasc 		= 8d0		! [adm] coeficiente que depende do tipo de cimento (2)
+temperatura 	= 20		! [oC] temperatura (2)
+alpha 		= 1		! [adm] efeito do tipo de cimento durante a cura (2)
+ndec  		= 10		! [década] No. de pontos por decada na discretização (2)
+ligafluencia 	= 1		! [un] 1 - liga fluência, 0 - desliga fluência (2)
+ligaretracao 	= 1		! [un] 1 - liga retração, 0 - desliga retração (2)
+ktime		= 10		! [dias] tempo da análise para saída de dados
+kelemid		= 2060		! [un] identificação do elemento para saída
+kkDomIntPt	= 1		! [un] identificação do ponto de integração para saída
+!
+!************************************************************!
+!****_ 		2.4 Condições de Contorno	  	_****!
+!************************************************************!
+pr 		= 4 		! [MPa] tensões hidrostáticas iniciais
+!
+!************************************************************!
+!****_ 		2.5 Discretização do tempo nos passos	_****!
+!************************************************************!
+!
+! Discretização do tempo durante os passos de escavação tunel longitudinal
+tp 		= Lp/(Vp) 	! [dias] tempo para fazer um passo de escavação nos tuneis longitudinais
+dtp 		= 0.5*tp 		! [dias] incremento de tempo inicial dentro de cada passo
+dtpmax 		= dtp 		! [dias] incremento máximo de tempo dentro de cada passo
+!
+! Discretização do tempo durante os passos de escavação da galeria
+tp1 		= Lp1/(Vp1) 	! [dias] tempo para fazer um passo de escavação na galeria transversal
+dtp1		= dtp		! [dias] incremento de tempo inicial dentro de cada passo
+dtpmax1		= dtpmax		! [dias] incremento máximo de tempo dentro de cada passo
+!
+! Discretização do tempo nos passos após a escavação
+tp2 		= 200 		! [dias] tempo de cada passo de solução após a escavação do túnel
+np2 		= 5 		! [un] número de passos de solução após a escavação do túnel
+dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
+dtp2max		= dtp2		! [dias] incremento máximo de tempo de cada passo
+!
+!************************************************************!
+!****_ 		2.6 Discretização da malha              _****!
+!************************************************************!
+tipoelem 	= 1 		! 1 - SOLID185, 2 - SOLID186
+formaint	= 0		! integração 0 - completa, 1 - reduzida
+tipoelem1 	= 2 		! elementos na região da galeria: 1 - SOLID185, 2 - SOLID186
+formaint1	= 0		! integração 0 - completa, 1 - reduzida
+!
+nLp		= 1		! [un] numero de elementos no passo escavado do túnel longitudinal
+nLp1		= 2 		! [un] numero de elementos no passo escavado da galeria
+nL1 		= 15 		! [un] numero de elementos ao longo do eixo do tunel longitudinal no trecho não escavado
+mL1 		= 1/5 		! [adm] taxa de crescimento
+nesp 		= 2 		! [un] numero de elementos na espessura do revestimento do tunel longitudinal
+nesp1 		= 1 		! [un] numero de elementos na espessura do revestimento da galeria
+nCRe 		= 16 		! [un] numero de elementos na interface entre maciço e o revestimento do tunel longitudinal (deve ser par)
+nCRe1 		= 14 		! 12 [un] numero de elementos na casca da galeria transversal (exemplo: 6, 12)
+nRi 		= nCRe/2 	! [un] numero de elementos na horizontal e vertical do maciço escavado no tunel longitudinal
+mRi 		= 0 		! [adm] taxa de crecimento
+nd3 		= nCRe/2 	! [un] numero de elementos na horizontal e vertical oposta ao tunel longitudinal
+!
+*IF,d1,EQ,16,THEN
+	nd1 		= 18		! 16 [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal (exemplo: 6, 8, 12)
+	md1 		= 20 		! 16 [adm] taxa de crescimento (exmeplo: 5, 8, 10)		
+	nd4 		= 5 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
+	md4 		= 1.5 		! [adm] taxa de crescimento
+	nd6		= nd1*2		! [un] número de elementos na vertical contígua a galeria transversal
+	md6		= md1		! [adm] taxa de crescimento
+	nd5		= 12		! 8 [un] numero de elementos no trecho adjacente a galeria transversal (exemplo: 6, 8)
+	md5		= 4		! 3 [adm] taxa de crescimento (exemplo: 2, 6)
+*ELSEIF,d1,EQ,4,THEN
+	nd1 		= 5		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
+	md1 		= 5 		! [adm] taxa de crescimento		
+	nd4 		= 10 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
+	md4 		= 3 		! [adm] taxa de crescimento
+	nd6		= nd1		! [un] número de elementos na vertical contígua a galeria transversal
+	md6		= md1		! [adm] taxa de crescimento
+	nd5		= 4		! [un] numero de elementos no trecho adjacente a galeria transversal
+	md5		= 2		! [adm] taxa de crescimento
+*ENDIF	
+!
+!************************************************************!
+!****_ 		2.7 Configuração da saida de dados    	_****!
+!************************************************************!
+iso		= 0 		! 0 - contorno padrão, 1 - isolinhas (apenas 0 se isosup=1)
+flag1 		= 1 		! 1 - saida jpg do gráfico de convergência em arquivo
+flag2 		= 1 		! 1 - saida txt de resultados do gráfico de convergênci
+flag3 		= 1 		! 1 - saida do gráfico de convergência na tela do Ansys
+!
+! Obs: os arquivos de imagem jpg saem com o nome jobname###.jpg
+! onde ### é um inteiro que vai incrementando a partir da última
+! numeração do último arquivo plotado.
+! Os campos de resultados serão referentes ao final da análise.
+!
+!***********************************************************!
+!****_ 		2.8 Configurações da solução	     	_****!
+!***********************************************************! 
+!
+nr	= 2	! Tipo de Newton-Raphson
+!		! 1 - INIT rigidez não é atualizada
+!		! 2 - FULL rigidez atualizada a cada iteração
+!		! 3 - UNSYM assimétrica atualizada a cada iteração
+!
+! Tolerâncias durante os passos de escavação do túnel longitudinal
+tolf	= 1e-6	! tolerância para o resíduo (padrão 0.005)
+tolu	= 1e-4	! tolerância para o incremento de deslocamento (padrão 0.05)
+!
+! Tolerâncias durante os passos de escavação da galeria transversal
+tolf1	= 1e-6	! tolerância para o resíduo
+tolu1	= 1e-4	! tolerância para o incremento de deslocamento
+!
+! Tolerâncias durante os passos após a construção do túnel
+tolf2	= 1e-6	! tolerância para o resíduo
+tolu2	= 1e-4	! tolerância para o incremento de deslocamento
+!
+psc	= 1	! 1 - Ativa, 0 - desativa a opção de paralelização SMP
+nlg	= 0	! 1 - Ativa, 0 - desativa a não lineariedade geométrica
+soleq	= 1	! 1 - calcula o equilibrio do maciço antes de iniciar
+!
+!
+!************************************************************!
+!****_ 		2.9 Titulo e nome dos arquivos  	_****!
+!************************************************************!
+! defini titulo na tela do Ansys
+/TITLE, Re=%Re% matmacico=%matmacico% E1=%E1% pr=%pr% matrev=%matrev% E2=%E2% vp=%vp%
+!
+! define nome file.* para os arquivos da analise
+/FILNAME,file,0
+!
+!
+!
+!
+!------------------FIM ENTRADA DE DADOS---------------------!
+!
+!
+!
+!
+!************************************************************!
+!****_ 3. PRÉ-PROCESSAMENTO 				_****!
+!************************************************************!
+/PREP7 ! inicia módulo de pré-processamento
+!
+!************************************************************!
+!****_ 		3.1 Calculos iniciais			_****!
+!************************************************************!
+ri 		= re-esp		! [m] raio da face interna do revestimento dos tuneis longitudinais
+l1		= l1*Re    		! [m] comprimento do trecho não escavado
+l2		= l2*Lp			! [m] comprimento do trecho escavado
+lt 		= l1+l2 		! [m] comprimento total do modelo ao longo do eixo longitudinal
+l3 		= (d1/2+d4)*2 		! [m] dimensão transversal do modelo
+d1 		= d1*Re			! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
+d3		= d3*Re			! [m] altura do domínio (profundidade do eixo do túnel longitudinal)
+d4 		= d4*re 		! [m] distância das bordas laterais do domínio até o eixo do tunel longitudinal
+d5		= d5*Lp			! [m] distância adjacente a galeria com malha livre (exemplo: 1, 2, 4, 6)
+np	 	= l2/Lp 		! [un] numero total passos escavados nos tuneis longitudinais
+nesc 		= np-npi+1 		! [un] total de escavações ao longo do eixo do tunel longitudinal
+d0		= nd0*lp		! [m] dimensão não suportada (multiplo do passo)
+!
+ri1 		= re1-esp1 		! [m] raio da face interna do revestimento das galerias transversais
+d2 		= l2/2 			! [m] posição da galeria ao longo do eixo longitudinal
+d01		= nd01*Lp1		! [m] [m] dimensão não suportada da galeria (multiplo do passo)
+np1 		= (d1/2-re)/Lp1 	! [un] total de passos escavados nas galerias transversais
+nesc1 		= np1-npi1+1 		! [un] total de escavações ao longo do eixo das galerias transversais
+pig1 		= pig1+l2/(2*Lp)	! [un] numero de passos de escavação no túnel longitudinal no qual iniciará a escavação da galeria 1
+!
+m1		= Lp/nLp 		! [m] tamanho do elemento ao longo do eixo do tunel longitudinal no trecho escavado
+m4ga		= Lp1/nLp1 		! [m] tamanho dos elementos na galeria
+m9 		= m1/2 			! [m] tamanho dos elementos na região do tunel oposta a galeria
+!
+! calculando o número de escavações na galeria de modo que seja inteiro
+*IF,NINT(nesc1)-nesc1,GT,0,THEN
+	nesc1 = NINT(nesc1)
+*ENDIF
+!
+! verificando se haverá análise após a construção do túnel
+analise2 = 0
+*IF,matmacico,GT,6,OR,matrev,GT,1,THEN
+	analise2 = 1
+*ENDIF
+*IF,matmacico,EQ,23,THEN
+	analise2 = 1
+*ENDIF
+!
+!************************************************************!
+!****_ 		3.2 Elementos finitos 			_****!
+!************************************************************!
+*IF,tipoelem,EQ,1,THEN
+	ET,1,SOLID185  
+	KEYOPT,1,2,formaint
+	KEYOPT,1,3,0
+	KEYOPT,1,6,0
+	KEYOPT,1,8,0
+*ELSEIF,tipoelem,EQ,2,THEN
+	ET,1,SOLID186  
+	KEYOPT,1,2,formaint
+	KEYOPT,1,3,0
+	KEYOPT,1,6,0
+	KEYOPT,1,8,0
+*ENDIF
+!
+*IF,tipoelem1,EQ,1,THEN
+	ET,2,SOLID185  
+	KEYOPT,2,2,formaint1
+	KEYOPT,2,3,0
+	KEYOPT,2,6,0
+	KEYOPT,2,8,0
+*ELSEIF,tipoelem1,EQ,2,THEN
+	ET,2,SOLID186  
+	KEYOPT,2,2,formaint1
+	KEYOPT,2,3,0
+	KEYOPT,2,6,0
+	KEYOPT,2,8,0
+*ENDIF
+!
+!************************************************************!
+!****_ 		3.3 Material do maciço 			_****!
+!************************************************************!
+*IF,matmacico,eq,1,then
+	! Definindo o material elastico do Ansys
+	MPTEMP,1,0  		
+	MPDATA,EX,1,,E1	
+	MPDATA,PRXY,1,,nu1 	
+*ELSEIF,matmacico,eq,2,then
+	! Definindo o material elastoplástico VM do Ansys bilienar
+	yield	    	= 2*c1			! [MPa]	tensão de escoamento
+	Ep 		= 2*(c2-c1)/(eps1)	! [MPa] módulo plástico tangente
+	youngt      	= Ep*E1/(E1+Ep)		! [MPa] módulo de elastoplástico tangente
+	!
+	MPTEMP,1,0  		
+	MPDATA,EX,1,,E1	
+	MPDATA,PRXY,1,,nu1 	
+	TB,BISO,1,1,2,  
+	TBTEMP,0
+	TBDATA,,yield,youngt,,,,
+*ELSEIF,matmacico,eq,22,then
+	! Definindo o material elastoplástico VM do Ansys multilinear
+	yield	    	= 2*c1			! [MPa]	tensão de escoamento
+	Ep 		= 2*(c2-c1)/(eps1)	! [MPa] módulo plástico tangente
+	youngt      	= Ep*E1/(E1+Ep)		! [MPa] módulo de elastoplástico tangente
+	epst0		= 2*c1/E1		! [adm] deformação total no escoamento
+	epst1		= 2*c2/E1 + eps1 	! [adm] deformação total na zona 1
+	epst2		= 2*c2/E1 + eps2	! [adm] deformação total na zona 2	
+	epst3		= 2*c3/E1 + eps3	! [adm] deformação total na zona 3
+	!
+	MPTEMP,1,0  		
+	MPDATA,EX,1,,E1	
+	MPDATA,PRXY,1,,nu1 	
+	TB,MISO,1,1,5,0 
+	TBTEMP,0
+	TBPT,,epst0,2*c1
+	TBPT,,epst1,2*c2
+	TBPT,,epst2,2*c2 
+	TBPT,,epst3,2*c3
+	TBPT,,0.1,2*c3    
+*ELSEIF,matmacico,eq,23,then
+	! Definindo o material viscoplastico perzyna VM do Ansys
+	yieldvp	    	= 2*cvp				! [MPa]	tensão de escoamento
+	youngtvp      	= 0				! [MPa] módulo de elastoplástico tangente
+	gamma	      	= ((yieldvp/f0)**n1)/eta 	! [dias^-1] coeficiente Gamma do modelo de Perzyna Ansys
+	m  	      	= 1/n1				! [adm] coeficiente m do modelo de Perzyna do ANSYS
+	!
+	MPTEMP,1,0  		
+	MPDATA,EX,1,,E1	
+	MPDATA,PRXY,1,,nu1	
+	TB,BISO,1,1,2,  
+	TBTEMP,0
+	TBDATA,,yieldvp,youngtvp,,,,
+	TB,RATE,1,1,2,1
+	TBTEMP,0
+	TBDATA,,m,gamma,,,,	
+*ELSEIF,matmacico,eq,4,then
+	! Definindo material usermat3D VM do Ansys
+	yield	    	= 2*c1			! [MPa]	tensão de escoamento
+	Ep 		= 2*(c2-c1)/(eps1)	! [MPa] módulo plástico tangente
+	youngt      	= Ep*E1/(E1+Ep)		! [MPa] módulo de elastoplástico tangente
+	!
+	TB,USER,1,2,5
+	TBTEMP,1.0 		
+	TBDATA,1,matmacico,E1,nu1,yield,youngt ! modelo, E, posn, sigy, H
+	TB,STATE,1,,8
+*ELSEIF,matmacico,eq,5,then
+	! Definindo material usermat3D_elastico
+	TB,USER,1,2,3
+	TBTEMP,1.0 		
+	TBDATA,1,matmacico,E1,nu1
+	TB,STATE,1,,8	
+*ELSEIF,matmacico,eq,6,then
+	! Definindo material usermat3D_EP
+	TB,USER,1,2,14
+	TBTEMP,1.0 		
+	TBDATA,1,matmacico,E1,nu1
+	TBDATA,4,superficief,superficieg
+	TBDATA,6,fi,psi,
+	TBDATA,8,c1,c2,c3,eps1,eps2,eps3
+	TBDATA,14,Dalg
+	TB,STATE,1,,20	
+*ELSEIF,matmacico,eq,7,then
+	! Definindo material usermat3D_VP
+	TB,USER,1,2,13
+	TBTEMP,1.0 		
+	TBDATA,1,matmacico,E1,nu1
+	TBDATA,4,superficiefvp,superficiegvp
+	TBDATA,6,fivp,psivp,
+	TBDATA,8,cvp,n1,eta,f0,thetavp	
+	TB,STATE,1,,20		
+*ELSEIF,matmacico,eq,8,then
+	! Definindo material usermat3D_EPVP
+	TB,USER,1,2,23
+	TBTEMP,1.0 		
+	TBDATA,1,matmacico,E1,nu1
+	TBDATA,4,superficief,superficieg
+	TBDATA,6,fi,psi,
+	TBDATA,8,c1,c2,c3,eps1,eps2,eps3
+	TBDATA,14,Dalg
+	TBDATA,15,superficiefvp,superficiegvp
+	TBDATA,17,fivp,psivp
+	TBDATA,19,cvp
+	TBDATA,20,n1,eta,f0
+	TBDATA,23,thetavp	
+	TB,STATE,1,,20
+*ENDIF
+!
+!************************************************************!
+!****_ 		3.4 Material do revestimento		_****!
+!************************************************************!
+*IF,matrev,EQ,1,THEN
+	*DO,i,2,nesc+nesc1,1
+		MPTEMP,1,0  				
+		MPDATA,EX,i,,E2				
+		MPDATA,PRXY,i,,nu2
+	*ENDDO 			
+*ELSEIF,matrev,EQ,2,THEN
+	*DO,i,2,nesc+nesc1,1
+		TB,USER,i,1,18
+		TBTEMP,1.0
+		TBDATA,1,9
+		TBDATA,2,ligafluencia,ligaretracao
+		!
+		*IF,escavagaleria,EQ,1,THEN
+			*IF,i,LT,nesc+nesc1,THEN
+				TBDATA,4,tp*(i-1)
+			*ELSE
+				TBDATA,4,tp*nesc + tp1*(i-1)		
+			*ENDIF
+		*ELSE
+			TBDATA,4,tp*(i-1)
+		*ENDIF
+		!
+		TBDATA,5,ts,t0,tinf
+		TBDATA,8,fck,nu2
+		TBDATA,10,s,rh,hf,betasc,alpha
+		TBDATA,15,ndec
+		TBDATA,16,ktime,kelemid,kkDomIntPt
+		TB,STATE,i,,500
+	*ENDDO	
+*ENDIF
+!
+!************************************************************!
+!****_ 		3.5 Modelando o sólido			_****!
+!************************************************************!
+!
+! Definindo a vista
+/VIEW,1,1,1,1
+/ANG,1
+!
+! criando bloco e casca cilindrica do trecho escavado
+BLC4,-d4,0,l3/2,d3,l1
+CYL4,0,0,ri,0,re,180,l1
+!
+! criando bloco e casca cilindrica do trecho que não será escavado
+WPOFFS,0,0,l1
+BLC4,-d4,0,l3/2,d3,l2
+CYL4,0,0,ri,0,re,180,l2
+!
+! excluindo volumes em comum
+VPTN,ALL
+!
+! tolerancia para operações booleanas
+BTOL,1E-4
+!
+! dividindo os volumes no plano vertical do eixo do tunel principal
+WPOFFS,0,0,0
+WPRO,,,90.000000
+VSBW,ALL
+!
+! dividindo o volume entre tuneis na altura
+VSEL,ALL
+VSEL,S,LOC,X,0,d1/2
+WPOFFS,0,d1/2,0
+WPRO,,90,
+VSBW,ALL
+!
+! criando o mesmo volume no lado oposto do plano vertical do eixo do tunel
+VSEL,ALL
+VSEL,S,LOC,X,0,d1/2
+VSEL,R,LOC,Y,0,d1/2
+VSEL,U,LOC,X,0,re
+VSYMM,X,ALL, , ,0,1,0
+!
+! criando primeiro tunel transversal
+WPAVE,0,0,0
+WPCSYS,-1,0
+WPOFFS,0,0,lt-d2/2		
+WPRO,,,90
+CYL4,0,0,ri1,0,re1,180,d1/2
+!
+! criando plano de corte da galeria transversal
+VSEL,ALL
+VSEL,S,LOC,Z,l1,lt
+VSEL,R,LOC,X,ri/2,re
+ASEL,S,EXT
+CSYS,1
+ASEL,R,LOC,X,re,re
+CM,A0,AREA
+!
+! cortando a galeria transversal
+CSYS,0
+ALLSEL,ALL
+VSEL,S,LOC,Z,l1,lt
+VSEL,R,LOC,X,re,d2/2		
+VSEL,R,LOC,Y,0,re
+VSBA,ALL,A0
+!
+! deletando trecho da galeria transversal dentro do tunel longitudinal
+ALLSEL,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+VSEL,S,LOC,Z,lt-d2/2,lt-d2/2
+VSEL,R,LOC,X,0,re
+VSEL,R,LOC,Y,0,re1
+VDELE,ALL,,,1
+!
+! Alterando posição da galeria para a metade de L2
+ALLSEL,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+VSEL,S,LOC,Z,lt-d2/2,lt-d2/2
+VSEL,R,LOC,X,re,d1/2
+VSEL,R,LOC,Y,0,re1
+VGEN, ,ALL, , , , ,-d2/2, , ,1 
+!
+! cortando trecho do tunel principal
+VSEL,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+WPOFFS,0,0,(lt-l2/2)+re1+d5		
+VSBW,ALL
+WPOFFS,0,0,-2*re1-2*d5
+VSBW,ALL
+!
+! particionando outros volumes
+VSEL,ALL
+VPTN,ALL
+!
+! Cortando túnel transversal na região do primeiro passo
+VSEL,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+VSEL,S,LOC,Z,lt-l2/2-re1,lt-l2/2+re1
+VSEL,R,LOC,X,re,d1/2
+VSEL,R,LOC,Y,0,re1
+WPAVE,re+npi1*Lp1,0,lt-l2/2
+WPRO,,,90.000000
+VSBW,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+!
+! Cortando no meio da galeria
+VSEL,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+VSEL,S,LOC,Z,lt-l2/2-d5,lt-l2/2+d5
+WPOFFS,0,0,lt-l2/2
+VSBW,ALL
+!
+VSEL,ALL
+WPAVE,0,0,0
+WPCSYS,-1,0
+!
+! juntando pontos duplicados
+NUMMRG,KP, , , ,LOW
+!
+! renumerando a geometria
+NUMCMP,KP
+NUMCMP,LINE
+NUMCMP,AREA
+NUMCMP,VOLU
+!
+!************************************************************!
+!****_ 		3.6 Divisões para a malha nas linhas 	_****!
+!************************************************************!
+!
+! tamanho do elemento ao longo do eixo do tunel longitudinal no trecho escavado (parte a frente da galeria)
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-0.01,lt-l2/2+re1+d5+0.01
+LSEL,R,LOC,X,-d4,d1/2
+LSEL,R,LOC,Y,0,d3
+LESIZE,ALL,m1, , , , , , ,1
+!
+! tamanho do elemento ao longo do eixo do tunel longitudinal no trecho escavado (parte anterior a galeria)
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2-re1-d5-0.01,lt-l2/2-d2+re1+d5+0.01
+LSEL,R,LOC,X,-d4,d1/2
+LSEL,R,LOC,Y,0,d3
+LESIZE,ALL,m1, , , , , , ,1
+!
+! interface entre solo e revestimento do tunel longitudinal
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,0.01,re
+LSEL,R,LOC,Y,1,180-1
+LSEL,R,LOC,Z,0,lt
+LSEL,U,LOC,Y,89,91
+LSEL,U,LOC,Z,lt-l2/2+re1-0.01,lt-l2/2-re1+0.01
+LESIZE,ALL, , ,nCRe, , , , ,1
+!
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,0.01,re
+LSEL,R,LOC,Y,1,180-1
+LSEL,R,LOC,Z,lt-l2/2,lt-l2/2
+LSEL,U,LOC,Y,89,91
+LSEL,U,LOC,Y,0,90
+LESIZE,ALL, , ,nCRe, , , , ,1
+!
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,0.01,ri
+LSEL,R,LOC,Y,1,89
+LSEL,R,LOC,Z,lt-l2/2,lt-l2/2
+LESIZE,ALL, , ,nCRe, , , , ,1
+!
+! horizontal e vertical dentro do túnel longitudinal
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,0,ri-0.01
+LSEL,R,LOC,Y,0,180
+LSEL,R,LOC,Z,0,lt
+LSEL,U,LOC,Z,lt-0.01,lt-l2/2+re1+0.01+d5
+LSEL,U,LOC,Z,lt-l2/2-re1-0.01-d5,l1+0.01
+LSEL,U,LOC,Z,l1-0.01,0.01
+LSEL,U,LOC,Z,lt-l2/2+d5+re1-0.01,lt-l2/2+0.01
+LSEL,U,LOC,Z,lt-l2/2-0.01,lt-l2/2-re1-d5+0.01
+LESIZE,ALL, , ,nRi,mRi, , , ,1
+!
+! horizontal e vertical contigua ao tunel longitudinal
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,d1/2-0.01
+LSEL,R,LOC,Y,0,180
+LSEL,R,LOC,Z,0,l1+l2/2-re1-d5
+LESIZE,ALL, , ,nd1,md1, , , ,1
+!
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,d1/2-0.01
+LSEL,R,LOC,Y,0,180
+LSEL,R,LOC,Z,l1+l2/2+re1+d5,lt
+LESIZE,ALL, , ,nd1,md1, , , ,1
+!
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,d1/2-0.01
+LSEL,R,LOC,Y,90,180
+LSEL,R,LOC,Z,l1+l2/2,l1+l2/2
+LESIZE,ALL, , ,nd1,md1, , , ,1
+!
+LSEL,ALL
+LSEL,S,LOC,Y,89,91
+LSEL,R,LOC,Z,lt-l2/2,lt-l2/2
+LREVERSE,ALL
+!
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,d1/2-0.01
+LSEL,R,LOC,Y,89,90
+LSEL,R,LOC,Z,l1+l2/2+re1+d5,l1+l2/2-re1-d5
+LREVERSE,ALL
+!
+! ao longo da galeria
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,re+npi1*Lp1+0.01,d1/2-0.01
+LSEL,R,LOC,Y,0,re1
+LSEL,R,LOC,Z,l1+l2/2+re1,l1+l2/2-re1
+LESIZE,ALL,m4ga, , , , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,re+npi1*Lp1-0.01
+LSEL,R,LOC,Y,0,re1
+LSEL,R,LOC,Z,l1+l2/2+re1,l1+l2/2-re1
+LESIZE,ALL,m4ga, , , , , , ,1
+!
+! 
+! Virando algumas linhas
+CSYS,1
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,d1/2-0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,0,l1
+LREVERSE,ALL
+!
+LSEL,ALL
+LSEL,S,LOC,X,re+1,d1/2-0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,lt,lt
+LREVERSE,ALL
+!
+LSEL,ALL
+LSEL,S,LOC,X,re+0.01,d1/2-0.01
+LSEL,R,LOC,Y,179,181
+LSEL,R,LOC,Z,0,l1
+LREVERSE,ALL
+!
+! horizontal e vertical contigua a região de refinamento do túnel longitudinal
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-d1/2-0.01,-d4+0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nd4,md4, , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,0,d1/2
+LSEL,R,LOC,Y,d1/2+0.01,d3-0.01
+LSEL,R,LOC,Z,0,lt
+LREVERSE,ALL
+LESIZE,ALL, , ,nd4,md4, , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-d1/2-0.01,-d4+0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,0,l1
+LREVERSE,ALL
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-d1/2-0.01,-d4+0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,lt,lt-0.01
+LREVERSE,ALL
+!
+! horizontal e vertical oposta ao tunel longitudinal
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-d1/2+1,-d1/2-0.01
+LSEL,R,LOC,Y,0.01,d1/2-0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nd3, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,d1/2+0.01,d1/2-0.01
+LSEL,R,LOC,Y,re,d1/2-0.01
+LSEL,R,LOC,Z,0,lt
+LSEL,U,LOC,Z,lt-l2/2,lt-l2/2
+LESIZE,ALL, , ,nd3, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,0.01,d1/2-0.01
+LSEL,R,LOC,Y,d1/2-0.01,d3
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nd3, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-0.01,-d1/2+0.01
+LSEL,R,LOC,Y,d1/2-0.01,d1/2+0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nd3, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-0.01,-d4+0.01
+LSEL,R,LOC,Y,d3-0.01,d3+0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nd3, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-d4-0.01,-d4+0.01
+LSEL,R,LOC,Y,0.01,d3-0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nd3, , , , ,1
+!
+! tamanho dos elementos na interface da casca da galeria transversal com o maciço
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2+ri1-0.01,lt-l2/2-ri1+0.01
+LSEL,R,LOC,X,0.01,d1/2
+LSEL,R,LOC,Y,0.01,re1+0.01
+LSEL,U,LOC,Z,lt-l2/2,lt-l2/2
+LESIZE,ALL, , ,nCRe1/2, , , , ,1
+!
+! Na horizontal e vertical dentro da galeria
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2+ri1-0.01,lt-l2/2-ri1+0.01
+LSEL,R,LOC,X,re-0.01,d1/2
+LSEL,R,LOC,Y,0,0.01
+LSEL,U,LOC,Z,lt-l2/2,lt-l2/2
+LESIZE,ALL, , ,nCRe1/4, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2,lt-l2/2
+LSEL,R,LOC,X,re-0.01,d1/2
+LSEL,R,LOC,Y,0.01,ri1-0.01
+LESIZE,ALL, , ,nCRe1/4, , , , ,1
+!
+! numero de elementos na espessura do revestimento do tunel longitudinal
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,ri+0.01,re-0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nesp, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,-ri-0.01,-re+0.01
+LSEL,R,LOC,Y,0,0.01
+LSEL,R,LOC,Z,0,lt
+LESIZE,ALL, , ,nesp, , , , ,1
+!
+! tamanho dos elementos na região do tunel oposta a galeria
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,ri,-d4
+LSEL,R,LOC,Y,0,d3
+LSEL,R,LOC,Z,lt-l2/2+(re1+d5)/2,lt-l2/2+(re1+d5)/2
+LESIZE,ALL,m9, , , , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,ri,-d4
+LSEL,R,LOC,Y,0,d3
+LSEL,R,LOC,Z,lt-l2/2-(re1+d5)/2,lt-l2/2-(re1+d5)/2
+LESIZE,ALL,m9, , , , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,d1/2
+LSEL,R,LOC,Y,d1/2,d3
+LSEL,R,LOC,Z,lt-l2/2+(re1+d5)/2,lt-l2/2+(re1+d5)/2
+LESIZE,ALL,m9, , , , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,X,d1/2
+LSEL,R,LOC,Y,d1/2,d3
+LSEL,R,LOC,Z,lt-l2/2-(re1+d5)/2,lt-l2/2-(re1+d5)/2
+LESIZE,ALL,m9, , , , , , ,1
+!
+! elementos ao longo do eixo do tunel longitudinal no trecho não escavado
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,0.01,lt-2*d2-0.01
+LSEL,R,LOC,X,-d4+0.01,d1/2
+LSEL,R,LOC,Y,0,d3
+LREVERSE,ALL
+LESIZE,ALL, , ,nL1,1/mL1, , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,0.01,lt-2*d2-0.01
+LSEL,R,LOC,X,-d4,-d4+0.01
+LSEL,R,LOC,Y,0,d3
+LREVERSE,ALL
+LESIZE,ALL, , ,nL1,mL1, , , ,1
+!
+! elementos na espessura do revestimento do tunel transversal
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2+re1-0.01,lt-l2/2+ri1+0.01
+LSEL,R,LOC,X,re-0.01,d1/2
+LSEL,R,LOC,Y,0,0.01
+LESIZE,ALL, , ,nesp1, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2,lt-l2/2
+LSEL,R,LOC,X,0,d1/2
+LSEL,R,LOC,Y,ri1+0.01,re1-0.01
+CSYS,1
+LSEL,U,LOC,X,0,ri
+LESIZE,ALL, , ,nesp1, , , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2-re1+0.01,lt-l2/2-ri1-0.01
+LSEL,R,LOC,X,re-0.01,d1/2
+LSEL,R,LOC,Y,0,0.01
+LESIZE,ALL, , ,nesp1, , , , ,1
+!
+! Adjacente ao a galeria transversal
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2+re1+d5-0.01,lt-l2/2+re1+0.01
+LSEL,R,LOC,X,re-0.01,d1/2
+LSEL,R,LOC,Y,0,0.01
+LESIZE,ALL, , ,nd5,md5, , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2-re1-d5+0.01,lt-l2/2-re1-0.01
+LSEL,R,LOC,X,re-0.01,d1/2
+LSEL,R,LOC,Y,0,0.01
+LESIZE,ALL, , ,nd5,md5, , , ,1
+!
+! Vertical acima da galeria transversal
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2,lt-l2/2
+LSEL,R,LOC,X,d1/2,d1/2
+LSEL,R,LOC,Y,re1,d1/2
+LESIZE,ALL, , ,nd6,md6, , , ,1
+!
+CSYS,0
+LSEL,ALL
+LSEL,S,LOC,Z,lt-l2/2,lt-l2/2
+LSEL,R,LOC,X,0,0
+LSEL,R,LOC,Y,re,d1/2
+LREVERSE,ALL
+!
+!
+!************************************************************!
+!****_ 		3.7 Concatenando áreas da malha mapeada _****!
+!************************************************************!
+!
+! primeiro trecho
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+ASEL,S,EXT
+ASEL,R,LOC,X,d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+ASEL,S,EXT
+ASEL,R,LOC,X,-d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+ASEL,S,EXT
+ASEL,R,LOC,X,-d4
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+ASEL,S,EXT
+ASEL,R,LOC,Y,d3
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+! segundo trecho
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,lt-l2
+ASEL,S,EXT
+ASEL,R,LOC,X,d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,lt-l2
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,lt-l2
+ASEL,S,EXT
+ASEL,R,LOC,X,-d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,lt-l2
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,lt-l2
+ASEL,S,EXT
+ASEL,R,LOC,X,-d4
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,lt-l2
+ASEL,S,EXT
+ASEL,R,LOC,Y,d3
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+! terceiro trecho (trecho não escavado)
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,0,l1
+ASEL,S,EXT
+ASEL,R,LOC,X,d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,0,l1
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,0,l1
+ASEL,S,EXT
+ASEL,R,LOC,X,-d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,0,l1
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,0,l1
+ASEL,S,EXT
+ASEL,R,LOC,X,-d4
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,0,l1
+ASEL,S,EXT
+ASEL,R,LOC,Y,d3
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+! entre o primeiro e segundo trecho
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2
+ASEL,S,EXT
+ASEL,R,LOC,X,-d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2,lt-l2/2-re1-d5
+ASEL,S,EXT
+ASEL,R,LOC,X,-d1/2
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2,lt-l2/2-re1-d5
+ASEL,S,EXT
+ASEL,R,LOC,Y,d1/2
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2
+ASEL,S,EXT
+ASEL,R,LOC,X,-d4
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2
+ASEL,S,EXT
+ASEL,R,LOC,Y,d3
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2,lt-l2/2-re1-d5
+ASEL,S,EXT
+ASEL,R,LOC,X,-d4
+CM,A1,AREA
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2,lt-l2/2-re1-d5
+ASEL,S,EXT
+ASEL,R,LOC,Y,d3
+CM,A2,AREA
+CMSEL,S,A1,AREA
+CMSEL,A,A2,AREA
+ACCAT,ALL
+!************************************************************!
+!****_ 		3.8 Grupos de volumes para malhar 	_****!
+!************************************************************!
+!
+! volumes com malha mapeada
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+CM,VM1,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+CM,VM2,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+CM,VM3,VOLUME
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2-re1-d5
+CM,VM4,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2-re1-d5
+CM,VM5,VOLUME
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,l1
+CM,VM6,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,l1
+CM,VM7,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,lt-l2/2-re1-d5,l1
+CM,VM8,VOLUME
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,0,l1
+CM,VM14,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-re,-d1/2
+VSEL,R,LOC,Y,re,d1/2
+VSEL,R,LOC,Z,0,l1
+CM,VM15,VOLUME
+ALLSEL,ALL
+VSEL,S,LOC,X,-d4,-d1/2
+VSEL,R,LOC,Y,0,d3/2
+VSEL,R,LOC,Z,0,l1
+CM,VM16,VOLUME
+!
+ALLSEL,ALL
+VSEL,S,LOC,X,0,d1/2
+VSEL,R,LOC,Y,d1/2+0.01,d3
+VSEL,R,LOC,Z,0,lt
+CM,VM17,VOLUME
+!
+! volume com malha sweep
+CSYS,1
+ALLSEL,ALL
+VSEL,S,LOC,X,0,re
+VSEL,R,LOC,Y,0,180
+VSEL,R,LOC,Z,lt,lt-l2/2+re1+d5
+CM,VS1,VOLUME
+!
+CSYS,1
+ALLSEL,ALL
+VSEL,S,LOC,X,0,re
+VSEL,R,LOC,Y,90,180
+VSEL,R,LOC,Z,l1+l2/2+re1+d5,lt-l2/2-re1-d5
+CM,VS2,VOLUME
+!
+CSYS,1
+ALLSEL,ALL
+VSEL,S,LOC,X,0,re/2
+VSEL,R,LOC,Y,0,90
+VSEL,R,LOC,Z,l1+l2/2+re1+d5,lt-l2/2-re1-d5
+CM,VS3,VOLUME
+!
+!
+CSYS,1
+ALLSEL,ALL
+VSEL,S,LOC,X,0,re
+VSEL,R,LOC,Y,0,180
+VSEL,R,LOC,Z,l1,l1+l2/2-re1-d5
+CM,VS7,VOLUME
+!
+CSYS,1
+ALLSEL,ALL
+VSEL,S,LOC,X,0,ri
+VSEL,R,LOC,Y,0,180
+VSEL,R,LOC,Z,0,l1
+CM,VS8,VOLUME
+!
+! Sweep na galeria transversal
+CSYS,0
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,0,re1
+VSEL,R,LOC,Z,lt-l2/2+re1,lt-l2/2
+CM,VS9,VOLUME
+!
+CSYS,0
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,0,re1
+VSEL,R,LOC,Z,lt-l2/2,lt-l2/2-re1
+CM,VS10,VOLUME
+!
+! criando grupo de volumes de malha livre
+CSYS,1
+ALLSEL,ALL
+VSEL,S,LOC,Z,lt-l2/2+re1+d5,lt-l2/2-re1-d5
+VSEL,R,LOC,Y,0,90
+VSEL,R,LOC,X,0,re
+CM,VL1,VOLUME
+!
+CSYS,0
+ALLSEL,ALL
+VSEL,S,LOC,X,re,d1/2
+VSEL,R,LOC,Y,re1,d1/2
+VSEL,R,LOC,Z,lt-l2/2+re1+d5,lt-l2/2-re1-d5
+CM,VL3,VOLUME
+!
+!************************************************************!
+!****_ 		3.9 Criando malhas 			_****!
+!************************************************************!
+!
+! malha sweep
+MSHAPE,0,3d
+MSHKEY,1
+TYPE, tipoelem
+ALLSEL,ALL
+CMSEL,S,VS1,VOLUME
+VSWEEP,ALL
+ALLSEL,ALL
+CMSEL,S,VS2,VOLUME
+VSWEEP,ALL
+!
+TYPE, tipoelem1
+ALLSEL,ALL
+CMSEL,S,VS3,VOLUME
+VSWEEP,ALL
+!
+TYPE, tipoelem
+ALLSEL,ALL
+CMSEL,S,VS7,VOLUME
+VSWEEP,ALL
+ALLSEL,ALL
+CMSEL,S,VS8,VOLUME
+VSWEEP,ALL
+!
+TYPE, tipoelem1
+ALLSEL,ALL
+CMSEL,S,VS9,VOLUME
+VSWEEP,ALL
+ALLSEL,ALL
+CMSEL,S,VS10,VOLUME
+VSWEEP,ALL
+!
+! malha mapeada
+MSHAPE,0,3d ! 0 - hexaedro, 1 - tetraedro
+MSHKEY,1
+TYPE, tipoelem
+ALLSEL,ALL
+CMSEL,S,VM1,VOLUME
+CMSEL,A,VM2,VOLUME
+CMSEL,A,VM3,VOLUME
+CMSEL,A,VM4,VOLUME
+CMSEL,A,VM5,VOLUME
+CMSEL,A,VM6,VOLUME
+CMSEL,A,VM7,VOLUME
+CMSEL,A,VM8,VOLUME
+CMSEL,A,VM14,VOLUME
+CMSEL,A,VM15,VOLUME
+CMSEL,A,VM16,VOLUME
+CMSEL,A,VM17,VOLUME
+VMESH,ALL
+!
+! malha livre
+MSHAPE,1,3d
+MSHKEY,0
+TYPE, tipoelem1
+ALLSEL,ALL
+CMSEL,S,VL1,VOLUME
+CMSEL,A,VL3,VOLUME
+VMESH,ALL
+!
+! junta nós repetidos e mantém a numeração mais baixa
+NUMMRG,node, , , ,LOW
+NUMCMP,ALL
+!
+!************************************************************!
+!****_ 		3.10 Grupos elementos do revestimento 	_****!
+!************************************************************!
+!
+! gerando grupo de elementos com o revestimento do tunel longitudinal
+ALLSEL,ALL
+LOCAL,11,1,0,0,0
+ESEL,ALL
+ESEL,S,CENT,Z,lt,l1
+ESEL,R,CENT,X,ri,re
+ESEL,R,CENT,Y,0,180
+CM,Casca1,ELEM
+!
+! gerando grupo de elementos com o revestimento das galerias transversais
+LOCAL,12,1,re,0,lt-l2/2,0,0,90
+VSEL,ALL
+VSEL,S,LOC,Z,0,d1/2
+VSEL,R,LOC,X,0,re1
+VSEL,R,LOC,Y,0,180
+CM,VG1,VOLUME
+ESLV,S
+ESEL,R,CENT,Z,-re,d1/2-re
+ESEL,R,CENT,X,ri1,re1-0.01
+ESEL,R,CENT,Y,0,180
+CM,Casca2,ELEM
+!
+!
+!************************************************************!
+!****_		3.11 Alterando a cor dos elementos	_****!
+!************************************************************!
+ALLSEL,ALL
+CMSEL,S,VM1,VOLUME
+CMSEL,A,VM2,VOLUME
+CMSEL,A,VM4,VOLUME
+CMSEL,A,VM6,VOLUME
+CMSEL,A,VM7,VOLUME
+CMSEL,A,VM14,VOLUME
+CMSEL,A,VM15,VOLUME
+ESLV,S
+/COLOR,ELEM,13,ALL
+!
+ALLSEL,ALL
+CMSEL,S,VM3,VOLUME
+CMSEL,A,VM5,VOLUME
+CMSEL,A,VM8,VOLUME
+CMSEL,A,VM16,VOLUME
+CMSEL,A,VM17,VOLUME
+ESLV,S
+/COLOR,ELEM,14,ALL
+!
+ALLSEL,ALL
+CMSEL,S,VL1,VOLUME
+CMSEL,A,VL3,VOLUME
+ESLV,S
+/COLOR,ELEM,13,ALL
+!
+ALLSEL,ALL
+CMSEL,S,VS1,VOLUME
+CMSEL,A,VS2,VOLUME
+CMSEL,A,VS7,VOLUME
+CMSEL,A,VS8,VOLUME
+ESLV,S
+/COLOR,ELEM,13,ALL
+!
+ALLSEL,ALL
+CMSEL,S,VS3,VOLUME
+CMSEL,A,VS9,VOLUME
+CMSEL,A,VS10,VOLUME
+ESLV,S
+/COLOR,ELEM,13,ALL
+!
+ALLSEL,ALL
+CMSEL,S,Casca1,ELEM
+/COLOR,ELEM,6,ALL
+!
+ALLSEL,ALL
+CMSEL,S,Casca2,ELEM
+/COLOR,ELEM,12,ALL
+!
+CMSEL,S,Casca1,ELEM
+CMSEL,A,Casca2,ELEM
+EPLOT
+!
+!
+!************************************************************!
+!****_ 		3.12 Condições de contorno		_****!
+!************************************************************!
+!CSYS,0
+! aplica tensões iniciais
+ALLSEL,ALL
+INISTATE, DEFINE,,,,,-pr,-pr,-pr,0,0,0
+!
+!Aplica condição de simetria na face direita do modelo
+LOCAL,11,0,0,0,0
+ALLSEL,ALL
+ASEL,S,LOC,X,d1/2,d1/2
+DA,ALL,SYMM
+!
+! Aplica condições de simetria na face de baixo do modelo
+LOCAL,11,0,0,0,0
+ALLSEL,ALL
+ASEL,S,LOC,Y,0,0
+DA,ALL,SYMM
+!
+!Deslocamento zero em Z, face frontal
+LOCAL,11,0,0,0,0
+ALLSEL,ALL
+ASEL,S,LOC,Z,lt,lt
+DA,ALL,UZ,0
+!
+! Aplica pressão na face superior
+LOCAL,11,0,0,0,0
+ALLSEL,ALL
+ASEL,S,LOC,Y,d3,d3
+SFA,ALL,1,PRES,pr
+!
+! Aplica pressão na face esquerda do modelo
+LOCAL,11,0,0,0,0
+ALLSEL,ALL
+ASEL,S,LOC,X,-d4,-d4
+SFA,ALL,1,PRES,pr
+!
+! Aplica pressão na face do fundo
+LOCAL,11,0,0,0,0
+ALLSEL,ALL
+ASEL,S,LOC,z,0,0
+SFA,ALL,1,PRES,pr
+!
+!************************************************************!
+!****_ 		3.13 Criando elementos do revestimento	_****!
+!************************************************************!
+! Obs: esses elementos ficam sobrepostos ao do solo. Durante
+! a análise, conforme vai desligando os elementos do
+! macicço vai-se ligando os do resvestimento, se houver.
+!
+*IF,matrev,NE,0,THEN
+	CMSEL,S,Casca1,ELEM
+	EGEN,2,0,ALL,ALL,1,1,,,,0,0,0
+	ESEL,ALL
+	NUMMRG,NODE, , , ,LOW
+	ESEL,MAT,2
+	CM,Revestimento1,ELEM
+*ENDIF
+!
+*IF,matrev,NE,0,THEN
+	CMSEL,S,Casca2,ELEM
+	EGEN,2,0,ALL,ALL,1,1,,,,0,0,0
+	ESEL,ALL
+	NUMMRG,NODE, , , ,LOW
+	ESEL,MAT,2
+	CMSEL,U,Revestimento1,ELEM
+	CM,Revestimento2,ELEM
+*ENDIF
+!
+!************************************************************!
+!****_ 		3.14 Grupos Esc-rev tunel longitudinal 	_****!
+!************************************************************!
+!
+! Primeira escavação
+i = 1
+LOCAL,11,1,0,0,lt,0,0,180,0
+ESEL,ALL
+fi=0
+ff=npi*Lp
+ESEL,S,CENT,Z,fi,ff
+ESEL,R,CENT,X,0,re
+ESEL,R,CENT,Y,0,180
+CM,Lesc %i%,ELEM
+CMSEL,S,Lesc %i%,ELEM
+!
+! Proximas escavações e resvestimentos
+*DO,i,2,nesc,1
+	! criando grupos com os elementos escavados do passo i
+	fi=ff
+	ff=(i-1)*Lp+npi*lp
+	ESEL,S,CENT,Z,fi,ff
+	ESEL,R,CENT,X,0,re
+	ESEL,R,CENT,Y,0,180
+	CM,Lesc %i%,ELEM
+	CMSEL,S,Lesc %i%,ELEM
+	!
+	*IF,matrev,NE,0,THEN
+		! criando grupos com os elementos revestidos do passo i
+		*IF,i,EQ,2,THEN
+			fi=0
+		*ELSE
+			fi=npi*lp+(i-2)*lp-(lp+d0)
+		*ENDIF
+		ff = (i-1)*lp+npi*lp-(lp+d0)
+		ESEL,ALL
+		ESEL,S,CENT,Z,fi,ff
+		ESEL,R,CENT,X,ri,re
+		ESEL,R,CENT,Y,0,180
+		ESEL,R,MAT,,2
+		MPCHG,i,ALL
+		CM,Lrev %i-1%,ELEM
+		CMSEL,S,Lrev %i-1%,ELEM
+	*ENDIF
+	!
+	! revestindo o ultimo trecho
+	*IF,i,EQ,nesc,THEN
+		*IF,matrev,NE,0,THEN
+			*IF,revested0,EQ,1,THEN
+				fi=l2-lp-d0
+				ff=l2
+				ESEL,S,CENT,Z,fi,ff
+				ESEL,R,CENT,X,ri,re
+				ESEL,R,CENT,Y,0,180
+				ESEL,R,MAT,,2
+				MPCHG,i,ALL
+				CM,Lrev %i%,ELEM
+				CMSEL,S,Lrev %i%,ELEM
+			*ENDIF
+			*IF,revesteface,EQ,1,THEN
+				fi=l2
+				ff=l2+(lp)
+				ESEL,ALL
+				ESEL,S,CENT,Z,fi,ff
+				ESEL,R,CENT,X,0,re
+				ESEL,R,CENT,Y,0,180
+				CM,soloface,ELEM
+				CMSEL,S,soloface,ELEM
+				!
+				fi=l2
+				ff=l2+lp
+				ESEL,ALL
+				ESEL,S,CENT,Z,fi,ff
+				ESEL,R,CENT,X,0,re
+				ESEL,R,CENT,Y,0,180
+				EGEN,2,0,all,all,1,1,,,,0,0,0
+				NUMMRG,node, , , ,LOW
+				ESEL,R,MAT,,2
+				MPCHG,i,ALL
+				CM,Lrevface,ELEM
+				CMSEL,S,Lrevface,ELEM
+			*ENDIF
+		*ENDIF
+	*ENDIF
+*ENDDO
+!
+! criando grupo de elementos escavados
+ESEL,S,CENT,Z,0,l2
+ESEL,R,CENT,X,0,re
+ESEL,R,CENT,Y,0,180
+CM,esctotallongitudinal,ELEM
+CSYS,0
+!
+!********************************************************************************************!
+!****_ 		3.15 Grupos esc-rev das galerias	_****!
+!********************************************************************************************!
+
+!
+! Primeira escavação da primeira galeria
+i = 1
+LOCAL,12,1,re,0,lt-l2/2,0,0,90
+fi=-re
+ff=npi1*Lp1
+ESEL,ALL
+CMSEL,S,VG1,VOLUME
+ESLV,S
+ESEL,R,CENT,Z,fi,ff
+ESEL,R,CENT,X,0,re1
+ESEL,R,CENT,Y,0,180
+CM,T1esc %i%,ELEM
+CMSEL,S,T1esc %i%,ELEM
+!
+! criando grupo da entrada da galeria 1
+*IF,matrev,NE,0,THEN
+	ESEL,ALL
+	CMSEL,S,Revestimento1,ELEM
+	ESEL,R,CENT,Z,fi,ff
+	ESEL,R,CENT,X,0,re1-0.01
+	ESEL,R,CENT,Y,0,180
+	CM,T1escent,ELEM
+	CMSEL,S,T1escent,ELEM
+*ENDIF
+!
+! Proximas escavações e resvestimentos da primeira galeria
+*DO,i,2,nesc1,1
+	fi=npi1*Lp1+(i-2)*Lp1
+	ff=npi1*Lp1+(i-1)*Lp1
+	ESEL,S,CENT,Z,fi,ff
+	ESEL,R,CENT,X,0,re1-0.01
+	ESEL,R,CENT,Y,0,180
+	CM,T1esc %i%,ELEM
+	CMSEL,S,T1esc %i%,ELEM
+	!
+	*IF,matrev,NE,0,THEN
+		! criando grupos com os elementos revestidos do passo i
+		*IF,i,EQ,2,THEN
+			fi=-re
+		*ELSE
+			fi=(i-2)*Lp1
+		*ENDIF
+		*IF,i,EQ,nesc1,THEN
+			ff=l2/2-re
+		*ELSE
+			ff=npi1*Lp1+(i-2)*Lp1-d01
+		*ENDIF
+		ESEL,ALL
+		CMSEL,S,Revestimento2,ELEM
+		ESEL,R,CENT,Z,fi,ff
+		ESEL,R,CENT,X,ri1,re1-0.01
+		ESEL,R,CENT,Y,0,180
+		MPCHG,nesc-1+i,ALL
+		CM,T1rev %i-1%,ELEM
+		CMSEL,S,T1rev %i-1%,ELEM
+	*ELSE
+		! não aplica revestimento
+	*ENDIF
+*ENDDO
+CSYS,0
+!
+!************************************************************!
+!****_ 4. SOLUÇÃO 					_****!
+!************************************************************!
+/SOL
+!
+! Colocando na angulação
+/VIEW,1,,-1
+/ANG,1
+/ANG,1,30,XS,1  
+/ANG,1,30,XS,1  
+/ANG,1,-30,YS,1 
+/DIST,1,0.729,1 
+/DIST,1,0.729,1 
+/REPLOT
+!
+! Configurações iniciais
+*IF,nlg,eq,0,then		
+	NLGEOM,OFF
+*ELSEIF,nlg,eq,1,then		
+	NLGEOM,ON
+*ENDIF
+*IF,nr,eq,1,then		
+	NROPT,INIT
+*ELSEIF,nr,eq,2,then		
+	NROPT,FULL
+*ELSEIF,nr,eq,3,then		
+	NROPT,UNSYM
+*ENDIF	
+*IF,psc,eq,0,then		
+	PSCONTROL,ALL,OFF
+*ELSEIF,nlg,eq,1,then		
+	PSCONTROL,ALL,ON
+*ENDIF
+!
+! Gravação da saida de resultados
+ALLSEL,ALL
+OUTRES,ESOL,LAST
+OUTRES,SVAR,ALL		
+!
+! Definição do diretório de trabalho
+PARSAV,ALL,parametros,txt
+!
+! Definindo temperatura
+TUNIF,temperatura
+!
+! Apaga os elementos do revestimento
+ALLSEL,ALL
+*IF,matrev,NE,0,THEN
+	CMSEL,S,Revestimento1,ELEM
+	CMSEL,A,Revestimento2,ELEM
+	EKILL,ALL
+	!
+	*IF,revesteface,EQ,1,THEN
+	CMSEL,S,Lrevface,ELEM
+		EKILL,ALL
+	*ENDIF
+*ENDIF
+!
+! Verifica o equilibrio do maciço
+*IF,soleq,EQ,1,THEN
+	ANTYPE,0,NEW
+	ESEL,ALL
+	TIME,1
+	DELTIM,1,,1
+	!CNVTOL,F,,tolf
+	!CNVTOL,U,,tolu
+	SOLVE
+	FINISH
+	!
+	! Plota a solução
+	/POST1
+	RSYS,0
+	ESEL,S,LIVE
+	PLNSOL, U,SUM, 0,1.0
+	ESEL,ALL
+*ENDIF
+!
+! Solução com as escavações
+/SOL
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN
+	!
+	! Maciço elástico sem revestimento (não precisa rodar a cada escavação)
+	ANTYPE,0,NEW
+	!
+	! primeira escavação
+	i=1
+	CMSEL,S,LESC %i%,ELEM
+	EKILL,ALL
+	ESEL,S,LIVE
+	EPLOT
+	*DO,i,2,nesc,1
+		! desligando elementos do grupo de escavação i
+		CMSEL,S,LESC %i%,ELEM
+		EKILL,ALL
+		ESEL,S,LIVE
+		EPLOT
+		!
+		! ligando elementos do grupo de revestimento i-1
+		*IF,matrev,NE,0,THEN
+			CMSEL,S,Lrev %i-1%,ELEM
+			EALIVE,ALL
+			*IF,revested0,EQ,1,THEN
+				*IF,i,EQ,nesc,THEN
+					CMSEL,S,Lrev %i%,ELEM
+					EALIVE,ALL
+				*ENDIF
+			*ENDIF
+			*IF,revesteface,EQ,1,THEN
+				*IF,i,EQ,nesc,THEN
+					CMSEL,S,Lrevface,ELEM
+					EALIVE,ALL
+					CMSEL,S,soloface,ELEM
+					EKILL,ALL
+				*ENDIF
+			*ENDIF
+		*ENDIF
+		ESEL,S,LIVE
+		EPLOT
+		!
+		! grupo de escavação da galeria 1
+		*IF,escavagaleria,EQ,1,THEN
+			*IF,i,EQ,pig1,THEN
+				! escava entrada da galeria 1
+				*IF,matrev,NE,0,THEN
+					ESEL,ALL
+					CMSEL,S,T1escent,ELEM
+					EKILL,ALL
+					ESEL,S,LIVE
+					EPLOT
+				*ENDIF
+				!
+				*DO,j,1,nesc1,1
+					! desligando os elementos do grupo de escavação
+					ESEL,ALL
+					CMSEL,S,T1ESC %j%,ELEM
+					EKILL,ALL
+					ESEL,S,LIVE
+					EPLOT
+					!
+					! ligando os elementos do grupo de revestimento
+					*IF,matrev,NE,0,THEN
+						*IF,revestegaleria,EQ,1,THEN
+							*IF,j,GE,2,THEN
+								CMSEL,S,T1REV %j-1%,ELEM
+								EALIVE,ALL
+							*ENDIF
+						*ENDIF
+					*ENDIF
+					!
+					! plotando apenas os elementos ativos
+					ESEL,S,LIVE
+					EPLOT
+				*ENDDO
+			*ENDIF
+			!
+		*ENDIF
+	*ENDDO
+	ESEL,ALL
+	SAVE
+	!CNVTOL,F,,tolf
+	!CNVTOL,U,,tolu
+	SOLVE
+	FINISH
+*ELSE
+	!
+	! Necessário fazer vários passos de escavação
+	ANTYPE,0,NEW
+	!
+	! Primeiro passo de escavação
+	i=1
+	CMSEL,S,LESC %i%,ELEM
+	EKILL,ALL
+	ESEL,S,LIVE
+	EPLOT
+	TIME,tp*i
+	DELTIM,dtp,,dtpmax
+	ESEL,ALL
+	!CNVTOL,F,,tolf
+	!CNVTOL,U,,tolu
+	SOLVE
+	SAVE
+	FINISH
+	!
+	! Mostrar solução da primeira escavação
+	/POST1
+	RSYS,1
+	ESEL,S,LIVE
+	PLNSOL, U,SUM, 0,1.0
+	!
+	! Próximos passos de escavação
+	/SOL
+	ANTYPE,0,RESTART
+	*DO,i,2,nesc,1
+		!
+		! desligando elementos do grupo de escavação i
+		ESEL,ALL
+		CMSEL,S,LESC %i%,ELEM
+		EKILL,ALL
+		ESEL,S,LIVE
+		EPLOT
+		!
+		! ligando elementos do grupo de revestimento i-1
+		*IF,matrev,NE,0,THEN
+			CMSEL,S,Lrev %i-1%,ELEM
+			EALIVE,ALL
+			*IF,revested0,EQ,1,THEN
+				*IF,i,EQ,nesc,THEN
+					CMSEL,S,Lrev %i%,ELEM
+					EALIVE,ALL
+				*ENDIF
+			*ENDIF
+			*IF,revesteface,EQ,1,THEN
+				*IF,i,EQ,nesc,THEN
+					CMSEL,S,Lrevface,ELEM
+					EALIVE,ALL
+					CMSEL,S,soloface,ELEM
+					EKILL,ALL
+				*ENDIF
+			*ENDIF
+		*ENDIF
+		!
+		! grupo de escavação da galeria 1
+		*IF,escavagaleria,EQ,1,THEN
+			*IF,i,EQ,pig1,THEN
+				! escava entrada da galeria 1
+				*IF,matrev,NE,0,THEN
+					ESEL,ALL
+					CMSEL,S,T1escent,ELEM
+					EKILL,ALL
+					ESEL,S,LIVE
+					EPLOT
+				*ENDIF
+				!
+				*DO,j,1,nesc1,1
+					! desligando os elementos do grupo de escavação
+					ESEL,ALL
+					CMSEL,S,T1ESC %j%,ELEM
+					EKILL,ALL
+					ESEL,S,LIVE
+					EPLOT
+					!
+					! ligando os elementos do grupo de revestimento
+					! ligando os elementos do grupo de revestimento
+					*IF,matrev,NE,0,THEN
+						*IF,revestegaleria,EQ,1,THEN
+							*IF,j,GE,2,THEN
+								CMSEL,S,T1REV %j-1%,ELEM
+								EALIVE,ALL
+							*ENDIF
+						*ENDIF
+					*ENDIF
+					!
+					ESEL,S,LIVE
+					EPLOT
+					TIME,tp*i+tp1*j
+					DELTIM,dtp1,,dtpmax1
+					ESEL,ALL
+					SAVE
+					!CNVTOL,F,,tolf1
+					!CNVTOL,U,,tolu1
+					SOLVE
+				*ENDDO
+				tad1 = tp1*nesc1
+			*ENDIF
+			!
+		*ENDIF
+		!
+		ESEL,S,LIVE
+		EPLOT
+		TIME,tp*i+tad1
+		DELTIM,dtp,,dtpmax
+		ESEL,ALL
+		SAVE
+		!CNVTOL,F,,tolf
+		!CNVTOL,U,,tolu
+		SOLVE
+	*ENDDO
+	!
+	*IF,analise2,EQ,1,THEN
+		! Faz o cálculo após o término da construção do túnel	                    
+		*DO,i,1,np2
+			TIME,tp*nesc+tad1+i*tp2		
+			DELTIM,dtp2,,dtp2max			
+			SAVE
+			!CNVTOL,F,,tolf2
+			!CNVTOL,U,,tolu2			
+			SOLVE						
+		*ENDDO
+	*ENDIF	
+	FINISH
+*ENDIF
+!
+!************************************************************!
+!****_ 5. PÓS-PROCESSAMENTO 				_****!
+!************************************************************!
+!
+!************************************************************!
+!****_ 		5.1 Configurações iniciais		_****!
+!************************************************************!
+!
+! mudando a cor da janela
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+!
+! qualidade do arquivo jpeg de saida
+JPEG,QUAL,100, 
+JPEG,ORIENT,HORIZ 
+JPEG,COLOR,2
+JPEG,TMOD,1
+/GFILE,800, 
+/TYPE,,3
+!
+! Colocando na angulação
+/VIEW,1,,-1
+/ANG,1
+/ANG,1,30,XS,1  
+/ANG,1,30,XS,1  
+/ANG,1,-30,YS,1 
+/DIST,1,0.729,1 
+/DIST,1,0.729,1 
+/REPLOT
+!
+!************************************************************!
+!****_ 		5.1 Perfis tunel longitudinal		_****!
+!************************************************************!
+/POST1
+!
+! numero de analises
+nanalises = 0
+*IF,escavagaleria,EQ,1,THEN
+*ELSE
+	nesc1 = 0
+*ENDIF
+nanalises=nesc+nesc1
+*IF,analise2,EQ,1,THEN
+	nanalises=nanalises + np2
+*ENDIF	
+!
+direcao = 'Y'
+teta	= 90
+!
+! selecionando os nós na interface entre revestimento e o maciço
+LOCAL,11,1,0,0,lt,0,0,0,0
+CSYS,11,
+ALLSEL,ALL
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,teta-0.01,teta+0.01
+NSLE,R,CORNER
+CSYS,0
+!
+! sistemas de referencias dos resultados
+RSYS,0
+!
+! dimensionando arrays
+*GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
+*GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
+*DIM,convergence_teta,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias
+*DIM,pressure_teta,TABLE,ncount,2+nanalises	  ! dimensionando tabela de pressões em x
+*DIM,coordz,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
+*DIM,u_teta,ARRAY,ntotal			  ! dimensionando vetor de deslocamentos em x
+*DIM,s_teta,ARRAY,ntotal			  ! dimensionando vetor de pressões em x
+*DIM,n_sel,ARRAY,ntotal			  ! dimensionando vetor que indica se o nó está selecionado
+!
+! coloca lista de nós em ordem na primeira coluna
+*VGET,convergence_teta(1,1),NODE,,NLIST
+*VGET,pressure_teta(1,1),NODE,,NLIST
+!
+! criando vetor de coordenadas
+*VGET,n_sel(1),NODE,1,NSEL
+*VGET,coordz(1),NODE,1,LOC,z
+*VOPER,coordz(1),coordz(1),MULT,1/Re
+!
+! Preenchendo o convergence e pressure com as coordenadas
+*VMASK,n_sel(1)				! usa como mascara os nós selecionados
+*VFUN,convergence_teta(1,2),COMP,coordz(1)
+*VMASK,n_sel(1)
+*VFUN,pressure_teta(1,2),COMP,coordz(1)
+!
+! preenchendo o convergence com a convergência
+*DO,i,1,nanalises,1
+	! identifica o passo
+	*IF,i,EQ,nanalises,THEN
+		SUBSET,LAST
+	*ELSE
+		*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN
+			SUBSET,LAST
+		*ELSE
+			SUBSET,i,,,,,,
+		*ENDIF
+	*ENDIF
+	!
+	! Preenchendo o array com os deslocamentos radiais e tensões radiais
+	*VMASK,n_sel(1)
+	*VGET,u_teta(1),NODE,1,U,direcao
+	*VOPER,u_teta(1),u_teta(1),MULT,-1/Re*100
+	!
+	*VMASK,n_sel(1)
+	*VGET,s_teta(1),NODE,1,S,direcao
+	*VOPER,s_teta(1),s_teta(1),MULT,1
+	!
+	! Preenchendo o convergence e pressure
+	*VMASK,n_sel(1)
+	*VFUN,convergence_teta(1,2+i),COMP,u_teta(1)
+	*VMASK,n_sel(1)
+	*VFUN,pressure_teta(1,2+i),COMP,s_teta(1)
+*ENDDO
+!
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)
+*MOPER,ORDER,convergence_teta,SORT,convergence_teta(1,2)
+*MOPER,ORDER,pressure_teta,SORT,pressure_teta(1,2)
+!
+! Coleta o maior valor das convergências
+*VSCFUN,umaximofinal,max,convergence_teta(1,2+nanalises)
+*VSCFUN,smaximofinal,max,pressure_teta(1,2+nanalises)
+*VSCFUN,sminimofinal,min,pressure_teta(1,2+nanalises)
+!
+! formatando grafico de convergencia
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+/AXLAB,X,Y/Re
+/AXLAB,Y,U=-u(r=Re)/Re (%)
+/XRANGE,0,Lt/Re
+/YRANGE,umaximofinal*1.2,0
+/GROPT,DIVY,20
+/GROPT,DIVX,10
+/GROPT,DIG1,3
+/GTHK,CURVE,1
+/PLOPTS,INFO,on
+!
+! graficando na tela do Ansys
+/ERASE
+/SHOW,JPEG,,iso
+*DO,i,1,nanalises,1
+	*IF,i,EQ,nanalises,THEN
+		/COLOR,CURVE,MAGE,1
+	*ELSEIF,i,EQ,nesc+nesc1,THEN
+		/COLOR,CURVE,YELL,1
+	*ELSE
+		/COLOR,CURVE,LGRA,1
+	*ENDIF
+	*VPLOT,convergence_teta(1,2),convergence_teta(1,2+i)
+	/NOERASE
+*ENDDO
+/SHOW,CLOSE
+/ERASE
+!
+!
+! formatando grafico do pressure
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+/AXLAB,X,Y/Ri
+/AXLAB,Y,Sx (MPa)
+/XRANGE,0,Lt/Re
+/YRANGE,smaximofinal*1.2,sminimofinal*1.2
+/GROPT,DIVY,20
+/GROPT,DIVX,10
+/GROPT,DIG1,3
+/GTHK,CURVE,1
+/PLOPTS,INFO,on
+!
+! graficando na tela do Ansys
+/ERASE
+/SHOW,JPEG,,iso
+*DO,i,1,nanalises,1
+	*IF,i,EQ,nanalises,THEN
+		/COLOR,CURVE,MAGE,1
+	*ELSEIF,i,EQ,nesc,THEN
+		/COLOR,CURVE,YELL,1
+	*ELSE
+		/COLOR,CURVE,LGRA,1
+	*ENDIF
+	*VPLOT,pressure_teta(1,2),pressure_teta(1,2+i)
+	/NOERASE
+*ENDDO
+/SHOW,CLOSE
+/ERASE
+!
+! Escrevendo em arquivo as convergências
+*CREATE,ansuitmp
+*MWRITE,convergence_teta,convergencias_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+! Escrevendo em arquivo as pressões
+*CREATE,ansuitmp
+*MWRITE,pressure_teta,pressure_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+! Cria arquivo com os parâmetros
+PARSAV,SCALAR,parametros,txt
+!
+!************************************************************!
+!****_ 		5.2 Perfis galeria			_****!
+!************************************************************!
+/POST1
+!
+! numero de analises
+nanalises = 0
+*IF,escavagaleria,EQ,1,THEN
+*ELSE
+	nesc1 = 0
+*ENDIF
+nanalises=nesc+nesc1
+*IF,analise2,EQ,1,THEN
+	nanalises=nanalises + np2
+*ENDIF	
+!
+direcao = 'Y'
+teta	= 90
+!
+! selecionando os nós na interface entre revestimento e o maciço
+LOCAL,12,1,re,0,lt-l2/2,0,0,90
+CSYS,12,
+ALLSEL,ALL
+CMSEL,S,VS9,VOLU
+CMSEL,A,VS10,VOLU
+NSLV,S,1
+NSEL,R,LOC,X,Re1-0.01,Re1+0.01
+NSEL,R,LOC,Y,teta-0.01,teta+0.01
+NSLE,R,CORNER
+CSYS,0,
+!
+! sistemas de referencias dos resultados
+RSYS,0
+!
+! dimensionando arrays
+*GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
+*GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
+*DIM,convergence1_teta,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias
+*DIM,pressure1_teta,TABLE,ncount,2+nanalises	  ! dimensionando tabela de pressões em x
+*DIM,coordz1,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
+*DIM,u1_teta,ARRAY,ntotal			  ! dimensionando vetor de deslocamentos em x
+*DIM,s1_teta,ARRAY,ntotal			  ! dimensionando vetor de pressões em x
+*DIM,n_sel,ARRAY,ntotal			  ! dimensionando vetor que indica se o nó está selecionado
+!
+! coloca lista de nós em ordem na primeira coluna
+*VGET,convergence1_teta(1,1),NODE,,NLIST
+*VGET,pressure1_teta(1,1),NODE,,NLIST
+!
+! criando vetor de coordenadas
+*VGET,n_sel(1),NODE,1,NSEL
+*VGET,coordz1(1),NODE,1,LOC,x
+*VOPER,coordz1(1),coordz1(1),MULT,1/Re
+!
+! Preenchendo o convergence e pressure com as coordenadas
+*VMASK,n_sel(1)				! usa como mascara os nós selecionados
+*VFUN,convergence1_teta(1,2),COMP,coordz1(1)
+*VMASK,n_sel(1)
+*VFUN,pressure1_teta(1,2),COMP,coordz1(1)
+!
+! preenchendo o convergence com a convergência
+*DO,i,1,nanalises,1
+	! identifica o passo
+	*IF,i,EQ,nanalises,THEN
+		SUBSET,LAST
+	*ELSE
+		*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN
+			SUBSET,LAST
+		*ELSE
+			SUBSET,i,,,,,,
+		*ENDIF
+	*ENDIF
+	!
+	! Preenchendo o array com os deslocamentos radiais e tensões radiais
+	*VMASK,n_sel(1)
+	*VGET,u1_teta(1),NODE,1,U,direcao
+	*VOPER,u1_teta(1),u1_teta(1),MULT,-1/Re*100
+	!
+	*VMASK,n_sel(1)
+	*VGET,s1_teta(1),NODE,1,S,direcao
+	*VOPER,s1_teta(1),s1_teta(1),MULT,1
+	!
+	! Preenchendo o convergence e pressure
+	*VMASK,n_sel(1)
+	*VFUN,convergence1_teta(1,2+i),COMP,u1_teta(1)
+	*VMASK,n_sel(1)
+	*VFUN,pressure1_teta(1,2+i),COMP,s1_teta(1)
+*ENDDO
+!
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)
+*MOPER,ORDER,convergence1_teta,SORT,convergence1_teta(1,2)
+*MOPER,ORDER,pressure1_teta,SORT,pressure1_teta(1,2)
+!
+! Coleta o maior valor das convergências
+*VSCFUN,umaximofinal1,max,convergence1_teta(1,2+nanalises)
+*VSCFUN,smaximofinal1,max,pressure1_teta(1,2+nanalises)
+*VSCFUN,sminimofinal1,min,pressure1_teta(1,2+nanalises)
+!
+! formatando grafico de convergencia
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+/AXLAB,X,x/Re1
+/AXLAB,Y,U1=-u1(r=Re1)/Re1 (%)
+/XRANGE,0,(d1/2)/Re1
+/YRANGE,umaximofinal1*1.2,0
+/GROPT,DIVY,20
+/GROPT,DIVX,10
+/GROPT,DIG1,3
+/GTHK,CURVE,1
+/PLOPTS,INFO,on
+!
+! graficando na tela do Ansys
+/ERASE
+/SHOW,JPEG,,iso
+*DO,i,1,nanalises,1
+	*IF,i,EQ,nanalises,THEN
+		/COLOR,CURVE,MAGE,1
+	*ELSEIF,i,EQ,nesc+nesc1,THEN
+		/COLOR,CURVE,YELL,1
+	*ELSE
+		/COLOR,CURVE,LGRA,1
+	*ENDIF
+	*VPLOT,convergence1_teta(1,2),convergence1_teta(1,2+i)
+	/NOERASE
+*ENDDO
+/SHOW,CLOSE
+/ERASE
+!
+!
+! formatando grafico do pressure
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+/AXLAB,X,x/Re1
+/AXLAB,Y,Sx1 (MPa)
+/XRANGE,0,(d1/2)/Re1
+/YRANGE,smaximofinal1*1.2,sminimofinal1*1.2
+/GROPT,DIVY,20
+/GROPT,DIVX,10
+/GROPT,DIG1,3
+/GTHK,CURVE,1
+/PLOPTS,INFO,on
+!
+! graficando na tela do Ansys
+/ERASE
+/SHOW,JPEG,,iso
+*DO,i,1,nanalises,1
+	*IF,i,EQ,nanalises,THEN
+		/COLOR,CURVE,MAGE,1
+	*ELSEIF,i,EQ,nesc,THEN
+		/COLOR,CURVE,YELL,1
+	*ELSE
+		/COLOR,CURVE,LGRA,1
+	*ENDIF
+	*VPLOT,pressure1_teta(1,2),pressure1_teta(1,2+i)
+	/NOERASE
+*ENDDO
+/SHOW,CLOSE
+/ERASE
+!
+! Escrevendo em arquivo as convergências
+*CREATE,ansuitmp
+*MWRITE,convergence1_teta,convergencias1_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+! Escrevendo em arquivo as pressões
+*CREATE,ansuitmp
+*MWRITE,pressure1_teta,pressure1_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+! Cria arquivo com os parâmetros
+PARSAV,SCALAR,parametros,txt
+!
+!
+!****_ 			FIM				_****!
+
+
+
+
+
+
+
+
+!************************************************************!
+!****_ 		5.3 Deformação da seção 		_****!
+!************************************************************!
+/POST1
+!
+! selecionando os nós na interface entre revestimento e o maciço
+zf = lt
+teta = 180
+CSYS,1,
+ALLSEL,ALL
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,0,teta
+NSEL,R,LOC,Z,zf
+NSLE,R,CORNER
+CSYS,0
+!
+! sistemas de referencias dos resultados
+RSYS,0
+!
+
+
+! dimensionando arrays
+nanalises = 0
+*GET,nanalises,ACTIVE,0,SET,NSET	  ! pegando o número de análises								 
+*GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
+*GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
+
+*DIM,convergence_x,TABLE,ncount,3+nanalises ! dimensionando tabela de convergencias
+*DIM,convergence_y,TABLE,ncount,3+nanalises	  ! dimensionando tabela de pressões em x
+
+*DIM,coordx,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
+*DIM,coordy,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
+
+*DIM,u_x,ARRAY,ntotal			  ! dimensionando vetor de deslocamentos em x
+*DIM,u_y,ARRAY,ntotal			  ! dimensionando vetor de pressões em x
+*DIM,n_sel,ARRAY,ntotal			  ! dimensionando vetor que indica se o nó está selecionado
+!
+! coloca lista de nós em ordem na primeira coluna
+*VGET,convergence_x(1,1),NODE,,NLIST
+*VGET,convergence_y(1,1),NODE,,NLIST
+!
+! criando vetor de coordenadas
+*VGET,n_sel(1),NODE,1,NSEL
+*VGET,coordx(1),NODE,1,LOC,x
+!
+! criando vetor de coordenadas
+*VGET,n_sel(1),NODE,1,NSEL
+*VGET,coordy(1),NODE,1,LOC,y
+!
+! Preenchendo o convergence com as coordenadas
+*VMASK,n_sel(1)				! usa como mascara os nós selecionados
+*VFUN,convergence_x(1,2),COMP,coordx(1)
+*VMASK,n_sel(1)
+*VFUN,convergence_x(1,3),COMP,coordy(1)
+!
+! Preenchendo o convergence com as coordenadas
+*VMASK,n_sel(1)				! usa como mascara os nós selecionados
+*VFUN,convergence_y(1,2),COMP,coordx(1)
+*VMASK,n_sel(1)
+*VFUN,convergence_y(1,3),COMP,coordy(1)
+!
+! preenchendo o convergence com a convergência
+*DO,i,1,nanalises,1
+	! identifica o passo
+	*IF,i,EQ,nanalises,THEN
+		SUBSET,LAST
+	*ELSE
+		*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN
+			SUBSET,LAST
+		*ELSE
+			SUBSET,i,,,,,,
+		*ENDIF
+	*ENDIF
+	!
+	! Preenchendo o array com os deslocamentos radiais e tensões radiais
+	*VMASK,n_sel(1)
+	*VGET,u_x(1),NODE,1,U,X
+	*VOPER,u_x(1),u_x(1),MULT,-1/Re*100
+	!
+	*VMASK,n_sel(1)
+	*VGET,u_y(1),NODE,1,U,Y
+	*VOPER,u_y(1),u_y(1),MULT,-1/Re*100
+	!
+	! Preenchendo o convergence e pressure
+	*VMASK,n_sel(1)
+	*VFUN,convergence_x(1,3+i),COMP,u_x(1)
+	*VMASK,n_sel(1)
+	*VFUN,convergence_y(1,3+i),COMP,u_y(1)
+*ENDDO
+!
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)
+*MOPER,ORDER,convergence_x,SORT,convergence_x(1,2)
+*MOPER,ORDER,convergence_y,SORT,convergence_y(1,2)
+!
+! Escrevendo em arquivo as convergências
+*CREATE,ansuitmp
+*MWRITE,convergence_x,convergencias_x,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+!
+! Escrevendo em arquivo as convergências
+*CREATE,ansuitmp
+*MWRITE,convergence_y,convergencias_y,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+
+!

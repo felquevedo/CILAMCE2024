@@ -1,0 +1,28 @@
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       19:02:43
+
+ *** WARNING ***                         CP =       0.531   TIME= 19:02:48
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =       4.906   TIME= 19:02:48
+ Previous testing revealed that 6 of the 3220 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =       5.281   TIME= 19:02:48
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =      44.781   TIME= 19:02:50
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =      44.781   TIME= 19:02:50
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    2606.062   TIME= 19:04:37
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               

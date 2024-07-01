@@ -1,0 +1,182 @@
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       14:31:23
+
+ *** WARNING ***                         CP =       0.828   TIME= 14:31:28
+ Assembly A0 is deleted.                                                 
+
+ *** WARNING ***                         CP =       4.734   TIME= 14:31:32
+ Assembly VD8 is deleted.                                                
+
+ *** WARNING ***                         CP =       4.734   TIME= 14:31:32
+ Assembly VD7 is deleted.                                                
+
+ *** WARNING ***                         CP =       5.469   TIME= 14:31:33
+ Assembly VD52 is deleted.                                               
+
+ *** WARNING ***                         CP =       5.469   TIME= 14:31:33
+ Assembly VD51 is deleted.                                               
+
+ *** WARNING ***                         CP =       5.469   TIME= 14:31:33
+ Assembly VD62 is deleted.                                               
+
+ *** WARNING ***                         CP =       5.469   TIME= 14:31:33
+ Assembly VD61 is deleted.                                               
+
+ *** WARNING ***                         CP =      15.047   TIME= 14:31:37
+ Structural elements without mid nodes usually produce much more         
+ accurate results in quad or brick shape.                                
+
+ *** WARNING ***                         CP =      20.406   TIME= 14:31:38
+ Shape testing revealed that 1 of the 10583 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      26.578   TIME= 14:31:39
+ Shape testing revealed that 1 of the 24126 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      26.953   TIME= 14:31:39
+ Concatenation of line 240 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      26.953   TIME= 14:31:39
+ Concatenation of area 166 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      26.953   TIME= 14:31:39
+ Concatenation of line 228 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      31.094   TIME= 14:31:39
+ Concatenation of line 225 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      31.875   TIME= 14:31:39
+ Shape testing revealed that 2 of the 34709 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      36.375   TIME= 14:31:40
+ After NUMMRG,NODE, node 68572 (and possibly others) is associated with  
+ more than one solid model entity.  Future commands which depend on the  
+ node to solid model connectivity (meshing, mesh clearing, solid         
+ boundary condition transfer, etc.) may not operate properly.            
+ NUMMRG,KP may correct this problem.                                     
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 174 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 178 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 148 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 176 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 177 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 172 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 171 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 173 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 42 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 169 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 55 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 45 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 54 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.625   TIME= 14:31:40
+ Due to merge, line 41 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.641   TIME= 14:31:40
+ Due to merge, area 99 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.641   TIME= 14:31:40
+ Due to merge, area 112 is now meshed.                                   
+
+ *** WARNING ***                         CP =      37.641   TIME= 14:31:40
+ Due to merge, area 58 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.641   TIME= 14:31:40
+ Due to merge, area 53 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.641   TIME= 14:31:40
+ Due to merge, area 28 is now meshed.                                    
+
+ *** WARNING ***                         CP =      37.641   TIME= 14:31:40
+ Due to merge, area 18 is now meshed.                                    
+
+ *** WARNING ***                         CP =      38.156   TIME= 14:31:40
+ Shape testing revealed that 232 of the 12213 new or modified elements   
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      44.203   TIME= 14:31:41
+ Shape testing revealed that 48 of the 26432 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      57.484   TIME= 14:31:44
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      58.234   TIME= 14:31:44
+ Shape testing revealed that 2 of the 10184 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      63.109   TIME= 14:31:44
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      96.109   TIME= 14:31:45
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =     112.406   TIME= 14:31:46
+ SOLID185 wedges are recommended only in regions of relatively low       
+ stress gradients.                                                       
+
+ *** WARNING ***                         CP =     113.531   TIME= 14:31:46
+ Previous testing revealed that 286 of the 182996 selected elements      
+ violate shape warning limits.  To review warning messages, please see   
+ the output or error file, or issue the CHECK command.                   
+
+ *** WARNING ***                         CP =     117.922   TIME= 14:31:46
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =    6309.609   TIME= 14:37:15
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    6315.859   TIME= 14:37:16
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =  419771.844   TIME= 20:40:54
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =  420100.688   TIME= 20:46:18
+ Parameter N_SEL already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  420429.312   TIME= 20:51:42
+ During this session a solution was performed using 24 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 24).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 24).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     

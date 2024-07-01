@@ -1,0 +1,654 @@
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       22:12:52
+
+ *** WARNING ***                         CP =       1.016   TIME= 22:12:57
+ Assembly A0 is deleted.                                                 
+
+ *** WARNING ***                         CP =       4.953   TIME= 22:13:01
+ Assembly VD8 is deleted.                                                
+
+ *** WARNING ***                         CP =       4.953   TIME= 22:13:01
+ Assembly VD7 is deleted.                                                
+
+ *** WARNING ***                         CP =       8.125   TIME= 22:13:04
+ Assembly VD52 is deleted.                                               
+
+ *** WARNING ***                         CP =       8.125   TIME= 22:13:04
+ Assembly VD51 is deleted.                                               
+
+ *** WARNING ***                         CP =       8.125   TIME= 22:13:04
+ Assembly VD62 is deleted.                                               
+
+ *** WARNING ***                         CP =       8.125   TIME= 22:13:04
+ Assembly VD61 is deleted.                                               
+
+ *** WARNING ***                         CP =      16.266   TIME= 22:13:07
+ Structural elements without mid nodes usually produce much more         
+ accurate results in quad or brick shape.                                
+
+ *** WARNING ***                         CP =      22.516   TIME= 22:13:09
+ Shape testing revealed that 10 of the 15389 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      29.047   TIME= 22:13:10
+ Shape testing revealed that 5 of the 38162 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      29.797   TIME= 22:13:10
+ Concatenation of line 242 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      29.797   TIME= 22:13:10
+ Concatenation of area 167 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      29.797   TIME= 22:13:10
+ Concatenation of line 230 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      33.984   TIME= 22:13:11
+ Concatenation of line 227 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      35.562   TIME= 22:13:11
+ Shape testing revealed that 13 of the 53546 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      38.938   TIME= 22:13:12
+ After NUMMRG,NODE, node 51073 (and possibly others) is associated with  
+ more than one solid model entity.  Future commands which depend on the  
+ node to solid model connectivity (meshing, mesh clearing, solid         
+ boundary condition transfer, etc.) may not operate properly.            
+ NUMMRG,KP may correct this problem.                                     
+
+ *** WARNING ***                         CP =      40.062   TIME= 22:13:12
+ Tetrahedron element 110864 has an aspect ratio of 27.82, which exceeds  
+ the warning limit of 20.                                                
+
+ *** WARNING ***                         CP =      40.062   TIME= 22:13:12
+ Tetrahedron element 110864 has an angle between adjacent edges of       
+ 170.2 degrees, which exceeds the warning limit of 165 degrees.          
+
+ *** WARNING ***                         CP =      40.438   TIME= 22:13:12
+ Tetrahedron element 119365 has an aspect ratio of 21.01, which exceeds  
+ the warning limit of 20.                                                
+
+ *** WARNING ***                         CP =      40.438   TIME= 22:13:12
+ Tetrahedron element 119365 has an angle between adjacent edges of 169   
+ degrees, which exceeds the warning limit of 165 degrees.                
+
+ *** WARNING ***                         CP =      41.000   TIME= 22:13:12
+ Due to merge, line 174 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.000   TIME= 22:13:12
+ Due to merge, line 178 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 148 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 176 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 177 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 172 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 171 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 173 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 42 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 169 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 55 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 45 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 54 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, line 41 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, area 99 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, area 113 is now meshed.                                   
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, area 58 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, area 53 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, area 28 is now meshed.                                    
+
+ *** WARNING ***                         CP =      41.016   TIME= 22:13:12
+ Due to merge, area 18 is now meshed.                                    
+
+ *** ERROR ***                           CP =      41.125   TIME= 22:13:12
+ An error occurred during sweeping while meshing area 40.  Change        
+ element sizing parameters (ESIZE, LESIZE, etc.), or mesh this area      
+ manually (AMESH or AMAP) then try the VSWE command again.  The VSWE     
+ command is ignored.                                                     
+
+ *** WARNING ***                         CP =      41.125   TIME= 22:13:12
+ Internal error copying one area mesh to another area.  The VSWE command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =      41.125   TIME= 22:13:12
+ Internal error copying one area mesh to another area.  The VSWE command 
+ is ignored.                                                             
+
+ *** ERROR ***                           CP =      41.141   TIME= 22:13:12
+ Error storing elements to database.  Database may be corrupted.  Please 
+ send the data leading to this operation to your technical support       
+ provider, as this will allow ANSYS, Inc to improve the program.         
+/COM,ANSYS RELEASE 2022 R1           BUILD 22.1      UP20211129       07:30:23
+
+ *** WARNING ***                         CP =       1.078   TIME= 07:30:28
+ Assembly A0 is deleted.                                                 
+
+ *** WARNING ***                         CP =       5.047   TIME= 07:30:32
+ Assembly VD8 is deleted.                                                
+
+ *** WARNING ***                         CP =       5.047   TIME= 07:30:32
+ Assembly VD7 is deleted.                                                
+
+ *** WARNING ***                         CP =       8.266   TIME= 07:30:36
+ Assembly VD52 is deleted.                                               
+
+ *** WARNING ***                         CP =       8.266   TIME= 07:30:36
+ Assembly VD51 is deleted.                                               
+
+ *** WARNING ***                         CP =       8.266   TIME= 07:30:36
+ Assembly VD62 is deleted.                                               
+
+ *** WARNING ***                         CP =       8.266   TIME= 07:30:36
+ Assembly VD61 is deleted.                                               
+
+ *** WARNING ***                         CP =      16.547   TIME= 07:30:38
+ Structural elements without mid nodes usually produce much more         
+ accurate results in quad or brick shape.                                
+
+ *** WARNING ***                         CP =      22.016   TIME= 07:30:40
+ Shape testing revealed that 10 of the 15389 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      28.578   TIME= 07:30:41
+ Shape testing revealed that 5 of the 38162 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      28.953   TIME= 07:30:41
+ Concatenation of line 242 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      28.953   TIME= 07:30:41
+ Concatenation of area 167 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      29.328   TIME= 07:30:41
+ Concatenation of line 230 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      33.484   TIME= 07:30:41
+ Concatenation of line 227 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      34.953   TIME= 07:30:42
+ Shape testing revealed that 13 of the 53546 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      37.953   TIME= 07:30:42
+ After NUMMRG,NODE, node 51073 (and possibly others) is associated with  
+ more than one solid model entity.  Future commands which depend on the  
+ node to solid model connectivity (meshing, mesh clearing, solid         
+ boundary condition transfer, etc.) may not operate properly.            
+ NUMMRG,KP may correct this problem.                                     
+
+ *** WARNING ***                         CP =      39.453   TIME= 07:30:42
+ Tetrahedron element 110864 has an aspect ratio of 27.82, which exceeds  
+ the warning limit of 20.                                                
+
+ *** WARNING ***                         CP =      39.453   TIME= 07:30:42
+ Tetrahedron element 110864 has an angle between adjacent edges of       
+ 170.2 degrees, which exceeds the warning limit of 165 degrees.          
+
+ *** WARNING ***                         CP =      39.453   TIME= 07:30:42
+ Tetrahedron element 119365 has an aspect ratio of 21.01, which exceeds  
+ the warning limit of 20.                                                
+
+ *** WARNING ***                         CP =      39.453   TIME= 07:30:42
+ Tetrahedron element 119365 has an angle between adjacent edges of 169   
+ degrees, which exceeds the warning limit of 165 degrees.                
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 174 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 178 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 148 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 176 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 177 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 172 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 171 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 173 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 42 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 169 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 55 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 45 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 54 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, line 41 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, area 99 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, area 113 is now meshed.                                   
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, area 58 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, area 53 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, area 28 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.375   TIME= 07:30:42
+ Due to merge, area 18 is now meshed.                                    
+
+ *** WARNING ***                         CP =      40.734   TIME= 07:30:43
+ Shape testing revealed that 26 of the 9381 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      41.859   TIME= 07:30:43
+ Shape testing revealed that 224 of the 480 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      47.062   TIME= 07:30:44
+ Shape testing revealed that 16 of the 32832 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      60.109   TIME= 07:30:46
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      60.859   TIME= 07:30:46
+ Shape testing revealed that 11 of the 8513 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      64.234   TIME= 07:30:47
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =      64.984   TIME= 07:30:47
+ Shape testing revealed that 8 of the 6412 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =     102.109   TIME= 07:30:48
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =     116.797   TIME= 07:30:49
+ SOLID185 wedges are recommended only in regions of relatively low       
+ stress gradients.                                                       
+
+ *** WARNING ***                         CP =     118.672   TIME= 07:30:49
+ Previous testing revealed that 313 of the 209786 selected elements      
+ violate shape warning limits.  To review warning messages, please see   
+ the output or error file, or issue the CHECK command.                   
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.969   TIME= 07:30:49
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =    8777.984   TIME= 07:38:28
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    8784.219   TIME= 07:38:29
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =  544422.312   TIME= 15:20:34
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =  544806.625   TIME= 15:26:56
+ Parameter N_SEL already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  545180.125   TIME= 15:33:05
+ During this session a solution was performed using 24 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 24).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 24).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     
