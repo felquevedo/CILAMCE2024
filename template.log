@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  1 JUL 2024 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  3 JUL 2024 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,61 +478,249 @@ Package caption Info: Standard document class detected.
 Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 )
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty
-Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxtext.sty
+Package: newtxtext 2024/04/01 v1.744(Michael Sharpe) latex and unicode latex su
+pport for TeXGyreTermesX
+
+`newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
+nd its extensions (msharpe)
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-01-16 L3 programming layer (loader) 
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count299
+\l__pdf_internal_box=\box54
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2023-01-16 L3 Experimental document command parser
+))
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks34
+\XKV@tempa@toks=\toks35
+)
+\XKV@depth=\count300
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count301
+\decimalpart=\count302
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+) (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
+LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 24.
+LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 24.
+LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
+LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.tex)
+\ntx@tmpcnta=\count303
+\ntx@cnt=\count304
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+\tx@sixem=\dimen196
+\tx@y=\dimen197
+\tx@x=\dimen198
+\tx@tmpdima=\dimen199
+\tx@tmpdimb=\dimen256
+\tx@tmpdimc=\dimen257
+\tx@tmpdimd=\dimen258
+\tx@tmpdime=\dimen259
+\tx@tmpdimf=\dimen260
+\tx@dimA=\dimen261
+\tx@dimAA=\dimen262
+\tx@dimB=\dimen263
+\tx@dimBB=\dimen264
+\tx@dimC=\dimen265
+LaTeX Info: Redefining \oldstylenums on input line 902.
+) (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxmath.sty
+Package: newtxmath 2024/06/18 v1.75
+
+`newtxmath' v1.75, 2024/06/18 Math macros based originally on txfonts (msharpe)
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count305
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.tex)
+\tx@Isdigit=\count306
+\tx@IsAlNum=\count307
+\tx@tA=\toks36
+\tx@tB=\toks37
+\tx@su=\read3
+
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 402.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+(Font)                  OT1/cmr/m/n --> OT1/minntx/m/n on input line 402.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-\symbold=\mathgroup8
-\symitalic=\mathgroup9
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/m/n on input line 402.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/minntx/m/n --> OT1/minntx/b/n on input line 403.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/phv/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/phv/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/phv/m/n --> OT1/phv/b/n on input line 412.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 419.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+(Font)                  OT1/cmr/m/it --> OT1/minntx/m/it on input line 419.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
-LaTeX Info: Redefining \hbar on input line 50.
+(Font)                  OT1/cmr/bx/it --> OT1/minntx/m/it on input line 419.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 420.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 420.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 420.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/b/n on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/b/n on input line 422.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/minntx/m/it --> OT1/minntx/b/it on input line 423.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/pcr/m/n --> OT1/pcr/b/n on input line 426.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 534.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ntxmi/m/it on input line 534.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ntxmi/m/it on input line 534.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 535.
+\symlettersA=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 582.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 584.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 604.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 604.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 604.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 605.
+\symAMSm=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 630.
+\symsymbolsC=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 651.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 664.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 6
+64.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 664.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 664
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 664.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 665.
+\symlargesymbolsTXA=\mathgroup11
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 679.
+\tx@sbptoks=\toks38
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 902.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 903.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 904.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 905.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 910.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 911.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 913.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 915.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 919.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 920.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 991.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 992.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2057.
+LaTeX Info: Redefining \Bbbk on input line 2847.
+LaTeX Info: Redefining \not on input line 2995.
+LaTeX Info: Redefining \textsquare on input line 3025.
+LaTeX Info: Redefining \openbox on input line 3027.
+) (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup12
+\symboldletters=\mathgroup13
+\symboldsymbols=\mathgroup14
+\symboldlargesymbols=\mathgroup15
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip74
 \bibsep=\skip75
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count299
+\c@NAT@ctr=\count308
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-75.
+LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
+e 177.
 
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
+File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count300
-\l__pdf_internal_box=\box54
-) (template.aux
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 177.
+
+(template.aux
 
 LaTeX Warning: Label `sec:format' multiply defined.
 
@@ -554,24 +742,51 @@ LaTeX Warning: Label `sec:format@cref' multiply defined.
 )
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 177.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
+ 177.
+ (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
+File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
+)
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 177.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+177.
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 177.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 177.
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 177.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 177.
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 177.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -611,17 +826,17 @@ LaTeX Font Info:    ... okay on input line 175.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count301
-\scratchdimen=\dimen196
+\scratchcounter=\count309
+\scratchdimen=\dimen266
 \scratchbox=\box55
-\nofMPsegments=\count302
-\nofMParguments=\count303
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count304
-\MPscratchDim=\dimen197
-\MPnumerator=\count305
-\makeMPintoPDFobject=\count306
-\everyMPtoPDFconversion=\toks35
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen267
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks40
 )
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -641,74 +856,176 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 175.
+LaTeX Info: Command `\dddot' is already robust on input line 177.
+LaTeX Info: Command `\ddddot' is already robust on input line 177.
+Package hyperref Info: Link coloring OFF on input line 177.
  (template.out) (template.out)
 \@outlinefile=\write3
 \openout3 = `template.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+\c@mv@tabular=\count315
+\c@mv@boldtabular=\count316
 <Figures/logo.png, id=27, 218.31563pt x 135.50626pt>
 File: Figures/logo.png Graphic file (type png)
 <use Figures/logo.png>
-Package pdftex.def Info: Figures/logo.png  used on input line 184.
+Package pdftex.def Info: Figures/logo.png  used on input line 186.
 (pdftex.def)             Requested size: 122.34692pt x 75.9388pt.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 201.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 196.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 196.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
+e 203.
 
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1minntx.fd
+File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 201.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 203
+.
 
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 201.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 203
+.
 
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 201.
-
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20
-1.
+3.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 203.
+
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-01.
-
+03.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 201.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 201.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 201.
 
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 203.
 
-LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 244.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+203.
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxmia.fd
+File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+203.
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+203.
+
+(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 10.0pt on input line 203.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 7.3pt on input line 203.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 5.5pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
+(Font)              scaled to size 10.0pt on input line 207.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 231.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 231.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 262.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
+(Font)              scaled to size 8.0pt on input line 262.
 
 [1
 
 {C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figures/lo
 go.png>]
-<Figures/Mesh1.pdf, id=68, 873.38435pt x 532.69443pt>
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 266.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 266.
+<Figures/Mesh1.pdf, id=70, 873.38435pt x 532.69443pt>
 File: Figures/Mesh1.pdf Graphic file (type pdf)
 <use Figures/Mesh1.pdf>
-Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 302.
+Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 306.
 (pdftex.def)             Requested size: 480.36288pt x 292.98283pt.
 
-Overfull \hbox (25.11877pt too wide) in paragraph at lines 302--303
+Overfull \hbox (25.11877pt too wide) in paragraph at lines 306--307
  [][] 
  []
 
@@ -716,44 +1033,47 @@ Overfull \hbox (25.11877pt too wide) in paragraph at lines 302--303
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2]
-<Figures/Diagram of excavations.pdf, id=84, 326.31583pt x 150.96735pt>
+<Figures/Diagram of excavations.pdf, id=86, 326.31583pt x 150.96735pt>
 File: Figures/Diagram of excavations.pdf Graphic file (type pdf)
 <use Figures/Diagram of excavations.pdf>
 Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
- 311.
+ 315.
 (pdftex.def)             Requested size: 391.57701pt x 181.15991pt.
  [3 <./Figures/Mesh1.pdf> <./Figures/Diagram of excavations.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Diagram of excavations.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/MA_Comparisions_plastic_zones.pdf, id=134, 659.7156pt x 200.03043pt>
+<Figures/MA_Comparisions_plastic_zones.pdf, id=136, 659.7156pt x 200.03043pt>
 File: Figures/MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
 <use Figures/MA_Comparisions_plastic_zones.pdf>
 Package pdftex.def Info: Figures/MA_Comparisions_plastic_zones.pdf  used on inp
-ut line 370.
+ut line 372.
 (pdftex.def)             Requested size: 461.79778pt x 140.02032pt.
 
-Overfull \hbox (6.55367pt too wide) in paragraph at lines 370--371
+Overfull \hbox (6.55367pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
-[4 <./Figures/MA_Comparisions_plastic_zones.pdf>]
-<Figures/MA_stresspaths.pdf, id=451, 657.88791pt x 677.71976pt>
+<Figures/MA_stresspaths.pdf, id=139, 657.88791pt x 677.71976pt>
 File: Figures/MA_stresspaths.pdf Graphic file (type pdf)
 <use Figures/MA_stresspaths.pdf>
-Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 380.
+Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 382.
 (pdftex.def)             Requested size: 394.7358pt x 406.63498pt.
-<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=454, 487.8225pt x 27
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./Figures/MA_Comparisions_plastic_zones.pdf>]
+<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=458, 487.8225pt x 27
 1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf Graphic file (type 
 pdf)
 <use Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf 
- used on input line 394.
+ used on input line 399.
 (pdftex.def)             Requested size: 487.8213pt x 271.01183pt.
 
-Overfull \hbox (32.5772pt too wide) in paragraph at lines 394--395
+Overfull \hbox (32.5772pt too wide) in paragraph at lines 399--400
  [][] 
  []
 
@@ -761,16 +1081,16 @@ Overfull \hbox (32.5772pt too wide) in paragraph at lines 394--395
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./Figures/MA_stresspaths.pdf>]
-<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3604, 487.8225pt x 27
+<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3610, 487.8225pt x 27
 1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf Graphic file (type p
 df)
 <use Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf  
-used on input line 403.
+used on input line 406.
 (pdftex.def)             Requested size: 487.8213pt x 271.01183pt.
 
-Overfull \hbox (32.5772pt too wide) in paragraph at lines 403--404
+Overfull \hbox (32.5772pt too wide) in paragraph at lines 406--407
  [][] 
  []
 
@@ -780,9 +1100,10 @@ ence Profiles - EP_d1_4Ri_anotate.pdf
 pdfTeX warning: pdflatex.exe (file ./Figures/Convergence Profiles - EP_d1_4Ri_a
 notate.pdf): PDF inclusion: multiple pdfs with page group included in a single 
 page
->] (template.bbl [7]) [8] (template.aux)
+>] (template.bbl) [7] (template.aux)
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -791,27 +1112,28 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: A489E9F97B1816982468961F8E09331A;1221.
  ) 
 Here is how much of TeX's memory you used:
- 16152 strings out of 476404
- 275249 string characters out of 2789525
- 1872324 words of memory out of 3000000
- 36205 multiletter control sequences out of 15000+600000
- 538787 words of font info for 88 fonts, out of 8000000 for 9000
+ 19946 strings out of 476404
+ 328776 string characters out of 2789525
+ 1871324 words of memory out of 3000000
+ 39891 multiletter control sequences out of 15000+600000
+ 550007 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,13n,67p,2626b,590s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
-/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
-onts/type1/urw/symbol/usyr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
-nts/type1/urw/symbol/usyr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fon
-ts/type1/urw/times/utmb8a.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fon
-ts/type1/urw/times/utmr8a.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fon
-ts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (8 pages, 1432752 bytes).
+ 73i,12n,77p,2786b,491s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-t
+lf.enc}<C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/N
+ewTXBMI.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ne
+wtx/NewTXMI.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/newtx/NewTXMI7.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/newtx/txbsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/newtx/txexs.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/newtx/txmiaX.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/font
+s/type1/public/newtx/txsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/newtx/ztmb.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/newtx/ztmr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/newtx/ztmri.pfb>
+Output written on template.pdf (7 pages, 1513397 bytes).
 PDF statistics:
- 4159 PDF objects out of 4296 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
+ 4158 PDF objects out of 4296 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

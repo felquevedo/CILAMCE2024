@@ -30,23 +30,23 @@ FINISH
 !************************************************************!
 ! referente aos tuneis longitudinais
 Re 		= 1 		! [m] raio da interface entre o túnel e o maciço
-esp		= 0.03		! [m] espessura do revestimento
+esp		= 0.1		! [m] espessura do revestimento
 Lp 		= 1/3*Re 	! [m] comprimento do passo de escavação
 nd0 		= 2 		! [Lp] número de passos que representam a dimensão não suportada
 npi 		= 3 		! [Lp] número de passos escavados na primeira escavação
 Vp 		= 12.5 		! [m/dia] velocidade do passo de escavação
-revested0 	= 1 		! 0 - não reveste ultimo d0+Lp, 1 - reveste ultimo d0+Lp
-revesteface 	= 1 		! 0 - não reveste a face, 1 - reveste a face
+revested0 	= 0 		! 0 - não reveste ultimo d0+Lp, 1 - reveste ultimo d0+Lp
+revesteface 	= 0 		! 0 - não reveste a face, 1 - reveste a face
 !
 ! referente as galeiras transversais
 Re1 		= 2*Lp 		! [m] raio externo da galeria (deve multiplo de Lp)
-esp1		= 0.03		! [m] espessura do revestimento
+esp1		= 0.1		! [m] espessura do revestimento
 !Lp1 		= 1/3*re1 	! [m] passo de escavação das galerias transversais (tem que ser multiplo de (d1/2+re))
 nd01 		= 2 		! [Lp1] dimensão não suportada (deve ser multiplo de Lp1)
 npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
 Vp1 		= 12.5 		! [m/dia] velocidade de escavação
-escavagaleria 	= 1 		! escavação das galerias: 0 - não escava, 1 - escava
-revestegaleria 	= 1 		! revestimento da galeria: 0 - não reveste, 1 - reveste
+escavagaleria 	= 0 		! escavação das galerias: 0 - não escava, 1 - escava
+revestegaleria 	= 0 		! revestimento da galeria: 0 - não reveste, 1 - reveste
 pig1 		= 15 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
 !
 ! referente ao restante do domínio
@@ -54,7 +54,7 @@ l1 		= 10 		! [Re] comprimento do trecho não escavado (deve ser suficiente para
 l2 		= 100 		! [Lp] comprimento do trecho escavado
 d3 		= 20 		! [Re] altura do domínio (profundidade do eixo do túnel longitudinal)
 d4 		= 20 		! [Re] distância das bordas laterais do domínio até o eixo do tunel longitudinal
-d1 		= 4		! [Re] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
+d1 		= 16		! [Re] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
 !
 ! distância adjacente a galeria com malha livre [Lp]
 !
@@ -96,7 +96,7 @@ d1 		= 4		! [Re] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou
 !	7  - usermat3D_VP
 !	8  - usermat3D_EPVP	                 
 !
-matmacico	= 8
+matmacico	= 6
 !                                
 ! Parâmetros de todos os modelos 
 E1 		= 1500		 ! [MPa] modulo elasticidade (1,2,22,23,4,5,6,7,8)
@@ -134,11 +134,11 @@ thetavp       	= 1		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !	1 - Ansys_Elástico
 !	2 - Usermat_Viscoelastico_CEB-MC90
 !
-matrev 		= 1		! Tipo de material (0-SR,1-E,2-VE)
+matrev 		= 0		! Tipo de material (0-SR,1-E,2-VE)
 !
 ! Parâmetros para os modelos 1 e 2
 E2 		= 30000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
-nu2 		= 0.3    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
+nu2 		= 0.2    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
 !
 ! Parâmetros para o modelo 2
 fck 		= 20		! [MPa] resistência característica do concreto (2)
@@ -213,7 +213,7 @@ nLp		= 1		! [un] numero de elementos no passo escavado do túnel longitudinal
 nLp1		= 2 		! [un] numero de elementos no passo escavado da galeria
 nL1 		= 15 		! [un] numero de elementos ao longo do eixo do tunel longitudinal no trecho não escavado
 mL1 		= 1/5 		! [adm] taxa de crescimento
-nesp 		= 1 		! [un] numero de elementos na espessura do revestimento do tunel longitudinal
+nesp 		= 2 		! [un] numero de elementos na espessura do revestimento do tunel longitudinal
 nCRe 		= 16 		! [un] numero de elementos na interface entre maciço e o revestimento do tunel longitudinal (deve ser par)
 nRi 		= nCRe/2 	! [un] numero de elementos na horizontal e vertical do maciço escavado no tunel longitudinal
 mRi 		= 0 		! [adm] taxa de crecimento
@@ -1752,13 +1752,7 @@ ALLSEL,ALL
 CMSEL,S,VB5,VOLUME
 CMSEL,A,VB6,VOLUME
 CMSEL,A,VC5,VOLUME
-VSWEEP,ALL  
-!
-MSHAPE,0,3d
-MSHKEY,1
-TYPE, tipoelem
-ALLSEL,ALL
-CMSEL,S,VC6,VOLUME
+CMSEL,A,VC6,VOLUME
 VSWEEP,ALL      
 !
 ! malha mapeada da região a posteriori da galeria
@@ -1802,13 +1796,13 @@ CM,Casca1,ELEM
 ! gerando grupo de elementos com o revestimento das galerias transversais
 LOCAL,12,1,re,0,lt-l2/2,0,0,90
 VSEL,ALL
-VSEL,S,LOC,Z,-esp,d1/2
+VSEL,S,LOC,Z,0,d1/2
 VSEL,R,LOC,X,0,re1
 VSEL,R,LOC,Y,0,180
 CM,VG1,VOLUME
 ESLV,S
 ESEL,R,CENT,Z,-re,d1/2-re
-ESEL,R,CENT,X,ri1,re1-0.001
+ESEL,R,CENT,X,ri1,re1-0.01
 ESEL,R,CENT,Y,0,180
 CM,Casca2,ELEM
 !

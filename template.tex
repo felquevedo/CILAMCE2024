@@ -69,7 +69,9 @@
 \usepackage{cleveref}
 \usepackage{./pkg-crefNames}
 \usepackage[labelsep=period]{caption}
-\usepackage{mathptmx}
+%\usepackage{mathptmx}
+\usepackage{newtxtext,newtxmath}
+\usepackage{bm}
 
 
 
@@ -278,12 +280,11 @@ which $I_1$ is the first invariant of the stress tensor, $J_2$ the second invari
 \end{equation}
 where $k = (1+\sin{\phi})/(1-\sin{\phi})$. The internal variable $\alpha$ is the equivalent plastic strain $\straineqp$ used to simulate strain hardening/softening phenomena. However, for this study, we adopt perfect plasticity, meaning that c is a constant. 
 
-A linear elastic constitutive model is used for the concrete lining, which can be expressed, within the framework of infinitesimal analysis, as:
+A linear elastic constitutive model is used for the concrete lining, which can be expressed, within the framework of infinitesimal analysis, as $\dstress = \Dll : \dstrain$, where, $\dstraine$ and $\Dll$ are respectively the elastic strain rate and the fourth-order isotrpoic elastic constitutive tensor defined by the concrete lining Poisson ratio $\nu_c$ and elastic Young modulus $E_c$. In the analyses, for comparisons, the tunnel stiffness will be given by the following expression:
 
 \begin{equation} \label{eq:8}
-	\dstress = \Dll : \dstraine,
+	K_c = \frac{E_c}{1+\nu_c}\frac{R_t^2-(R_t-e_t)^2}{(1-2\nu_c)R_t+(R_t-e_t)^2},
 \end{equation}
-where, $\dstraine$ and $\Dll$ are respectively the elastic strain rate and the fourth-order isotrpoic elastic constitutive tensor defined by the concrete lining Poisson ratio $\nu_c = 0.2$ and elastic Young modulus $E_c$.
 %\begin{equation} \label{eq:9}
 %	E_c = 21500\left[(f_{ck}+8)/10\right]^{1/3}
 %\end{equation}
@@ -295,16 +296,19 @@ where, $\dstraine$ and $\Dll$ are respectively the elastic strain rate and the f
 \section{Spatial and time discretization of the domain}\label{sec:format}
 % --------------------------------------------------------------------------
 
-The geometry material domain $\Omega$ considered for the finite element simulations, including tunnelling and deformation analysis, is defined by a parallelepiped volume of dimensions $\left(L_1+L_2 \right ) \times L_3 \times d_3$ (\cref{Mesh1}). Owing to the symmetry of the problem, only the material portion $\left\{x \le 0, y \ge 0\right\}$   is considered for F.E discretization and analysis. Referring to the notations of \cref{Mesh1}, $d_1$ is the distance between the axes of longitudinal tunnels, $L_2$  represents the total length  along longitudinal direction $\ez$ of the cylindrical  volume to be excavated that is  considered in the numerical simulation, $d_3$ is the thickness along vertical direction $\ey$ of material domain $\Omega$, $L_1$ stands for the length of unexcavated region after total excavation process, $L_3$ is the total length along transversal direction $\ex$ of discretized material domain, $d_2$ characterizes the location of the circular transverse axis gallery that intersects the  longitudinal tunnel at $z = L_1+d_2$. The length of the excavation step adopted  will be denoted by $L_{pt}$. The mesh used in the simulations consists of $119740$ or $221104$ total elements (hexahedra and tetrahedra), depending on the value of spacing between longitudinal tunnels. To increase the accuracy of the model predictions in the intersection zone, the region surrounding the transverse gallery (including part of the longitudinal tunnel) is discretized by means 10-node quadratic tetrahedral elements, whereas 8-node trilinear hexahedral elements are used for the remaining part of the structure.   Furthermore, a refined meshing is used for discretizing the zones surrounding the longitudinal and transverse gallery. These zones whose mechanical state is significantly affected by the tunnelling process are indicated by light gray color in \cref{Mesh1}. Two values shall be considered for the spacing $d_1$ in the numerical simulations, namely  $d_1 = 16R_t$ and $4R_t$. The layer of concrete lining of thickness $e_g$ installed along the gallery wall is indicated by red color in the figure. Without introducing additional modeling restriction and for the sake of simplicity, the value of the gallery radius is fixed to $R_g = 2/3R_t$. The same lining system (same concrete material and layer thickness) is considered for both longitudinal tunnels and gallery. As regards the discretization of the region surrounding the gallery, parameters $d_5$ and $d_1$ define the size in a $yz$ plane of the transition region involving the tetrahedral finite elements.
+The geometry material domain $\Omega$ considered for the finite element simulations is defined by a parallelepiped volume of dimensions $\left(L_1+L_2 \right ) \times L_3 \times d_3$ (\cref{Mesh1}). Owing to the symmetry of the problem, only the material portion $\left\{x \le 0, y \ge 0\right\}$   is considered for F.E discretization and analysis. Referring to the notations of \cref{Mesh1}, $d_1$ is the distance between the axes of longitudinal tunnels, $L_2$  represents the total length  along longitudinal direction $\ez$ of the cylindrical  volume to be excavated that is  considered in the numerical simulation, $d_3$ is the thickness along vertical direction $\ey$ of material domain $\Omega$, $L_1$ stands for the length of unexcavated region after total excavation process, $L_3$ is the total length along transversal direction $\ex$ of discretized material domain, $d_2$ characterizes the location of the circular transverse axis gallery that intersects the  longitudinal tunnel at $z = L_1+d_2$. The length of the excavation step adopted  will be denoted by $L_{pt}$. The mesh used in the simulations consists of $119740$ or $221104$ total elements (hexahedra and tetrahedra), depending on the value of spacing between longitudinal tunnels. To increase the accuracy of the model predictions in the intersection zone, the region surrounding the transverse gallery (including part of the longitudinal tunnel) is discretized by means 10-node quadratic tetrahedral elements, whereas 8-node trilinear hexahedral elements are used for the remaining part of the structure.   Furthermore, a refined meshing is used for discretizing the zones surrounding the longitudinal and transverse gallery. These zones whose mechanical state is significantly affected by the tunnelling process are indicated by light gray color in \cref{Mesh1}. Two values shall be considered for the spacing $d_1$ in the numerical simulations, namely  $d_1 = 16R_t$ and $4R_t$. The layer of concrete lining of thickness $e_g$ installed along the gallery wall is indicated by red color in the figure. Without introducing additional modeling restriction and for the sake of simplicity, the value of the gallery radius is fixed to $R_g = 2/3R_t$. The same lining system (same concrete material and layer thickness) is considered for both longitudinal tunnels and gallery. As regards the discretization of the region surrounding the gallery, parameters $d_5$ and $d_1$ define the size in a $yz$ plane of the transition region involving the tetrahedral finite elements. The initial stress state prevaling in the rock mass prior to the tunnel excavation process is defined by constant vertical and horziontal geostatic stress $\sigma_v$ and $\sigma_h$ taking the following form:
+\begin{equation} \label{eq:stress0}
+	\stress_0 = -\sigma_v \ey \otimes \ey - \sigma_h\left( \onell - \ey \otimes \ey \right)
+\end{equation}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.55]{Figures/Mesh1.pdf}
-	\caption{Geometry, mesh and boundary conditions of domain and details of a) longitudinal tunnel cross-section for configuration $d_1=4R_t$ and gallery cross-section for configuratoins b) $d_1=16R_t$ and c) $d_1=4R_t$.}
+	\caption{Geometry, mesh and boundary conditions of domain and details of a) longitudinal tunnel cross-section for configuration $d_1=4R_t$ and gallery cross-section for configurations b) $d_1=16R_t$ and c) $d_1=4R_t$.}
 	\label{Mesh1}
 \end{figure}
 \FloatBarrier
-As mentioned previously, the tunnelling process, including the excavation steps and lining installation, is simulated resorting to the activation-deactivation method shown in the schematic representation in \cref{Diagram of excavations}. Each excavation step is modeled by deactivation of the corresponding elements (the elements stiffness is reduced by a factor $1E8$), whereas installation of elements of lining at a distance $d_{0t}$ from the excavation face (unlined length) is achieved through activation of the corresponding elements by assigning them concrete properties. In this Figure, $n_p$ is the total number of excavation steps and $n_{pig}$ represents the number of longitudinal tunnel excavation steps prior to gallery excavation. After achievement of the $n_{pig}$ excavation steps, the excavation of the gallery is initiated starting from the longitudinal tunnel wall. Referring to the notation of \cref{Diagram of excavations},  $L_{pg}$ is the considered step length for the gallery excavation, $V_{pg}$ is the speed of the gallery excavation, and $d_{0g}$ is the unlined length of the gallery. Each gallery excavation step is associated with pseudotime interval $t_{pg} = V_{pg}/L_{pg}$. After the gallery excavation is completed, we proceed to further excavation steps of the longitudinal tunnel. The main parameters defining the geometry domain as well as and excavation process and lining installation are summarized in Table~\ref{table1}.
+As mentioned previously, the tunnelling process, including the excavation steps and lining installation, is simulated resorting to the activation-deactivation method shown in the schematic representation in \cref{Diagram of excavations}. Each excavation step is modeled by deactivation of the corresponding elements (the elements stiffness is reduced by a factor $1E8$), whereas installation of elements of lining at a distance $d_{0t}$ from the excavation face (unlined length) is achieved through activation of the corresponding elements by assigning them concrete properties. In this Figure, $n_p$ is the total number of excavation steps and $n_{pig}$ represents the number of longitudinal tunnel excavation steps prior to gallery excavation. After achievement of the $n_{pig}$ excavation steps, the excavation of the gallery is initiated starting from the longitudinal tunnel wall. Referring to the notation of \cref{Diagram of excavations},  $L_{pg}$ is the considered step length for the gallery excavation and $d_{0g}$ is the unlined length of the gallery. After the gallery excavation is completed, we proceed to further excavation steps of the longitudinal tunnel. The main parameters defining the geometry domain as well as and excavation process and lining installation are summarized in Table~\ref{table1}.
 
 \begin{figure}[h!]
 	\centering
@@ -330,27 +334,25 @@ As mentioned previously, the tunnelling process, including the excavation steps 
 		\multicolumn{4}{c}{Longitudinal tunnels} \\
 		\hline
 		Radius of the longitudinal tunnel & $R_t$ & m & $R_t$ \\
-		Thickness of the lining & $e_t$ & m & $0.1R_t$ \\
-		Step length of the excavation process & $L_{pt}$ & m & $1/3R_t$ \\
+		Thickness of the lining & $e_t$ & m & $0.1R_t$, $0.03R_t$ \\
+		Length of the excavation step & $L_{pt}$ & m & $1/3R_t$ \\
 		Unlined length & $d_{0t}$ & m & $2L_{pt}$ \\
-		Speed of the excavation face & $V_{pt}$ & m/day & $12.5$ \\
-		Excavation step time & $t_p$ & day & $L_{pt}/V_{pt}$ \\
 		\hline
 		\multicolumn{4}{c}{Gallery} \\
 		\hline
 		Radius of the gallery & $R_{g}$ & m & $2/3R_t$ \\
-		Thickness of the concrete lining & $e_g$ & m & $0.1R_t$ \\
-		Step length of the excavation process & $L_{pg}$ & m & $1/3R_g$ \\
+		Thickness of the lining & $e_g$ & m & $e_t$ \\
+		Length of the excavation step & $L_{pg}$ & m & $1/3R_g$ \\
 		Unlined length & $d_{0g}$ & m & $2L_{pg}$ \\
-		Speed of the excavation face & $V_{pg}$ & m/day & $12.5$ \\
 		Number of steps that starts gallery excavation & $n_{pig}$ & un & $15$ \\
 		\hline
 		\multicolumn{4}{c}{Rest of domain} \\
 		\hline
-		Distance between longitudinal tunnel axes & $d_1$ & m & $4R_t, ~16R_t$ \\
-		Length of the unexcavated region & $L_1$ & m & $10R_t$ \\
-		Total excavated length & $L_2$ & m & $100L_{pt}$ \\
-		Domain height & $L_3$ & m & $20R_t$ \\
+		Distance between the axes of longitudinal tunnels & $d_1$ & m & $4R_t, ~16R_t$ \\
+		Thickness along vertical direction $\ey$ & $d_3$ & m & $20R_t$ \\
+		Length of unexcavated region & $L_1$ & m & $10R_t$ \\
+		Total excavated length along direction $\ez$ & $L_2$ & m & $100L_{pt}$ \\
+		Total length along transversal direction $\ex$ & $L_3$ & m & $20R_t$ \\
 		\hline
 	\end{tabular}
 	\normalsize
@@ -361,7 +363,7 @@ As mentioned previously, the tunnelling process, including the excavation steps 
 \section{Verification with unlined twin tunnel in elastoplastic medium}\label{sec:format}
 % --------------------------------------------------------------------------
 
-In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. This solution does not assume necessarily equal initial stresses, and the initial stress along the tunnel axis is assumed as the middle stress, i.e., $\sigma_{zz} = (\sigma_v+\sigma_h)/2$. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. In this analytical solution, it is assumed that the plastic zones around each tunnel are isolated from each other and completely surround each tunnel.
+In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. In this analytical solution, it is assumed that the plastic zones around each tunnel are isolated from each other and completely surround each tunnel.
 
 \cref{MA_FIG1} shows the comparison between the 3D F.E. Solution (from a far behind the excavation face) and the analytical solution for plastic zone boundary provided in [\citenum{MA2020}]. For these analysis, $R_t = 1$ m, $d_1/2R_t = 2.5$, Young's modulus $E=20$ GPa, Poisson's ratio $\nu = 0.3$ and, friction angle $\phi = 30^\circ$. The boundary of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
 
@@ -386,29 +388,26 @@ The stresses obtained in the 3D numerical simulation are compared quantitatively
 % --------------------------------------------------------------------------
 \section{Numerical Results and Discussion}\label{sec:format}
 % --------------------------------------------------------------------------
-
-To study the effect of the lining, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} show the elastoplastic rock mass (EP) under various conditions: without lining (NL), with a moderately stiff elastic lining ($K_c = 1027$ MPa), and with a highly stiff lining ($K_c = 3660$ MPa) with (WG) and without gallary (NG).
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=1]{Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf}
-	\caption{Convergence Profiles - elastoplastic rock mass (EP) without lining (NL) with a highly stiff elastic lining ($K_c = 3660$ MPa) and a moderately stiff elastic lining ($K_c = 1027$ MPa), without gallery (NG) and with gallery (WG) for $d_1 = 16R_t$.}.
-	\label{EP_d1_16Ri}
-\end{figure}
-\FloatBarrier
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=1]{Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf}
-	\caption{Convergence Profiles - elastoplastic rock mass (EP) without lining (NL) with a highly stiff elastic lining ($K_c = 3660$ MPa) and a moderately stiff elastic lining ($K_c = 1027$ MPa), without gallery (NG) and with gallery (WG) for $d_1 = 4R_t$.}.
-	\label{EP_d1_4Ri}
-\end{figure}
-\FloatBarrier
+To develop the analysis, we employed Young's modulus $E = 1500$ MPa, Poisson ratio $\nu \rightarrow 0.5$, $c = 4\sqrt{3}/2$, $\phi = 0^\circ$ and, isotropic initial stresses $\sigma_v = \sigma_h = 9$ MPa, which correspond to the constitutive parameters and tunneling conditions in the clay rock mass in the Paris basin (specifically in Aisne), as detailed in \citet{piepi1995} and \citet{rousset1988}. For the lining, two stiffness values will be considered: $K_c = 1027$ MPa and $K_c = 3660$ MPa which assuming a tunnel radius $R_t = 1$ m, $E_c = 30303$ MPa, $\nu_c = 0.3$, these values corresponds to thicknesses $e_t$ of $0.1$ m and $0.03$ m. Denoting by $u_y$ the displacement component following the  $y$-axis, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} displays the convergence curves $U_B = -u_y(B)/R_t$ that characterize the inward movement at the tunnel roof $B(x=0,y=R_t,z)$ as a function of normalized longitudinal distance to the facing for different conditions: without lining (NL), with elastic lining (EL), with (WG) and without gallary (NG) for $d_1 = 16R_t$ and $d_1 = 4R_t$, respectively.
 
 For the single tunnel, a high stiffness lining (black solid line) decreases convergence by approximately 35\% compared to the unlined model (black dashed line). Conversely, a moderately stiff lining (black dotted line) increases convergence by 12\% compared to the rigid lining.
 
 When $d_1 = 16R_t$ between the twin tunnels (blue and yellow lines), the results of $U_{eq}$ are similar to the isolated tunnel (black line). However, with a distance reduced to $d_1 = 4R_t$, the interaction between the tunnels becomes significant. A smaller $d_1$, the high stiffness lining (solid yellow and blue lines) can restrict convergence by up to 46\% of the unlined (dashed yellow and blue lines) convergence. A moderate stiffness lining (dotted lines) leads to an increase of up to 16\% in convergence compared to the high stiffness lining (solid lines).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf}
+	\caption{Convergence Profiles - for $d_1 = 16R_t$.}.
+	\label{EP_d1_16Ri}
+\end{figure}
+\FloatBarrier
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf}
+	\caption{Convergence Profiles - for $d_1 = 4R_t$.}.
+	\label{EP_d1_4Ri}
+\end{figure}
+\FloatBarrier
 
 When comparing results between twin lined tunnels with spacings of $16R_t$ and $4R_t$, differences of 6\% with high stiffness lining (solid yellow and blue lines), 10\% with moderate stiffness lining (dotted yellow and blue lines), and 30\% without lining (dashed yellow and blue lines) are observed. These results show the direct impact of lining stiffness and the distance between twin tunnels on $U_{eq}$ convergence.
 

@@ -65,38 +65,6 @@ ANSYS.
 \newblock {\em ANSYS Programmer's Reference, release 15.0}.
 \newblock Canonsburg, Pennsylvania, 2013.
 
-\bibitem[Rousset, 1988]{rousset1988}
-G. Rousset.
-\newblock {\em Comportement mecanique des argiles profondes: Application au
-  stockage de d{\'e}chets radioactifts}.
-\newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
-  Chauss{\'e}es, Paris, France, 1988.
-
-\bibitem[Nguyen~Minh and Rousset, 1987]{Nguyen1987}
-D. Nguyen~Minh and G. Rousset.
-\newblock Influence of instantaneous failure on time dependent behavior of
-  underground galleries.
-\newblock In {\em The 28th U.S. Symposium on Rock Mechanics (USRMS)}, pp.
-  ARMA--87--0663, Tucson, Arizona, 1987.
-
-\bibitem[Giraud and Rousset, 1996]{GIRAUD1996}
-A. Giraud and G. Rousset.
-\newblock Time-dependent behaviour of deep clays.
-\newblock {\em Engineering Geology}, vol. 41, n. 1, pp. 181--195, 1996.
-
-\bibitem[Quevedo et~al., 2022]{quevedo2022b}
-F.~P.~M. Quevedo, D. Bernaud, and S. Maghous.
-\newblock Numerical integration scheme for coupled elastoplastic–viscoplastic
-  constitutive law for tunnels.
-\newblock {\em International Journal of Geomechanics}, vol. 22, n. 10, 2022.
-
-\bibitem[Quevedo, 2021]{quevedo2022thesis}
-F.~P.~M. Quevedo.
-\newblock {\em An{\'a}lise computacional das deformações em t{\'u}neis
-  profundos considerando o acoplamento plasticidade-viscoplasticidade}.
-\newblock Ph.{D}. {T}hesis (in portuguese), Federal University of Rio Grande do
-  Sul, Porto Alegre, Brazil, 2021.
-
 \bibitem[Bernaud, 1991]{bernaud1991}
 D. Bernaud.
 \newblock {\em Tunnels profonds dans les milieux viscoplastiques: approches
@@ -104,10 +72,18 @@ D. Bernaud.
 \newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
   Chauss{\'e}es, Paris, France, 1991.
 
-\bibitem[Perzyna, 1966]{perzyna1966}
-P. Perzyna.
-\newblock Fundamental problems in viscoplasticity.
-\newblock In {\em Advances in applied mechanics}, volume~9, pp.  243--377.
-  Elsevier, 1966.
+\bibitem[Piepi, 1995]{piepi1995}
+G.~T. Piepi.
+\newblock {\em Comportement viscoplastique avec rupture des argiles raides.
+  Applications aux ouvrages souterrains}.
+\newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
+  Chauss{\'e}es, Paris, France, 1995.
+
+\bibitem[Rousset, 1988]{rousset1988}
+G. Rousset.
+\newblock {\em Comportement mecanique des argiles profondes: Application au
+  stockage de d{\'e}chets radioactifts}.
+\newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
+  Chauss{\'e}es, Paris, France, 1988.
 
 \end{thebibliography}
