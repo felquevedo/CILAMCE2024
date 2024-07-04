@@ -326,7 +326,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=1027$, single tunnel, $U_C=$ 1.03'
+lblcoluna   = 'NG, EL, $K_c=969$, single tunnel, $U_C=$ 1.03'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -344,7 +344,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3660$, single tunnel, $U_C=$ 0.92'
+lblcoluna   = 'NG, EL, $K_c=3403$, single tunnel, $U_C=$ 0.92'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -380,7 +380,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=1027$, $U_C=$ 1.03'
+lblcoluna   = 'NG, EL, $K_c=969$, $U_C=$ 1.03'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -398,7 +398,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3660$, $U_C=$ 0.92'
+lblcoluna   = 'NG, EL, $K_c=3403$, $U_C=$ 0.92'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -434,7 +434,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=1027$, $U_C=$ 1.03'
+lblcoluna   = 'WG, EL, $K_c=969$, $U_C=$ 1.03'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -452,7 +452,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=3660$, $U_C=$ 0.92'
+lblcoluna   = 'WG, EL, $K_c=3403$, $U_C=$ 0.92'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -513,7 +513,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=1027$, single tunnel, $U_C=$ 1.03'
+lblcoluna   = 'NG, EL, $K_c=969$, single tunnel, $U_C=$ 1.03'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -531,7 +531,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3660$, single tunnel, $U_C=$ 0.92'
+lblcoluna   = 'NG, EL, $K_c=3403$, single tunnel, $U_C=$ 0.92'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -567,7 +567,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=1027$, $U_C=$ 1.13'
+lblcoluna   = 'NG, EL, $K_c=969$, $U_C=$ 1.13'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -585,7 +585,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3660$, $U_C=$ 0.98'
+lblcoluna   = 'NG, EL, $K_c=3403$, $U_C=$ 0.98'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -621,7 +621,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=1027$, $U_C=$ 1.13'
+lblcoluna   = 'WG, EL, $K_c=969$, $U_C=$ 1.13'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -639,7 +639,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=3660$, $U_C=$ 0.98'
+lblcoluna   = 'WG, EL, $K_c=3403$, $U_C=$ 0.98'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1

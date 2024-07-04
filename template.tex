@@ -352,7 +352,7 @@ As mentioned previously, the tunnelling process, including the excavation steps 
 		Thickness along vertical direction $\ey$ & $d_3$ & m & $20R_t$ \\
 		Length of unexcavated region & $L_1$ & m & $10R_t$ \\
 		Total excavated length along direction $\ez$ & $L_2$ & m & $100L_{pt}$ \\
-		Total length along transversal direction $\ex$ & $L_3$ & m & $20R_t$ \\
+		Total length along transversal direction $\ex$ & $L_3$ & m & $20R_t + d_1/2 $ \\
 		\hline
 	\end{tabular}
 	\normalsize
@@ -388,7 +388,7 @@ The stresses obtained in the 3D numerical simulation are compared quantitatively
 % --------------------------------------------------------------------------
 \section{Numerical Results and Discussion}\label{sec:format}
 % --------------------------------------------------------------------------
-To develop the analysis, we employed Young's modulus $E = 1500$ MPa, Poisson ratio $\nu \rightarrow 0.5$, $c = 4\sqrt{3}/2$, $\phi = 0^\circ$ and, isotropic initial stresses $\sigma_v = \sigma_h = 9$ MPa, which correspond to the constitutive parameters and tunneling conditions in the clay rock mass in the Paris basin (specifically in Aisne), as detailed in \citet{piepi1995} and \citet{rousset1988}. For the lining, two stiffness values will be considered: $K_c = 1027$ MPa and $K_c = 3660$ MPa which assuming a tunnel radius $R_t = 1$ m, $E_c = 30303$ MPa, $\nu_c = 0.3$, these values corresponds to thicknesses $e_t$ of $0.1$ m and $0.03$ m. Denoting by $u_y$ the displacement component following the  $y$-axis, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} displays the convergence curves $U_B = -u_y(B)/R_t$ that characterize the inward movement at the tunnel roof $B(x=0,y=R_t,z)$ as a function of normalized longitudinal distance to the facing for different conditions: without lining (NL), with elastic lining (EL), with (WG) and without gallary (NG) for $d_1 = 16R_t$ and $d_1 = 4R_t$, respectively.
+To develop the analysis, we employed Young's modulus $E = 1500$ MPa, Poisson ratio $\nu \rightarrow 0.5$, $c = 4\sqrt{3}/2$, $\phi = 0^\circ$ and, isotropic initial stresses $\sigma_v = \sigma_h = 9$ MPa, which correspond to the constitutive parameters and tunneling conditions in the clay rock mass in the Paris basin (specifically in Aisne), as detailed in \citet{piepi1995} and \citet{rousset1988}. For the lining, two stiffness values will be considered: $K_c = 969$ MPa and $K_c = 3403$ MPa which assuming a tunnel radius $R_t = 1$ m, $E_c = 30303$ MPa, $\nu_c = 0.2$, these values corresponds to thicknesses $e_t$ of $0.1$ m and $0.03$ m. Denoting by $u_y$ the displacement component following the  $y$-axis, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} displays the convergence curves $U_B = -u_y(B)/R_t$ that characterize the inward movement at the tunnel roof $B(x=0,y=R_t,z)$ as a function of normalized longitudinal distance to the facing for different conditions: without lining (NL), with elastic lining (EL), with (WG) and without gallary (NG) for $d_1 = 16R_t$ and $d_1 = 4R_t$, respectively.
 
 For the single tunnel, a high stiffness lining (black solid line) decreases convergence by approximately 35\% compared to the unlined model (black dashed line). Conversely, a moderately stiff lining (black dotted line) increases convergence by 12\% compared to the rigid lining.
 
