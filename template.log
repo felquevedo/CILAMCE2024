@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  4 JUL 2024 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  5 JUL 2024 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1044,7 +1044,7 @@ Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
 pdfTeX warning: pdflatex.exe (file ./Figures/Diagram of excavations.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/MA_Comparisions_plastic_zones.pdf, id=136, 659.7156pt x 200.03043pt>
+<Figures/MA_Comparisions_plastic_zones.pdf, id=137, 659.7156pt x 200.03043pt>
 File: Figures/MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
 <use Figures/MA_Comparisions_plastic_zones.pdf>
 Package pdftex.def Info: Figures/MA_Comparisions_plastic_zones.pdf  used on inp
@@ -1055,7 +1055,7 @@ Overfull \hbox (6.55367pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
-<Figures/MA_stresspaths.pdf, id=139, 657.88791pt x 677.71976pt>
+<Figures/MA_stresspaths.pdf, id=142, 657.88791pt x 677.71976pt>
 File: Figures/MA_stresspaths.pdf Graphic file (type pdf)
 <use Figures/MA_stresspaths.pdf>
 Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 382.
@@ -1064,7 +1064,7 @@ Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 382.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4 <./Figures/MA_Comparisions_plastic_zones.pdf>]
-<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=458, 487.8225pt x 27
+<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=485, 487.8225pt x 27
 1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf Graphic file (type 
 pdf)
@@ -1081,7 +1081,7 @@ Overfull \hbox (32.5772pt too wide) in paragraph at lines 399--400
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./Figures/MA_stresspaths.pdf>]
-<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3610, 487.8225pt x 27
+<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3637, 487.8225pt x 27
 1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf Graphic file (type p
 df)
@@ -1131,9 +1131,9 @@ s/type1/public/newtx/txsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/newtx/ztmb.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/newtx/ztmr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/newtx/ztmri.pfb>
-Output written on template.pdf (7 pages, 1545848 bytes).
+Output written on template.pdf (7 pages, 1551885 bytes).
 PDF statistics:
- 4170 PDF objects out of 4296 (max. 8388607)
+ 4197 PDF objects out of 4296 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

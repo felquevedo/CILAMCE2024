@@ -363,19 +363,19 @@ As mentioned previously, the tunnelling process, including the excavation steps 
 \section{Verification with unlined twin tunnel in elastoplastic medium}\label{sec:format}
 % --------------------------------------------------------------------------
 
-In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. In this analytical solution, it is assumed that the plastic zones around each tunnel are isolated from each other and completely surround each tunnel.
+In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. The stress solution for twin tunnels was formulated on the premise that the plastic zone around each tunnel fully encloses the tunnel edge, with the two plastic zones remaining separate and unconnected.
 
-\cref{MA_FIG1} shows the comparison between the 3D F.E. Solution (from a far behind the excavation face) and the analytical solution for plastic zone boundary provided in [\citenum{MA2020}]. For these analysis, $R_t = 1$ m, $d_1/2R_t = 2.5$, Young's modulus $E=20$ GPa, Poisson's ratio $\nu = 0.3$ and, friction angle $\phi = 30^\circ$. The boundary of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
+\cref{MA_FIG1} shows the comparison between the 3D F.E. Solution (from a far behind the excavation face) and the analytical solution for plastic zone boundary provided in [\citenum{MA2020}]. For these analysis, $R_t = 1$ m, $d_1/2R_t = 2.5$, rock Young's modulus $E=20$ GPa, Poisson's ratio $\nu = 0.3$ and, friction angle $\phi = 30^\circ$. This analysis shows that finite element modeling produces predictions very similar with those shown in \ref{MA_FIG1}. In addition, the results show that lower values of cohesion $c$ result in larger plastic zones.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.7]{Figures/MA_Comparisions_plastic_zones.pdf}
-	\caption{Comparisons between the numerical and analytical solution for the plastic zones considering $d_1/2R_t = 2.5$ and $\phi = 30^\circ$ for different initial conditions and cohesion values.}.
+	\caption{The plastic zone extent obtained from the present F.E. simulations and from the stress solution provided in [\citenum{MA2020}].}
 	\label{MA_FIG1}
 \end{figure}
 \FloatBarrier
 
-The stresses obtained in the 3D numerical simulation are compared quantitatively in \cref{MA_stresspaths} with the stresses derived from the elastoplastic analytical solution in [\citenum{MA2020}]. This figure shows the radial and orthoradial stresses in polar coordinates $(r,\theta)$ considering three paths $\theta = 45^\circ, 90^\circ \text{~and~} 135^\circ$. Although the criterion adopted for numerical simulation is the Drucker-Prager inscribed in Mohr-Coulomb, the solution agrees very well with the analytical solution in the plastic zone.
+Further comparisons are illustrated in Fig.~\ref{MA_stresspaths}, which shows the radial $\sigma_{rr}$ and orthoradial $\sigma_{\theta \theta}$ stress components along three radial paths defined in polar coordinates by $\theta = 45^\circ$, $90^\circ$, and $135^\circ$. It is important to note that although the finite element simulations use the Drucker-Prager yield surface inscribed within the Mohr-Coulomb surface (as used in the solution by Ma et al. \citenum{MA2020}), the numerical predictions closely match the analytical stress solution.
 
 \begin{figure}[h!]
 	\centering
