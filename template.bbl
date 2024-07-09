@@ -72,18 +72,25 @@ D. Bernaud.
 \newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
   Chauss{\'e}es, Paris, France, 1991.
 
-\bibitem[Piepi, 1995]{piepi1995}
-G.~T. Piepi.
-\newblock {\em Comportement viscoplastique avec rupture des argiles raides.
-  Applications aux ouvrages souterrains}.
-\newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
-  Chauss{\'e}es, Paris, France, 1995.
-
 \bibitem[Rousset, 1988]{rousset1988}
 G. Rousset.
 \newblock {\em Comportement mecanique des argiles profondes: Application au
   stockage de d{\'e}chets radioactifts}.
 \newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
   Chauss{\'e}es, Paris, France, 1988.
+
+\bibitem[Giraud, 1993]{giraud1993}
+A. Giraud.
+\newblock {\em Couplages thermo-hydro-m{\'e}caniques dans les poreux peu
+  perm{\'e}ables: application aux argiles profondes}.
+\newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
+  Chauss{\'e}es, Paris, France, 1993.
+
+\bibitem[Piepi, 1995]{piepi1995}
+G.~T. Piepi.
+\newblock {\em Comportement viscoplastique avec rupture des argiles raides.
+  Applications aux ouvrages souterrains}.
+\newblock Ph.{D}. {T}hesis (in french), Ecole Nationale des Ponts et
+  Chauss{\'e}es, Paris, France, 1995.
 
 \end{thebibliography}
