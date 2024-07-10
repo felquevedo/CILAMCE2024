@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  9 JUL 2024 09:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  10 JUL 2024 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,13 +712,13 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count308
 )
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 177.
+e 176.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 177.
+(Font)              scaled to size 10.0pt on input line 176.
 
 (template.aux
 
@@ -742,51 +742,51 @@ LaTeX Warning: Label `sec:format@cref' multiply defined.
 )
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 177.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 176.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 177.
+ 176.
  (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 176.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-177.
+176.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 176.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 177.
+ 176.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 176.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 177.
+e 176.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    ... okay on input line 176.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -856,9 +856,9 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 177.
-LaTeX Info: Command `\ddddot' is already robust on input line 177.
-Package hyperref Info: Link coloring OFF on input line 177.
+LaTeX Info: Command `\dddot' is already robust on input line 176.
+LaTeX Info: Command `\ddddot' is already robust on input line 176.
+Package hyperref Info: Link coloring OFF on input line 176.
  (template.out) (template.out)
 \@outlinefile=\write3
 \openout3 = `template.out'.
@@ -870,229 +870,213 @@ Package caption Info: End \AtBeginDocument code.
 <Figures/logo.png, id=27, 218.31563pt x 135.50626pt>
 File: Figures/logo.png Graphic file (type png)
 <use Figures/logo.png>
-Package pdftex.def Info: Figures/logo.png  used on input line 186.
+Package pdftex.def Info: Figures/logo.png  used on input line 185.
 (pdftex.def)             Requested size: 122.34692pt x 75.9388pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 196.
+(Font)              scaled to size 10.0pt on input line 195.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 196.
+(Font)              scaled to size 14.4pt on input line 195.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
-e 203.
+e 202.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 203
+(Font)              scaled to size 5.5pt on input line 202.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 202
 .
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 203
+LaTeX Font Info:    Trying to load font information for U+msb on input line 202
 .
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20
-3.
+2.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 203.
+(Font)              size <5> substituted on input line 202.
 
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-03.
+02.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 203.
+(Font)              size <5> substituted on input line 202.
 
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-203.
+202.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-203.
+202.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-203.
+202.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 10.0pt on input line 203.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.3pt on input line 203.
+(Font)              scaled to size 7.3pt on input line 202.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 5.5pt on input line 203.
+(Font)              scaled to size 5.5pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 207.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 231.
+(Font)              scaled to size 12.0pt on input line 230.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 231.
+(Font)              scaled to size 12.0pt on input line 230.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 262.
+(Font)              scaled to size 8.0pt on input line 247.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.0pt on input line 262.
+(Font)              scaled to size 8.0pt on input line 247.
 
 [1
 
 {C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figures/lo
 go.png>]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 266.
+(Font)              scaled to size 7.3pt on input line 251.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 266.
-<Figures/Mesh1.pdf, id=70, 873.38435pt x 532.69443pt>
+(Font)              scaled to size 5.5pt on input line 251.
+<Figures/Mesh1.pdf, id=72, 873.38435pt x 532.69443pt>
 File: Figures/Mesh1.pdf Graphic file (type pdf)
 <use Figures/Mesh1.pdf>
-Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 306.
-(pdftex.def)             Requested size: 480.36288pt x 292.98283pt.
-
-Overfull \hbox (25.11877pt too wide) in paragraph at lines 306--307
- [][] 
- []
+Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 295.
+(pdftex.def)             Requested size: 436.6911pt x 266.34656pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2]
-<Figures/Diagram of excavations.pdf, id=86, 326.31583pt x 150.96735pt>
+<Figures/Diagram of excavations.pdf, id=89, 326.31583pt x 150.96735pt>
 File: Figures/Diagram of excavations.pdf Graphic file (type pdf)
 <use Figures/Diagram of excavations.pdf>
 Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
- 315.
+ 304.
 (pdftex.def)             Requested size: 391.57701pt x 181.15991pt.
  [3 <./Figures/Mesh1.pdf> <./Figures/Diagram of excavations.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Diagram of excavations.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/MA_Comparisions_plastic_zones.pdf, id=137, 659.7156pt x 200.03043pt>
+<Figures/MA_Comparisions_plastic_zones.pdf, id=140, 659.7156pt x 200.03043pt>
 File: Figures/MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
 <use Figures/MA_Comparisions_plastic_zones.pdf>
 Package pdftex.def Info: Figures/MA_Comparisions_plastic_zones.pdf  used on inp
-ut line 372.
-(pdftex.def)             Requested size: 461.79778pt x 140.02032pt.
-
-Overfull \hbox (6.55367pt too wide) in paragraph at lines 372--373
- [][] 
- []
-
-<Figures/MA_stresspaths.pdf, id=142, 657.88791pt x 677.71976pt>
+ut line 361.
+(pdftex.def)             Requested size: 448.60068pt x 136.01888pt.
+<Figures/MA_stresspaths.pdf, id=145, 657.88791pt x 677.71976pt>
 File: Figures/MA_stresspaths.pdf Graphic file (type pdf)
 <use Figures/MA_stresspaths.pdf>
-Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 382.
+Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 371.
 (pdftex.def)             Requested size: 394.7358pt x 406.63498pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4 <./Figures/MA_Comparisions_plastic_zones.pdf>]
-<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=486, 487.8225pt x 27
-1.0125pt>
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+ [5 <./Figures/MA_stresspaths.pdf>]
+<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=3641, 487.8225pt x 2
+71.0125pt>
 File: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf Graphic file (type 
 pdf)
 <use Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf 
- used on input line 399.
-(pdftex.def)             Requested size: 487.8213pt x 271.01183pt.
-
-Overfull \hbox (32.5772pt too wide) in paragraph at lines 399--400
- [][] 
- []
-
-[5 <./Figures/MA_stresspaths.pdf>]
-<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3639, 487.8225pt x 27
+ used on input line 390.
+(pdftex.def)             Requested size: 439.0362pt x 243.90898pt.
+<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3642, 487.8225pt x 27
 1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf Graphic file (type p
 df)
 <use Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf  
-used on input line 406.
-(pdftex.def)             Requested size: 487.8213pt x 271.01183pt.
-
-Overfull \hbox (32.5772pt too wide) in paragraph at lines 406--407
- [][] 
- []
-
-[6 <./Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf> <./Figures/Converg
-ence Profiles - EP_d1_4Ri_anotate.pdf
+used on input line 397.
+(pdftex.def)             Requested size: 439.0362pt x 243.90898pt.
+ [6 <./Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf> <./Figures/Conver
+gence Profiles - EP_d1_4Ri_anotate.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Convergence Profiles - EP_d1_4Ri_a
 notate.pdf): PDF inclusion: multiple pdfs with page group included in a single 
@@ -1106,16 +1090,16 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: A489E9F97B1816982468961F8E09331A;1221.
+(rerunfilecheck)             Checksum: 13BCB10D0A3574DA35CB122D412B7580;1170.
  ) 
 Here is how much of TeX's memory you used:
- 19950 strings out of 476404
- 328845 string characters out of 2789525
+ 19954 strings out of 476404
+ 328910 string characters out of 2789525
  1871324 words of memory out of 3000000
- 39894 multiletter control sequences out of 15000+600000
+ 39897 multiletter control sequences out of 15000+600000
  550007 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,12n,77p,2786b,509s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 73i,12n,77p,2767b,491s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-t
 lf.enc}<C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/N
 ewTXBMI.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ne
@@ -1128,9 +1112,9 @@ s/type1/public/newtx/txsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/newtx/ztmb.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/newtx/ztmr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/newtx/ztmri.pfb>
-Output written on template.pdf (7 pages, 1552774 bytes).
+Output written on template.pdf (7 pages, 1553515 bytes).
 PDF statistics:
- 4199 PDF objects out of 4296 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
+ 4203 PDF objects out of 4296 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

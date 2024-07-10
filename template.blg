@@ -15,45 +15,45 @@ I was expecting a `,' or a `}'---line 275 of file bibliography.bib
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 14 entries,
+You've used 15 entries,
             1926 wiz_defined-function locations,
-            556 strings with 6165 characters,
-and the built_in function-call counts, 4212 in all, are:
-= -- 396
-> -- 106
-< -- 11
-+ -- 45
-- -- 28
-* -- 357
-:= -- 693
-add.period$ -- 44
-call.type$ -- 14
-change.case$ -- 55
-chr.to.int$ -- 12
-cite$ -- 14
-duplicate$ -- 206
-empty$ -- 351
-format.name$ -- 51
-if$ -- 852
+            562 strings with 6316 characters,
+and the built_in function-call counts, 4433 in all, are:
+= -- 414
+> -- 110
+< -- 12
++ -- 47
+- -- 29
+* -- 372
+:= -- 731
+add.period$ -- 47
+call.type$ -- 15
+change.case$ -- 58
+chr.to.int$ -- 13
+cite$ -- 15
+duplicate$ -- 219
+empty$ -- 372
+format.name$ -- 53
+if$ -- 896
 int.to.chr$ -- 3
-int.to.str$ -- 14
-missing$ -- 9
-newline$ -- 73
-num.names$ -- 26
-pop$ -- 54
+int.to.str$ -- 15
+missing$ -- 11
+newline$ -- 78
+num.names$ -- 28
+pop$ -- 61
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 60
 quote$ -- 0
-skip$ -- 125
+skip$ -- 132
 stack$ -- 0
-substring$ -- 306
-swap$ -- 51
+substring$ -- 314
+swap$ -- 53
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
+type$ -- 44
 warning$ -- 0
-while$ -- 26
+while$ -- 27
 width$ -- 0
-write$ -- 189
+write$ -- 201
 (There were 2 error messages)
