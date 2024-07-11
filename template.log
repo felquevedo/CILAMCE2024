@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  10 JUL 2024 18:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  11 JUL 2024 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,7 +1019,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 7.3pt on input line 251.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 251.
-<Figures/Mesh1.pdf, id=72, 873.38435pt x 532.69443pt>
+<Figures/Mesh1.pdf, id=71, 873.38435pt x 532.69443pt>
 File: Figures/Mesh1.pdf Graphic file (type pdf)
 <use Figures/Mesh1.pdf>
 Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 295.
@@ -1095,7 +1095,7 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 Here is how much of TeX's memory you used:
  19954 strings out of 476404
  328910 string characters out of 2789525
- 1871324 words of memory out of 3000000
+ 1872324 words of memory out of 3000000
  39897 multiletter control sequences out of 15000+600000
  550007 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1112,7 +1112,7 @@ s/type1/public/newtx/txsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/newtx/ztmb.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/newtx/ztmr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/newtx/ztmri.pfb>
-Output written on template.pdf (7 pages, 1553515 bytes).
+Output written on template.pdf (7 pages, 1553317 bytes).
 PDF statistics:
  4203 PDF objects out of 4296 (max. 8388607)
  43 named destinations out of 1000 (max. 500000)

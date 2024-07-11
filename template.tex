@@ -73,7 +73,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage{bm}
 
-%\hypersetup{hidelinks}
+\hypersetup{hidelinks}
 
 %BibTeX compatible with the CILAMCE format
 \usepackage[numbers,sort&compress]{natbib}
@@ -229,7 +229,7 @@ Relying upon a three-dimensional finite element analysis, this contribution inve
 % --------------------------------------------------------------------------
 \section{Introduction}\label{sec:introduction}
 % --------------------------------------------------------------------------
-Many design methods often focus on single tunnels, but twin tunnels are a common occurrence. The interaction between tunnels can be significant, especially when the spacing between them is minimal. Additionally, many twin tunnels incorporate transverse galleries, introducing a localized effect on displacements and stresses. While the simulation of tunnel convergence in single tunnels has been widely investigated and reported in published
+Many design methods often focus on single tunnels, however twin tunnels are a common occurrence. The interaction between tunnels can be significant, especially when the spacing between them is minimal. Additionally, many twin tunnels incorporate transverse galleries, introducing a localized effect on displacements and stresses. While the simulation of tunnel convergence in single tunnels has been widely investigated and reported in published
 literature, few works have addressed the computational evaluation of deformation in twin tunnels. Some studies on deep twin tunnels can be found at \citet{Spyridis2015}, \citet{Chen2019}, \citet{MA2020}, \citet{Fortsakis2021}, \citet{chortis2021a}, \citet{chortis2021b}, \citet{GUO2021}, \citet{chortis2023a}, \citet{chortis2023b}. However, less attention has been dedicated to assessing the mutual mechanical interaction induced by the excavation of the transverse gallery connecting the twin tunnels.
 
 In this context, the main contributions of this paper can be summarized at both the material and tunnel analysis levels. At the material level, the constitutive state equations of the rock mass are developed using a plasticity framework, which is suitable for clayey rocks. For the mechanical behavior of the concrete lining, the traditional linear elastic model is employed. At the structural analysis level, the deformation of the highly interactive components of the material system (i.e., rock mass and lining) resulting from the excavation of twin tunnels and transverse gallery is simulated using three-dimensional finite element simulations. The excavation and lining placement processes are simulated through the activation/deactivation technique. The constitutive models for the rock mass and the associated numerical integration schemes are implemented into the UPF/USERMAT customization tool [\citenum{ANSYS:2013b}] of the ANSYS standard software. This three-dimensional finite element analysis is specifically designed to address the interactions induced by the construction process, the proximity of twin tunnels, and the presence of the transverse gallery.
@@ -240,7 +240,7 @@ In this context, the main contributions of this paper can be summarized at both 
 
 The constitutive model for the rock mass corresponds to the associated Drucker-Prager elastoplastic model. The local strain rate $\dstrain$ is split into two contributions $\dstrain = \dstraine + \dstrainp$, so that the constitutive relationships relating the Cauchy stress rate $\dstress$ and strain rate components can be written as:
 \begin{equation} \label{eq_constitutive_relationship_epvp}
-	\dstress = \Dll : \dstraine = \Dll : (\dstrain - \dstrainp).\;
+	\dstress = \Dll : \dstraine = \Dll : (\dstrain - \dstrainp)\;
 \end{equation}
 
 In the above relationship, $\dstraine$ and $\dstrainp$, represent respectively the elastic and plastic strain rate, and $\Dll$ denote the fourth-order isotropic elastic linear constitutive tensor defined by the rock mass elastic Young modulus $E$ and Poisson ratio $\nu$. The plastic strain rate is given by the flow rule:
@@ -250,25 +250,25 @@ In the above relationship, $\dstraine$ and $\dstrainp$, represent respectively t
 	\begin{array}{ll} 
 		\dot \lambda \dfrac{\partial g}{\partial \stress} &  \text{for } f > 0 \\ 
 		\zerol, & \text{for } f \le 0 \\
-	\end{array}\right.,
+	\end{array}\right.
 \end{equation}
 where $\dot \lambda$ is the plasticity multiplier (obtained through the consistency condition  $\dot f = 0$) and $g$ is a potential flow function analogous to $f$ used to simulate the volume dilatation during the evolution of plastic deformations. However, for this analysis, associated plasticity was adopted, i.e., $g=f$. In this model, the Drucker-Prager plastic flow surface is given by
 \begin{equation}
 	\label{eq:f_Drucker_Prager}
-	f(\stress,q) = f(I_1,J_2,q) = \beta_1 I_1 +\beta_2 \sqrt{J_2}-q(\alpha),
+	f(\stress,q) = f(I_1,J_2,q) = \beta_1 I_1 +\beta_2 \sqrt{J_2}-q(\alpha)
 \end{equation}
 which $I_1$ is the first invariant of the stress tensor, $J_2$ is the second invariant of the deviator tensor and $\beta_1, \beta_2$ and $q(\alpha)$ are strength parameters related to the friction angle $\phi$ and cohesion $c(\alpha)$, respectively. The Drucker-Prager plasticity surface inscribed in the Mohr-Coulomb surface is considered, i.e. [\citenum{bernaud1991}]:
 \begin{equation}
 	\label{eq:f_DP_inscrita_MC}
 	\beta_1 = \dfrac{(k-1)}{3}, ~~~ \beta_2 = \dfrac{(2k+1)}{\sqrt{3}}, ~~~
-	q(\alpha) = 2\sqrt{k}~c(\alpha),
+	q(\alpha) = 2\sqrt{k}~c(\alpha)
 \end{equation}
 where $k = (1+\sin{\phi})/(1-\sin{\phi})$. The internal variable $\alpha$ is the equivalent plastic strain $\straineqp$ used to simulate strain hardening/softening phenomena. However, for this study, we adopt perfect plasticity, meaning that c is a constant. 
 
 A linear elastic constitutive model is used for the concrete lining, which can be expressed, within the framework of infinitesimal analysis, as $\dstress = \Dll : \dstraine$, where, $\dstraine$ and $\Dll$ are respectively the elastic strain rate and the fourth-order isotropic elastic constitutive tensor defined by the concrete lining Poisson ratio $\nu_c$ and elastic Young modulus $E_c$. In the analyses, for comparisons, the tunnel stiffness will be given by the following expression [\citenum{Panet1995}]:
 
 \begin{equation} \label{eq:8}
-	K_c = \frac{E_c}{1+\nu_c}\frac{R_t^2-(R_t-e_t)^2}{(1-2\nu_c)R_t+(R_t-e_t)^2},
+	K_c = \frac{E_c}{1+\nu_c}\frac{R_t^2-(R_t-e_t)^2}{(1-2\nu_c)R_t+(R_t-e_t)^2}
 \end{equation}
 where $R_t$ is the tunnel radius and $e_t$ is the tunnel wall thickness.
 
@@ -379,11 +379,11 @@ Further comparisons are illustrated in Fig.~\ref{MA_stresspaths}, which shows th
 % --------------------------------------------------------------------------
 To develop the analysis, we employed Young's modulus $E = 1500$ MPa, Poisson ratio $\nu = 0.49$, $c = 4\sqrt{3}/2$, $\phi = 0^\circ$ and, isotropic initial stresses $\sigma_v = \sigma_h = 9$ MPa, which correspond to the constitutive parameters and tunneling conditions (450 m depth) in the incompressive clay rock mass in the Paris basin (in Aisne, France), as detailed in  \citet{rousset1988}, \citet{giraud1993} and, \citet{piepi1995}. For the lining, two stiffness values will be considered: $K_c = 969$ MPa and $K_c = 3403$ MPa. Assuming a Young's modulus $E_c = 30303$ MPa and Poisson's ratio $\nu_c = 0.2$, these values corresponds to lining thicknesses $e_t$ of $0.03R_t$ and $0.1R_t$. 
 
-Denoting by $u_y$ the displacement component following the  $y$-axis, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} displays the convergence curves $U_B = -u_y(B)/R_t$ that characterize the inward movement at the tunnel roof $B(x=0,y=R_t,z)$ as a function of normalized longitudinal distance to the facing for different conditions: without lining (NL), with elastic lining (EL), with (WG) and without gallary (NG) for $d_1 = 16R_t$ and $d_1 = 4R_t$. In these figures, $U_C$ represents  convergence at $z/R_t = -25$ (far from the effect of the excavation face and gallery), and $U_{D}$ is highlighted at the gallery position $D(x=0, y = R_t, z = L_2/2)$.
+Denoting by $u_y$ the displacement component following the  $y$-axis, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} displays the convergence curves $U_B = -u_y(B)/R_t$ that characterize the inward movement at the tunnel roof $B(x=0,y=R_t,z)$ as a function of normalized longitudinal distance to the facing for different conditions: without lining (NL), with elastic lining (EL), with (WG) and without gallary (NG) for $d_1 = 16R_t$ and $d_1 = 4R_t$. In these figures, $U_C$ represents  convergence at $z/R_t = -25$ (far from the effect of the excavation face and gallery), and $U_{D}$ is highlighted at the gallery position $D(x=0, y = R_t, z = L_1+L_2/2)$.
 
 For the single tunnel, the higher stiffness lining (black solid line) reduced convergence by approximately 35\% compared to the unlined scenario (black dashed line). Conversely, the moderately stiff lining (black dotted line) increased convergence by 12\% compared to the higher stiffness lining.
 
-When $d_1 = 16R_t$ (blue and yellow lines), the results of $U_{C}$ are similar to the isolated tunnel (black line). However, with a distance reduced to $d_1 = 4R_t$, the interaction between the tunnels becomes significant. A smaller $d_1$, the higher stiffness lining (solid yellow and blue lines) can restrict convergence by up to 46\% of the unlined (dashed yellow and blue lines) convergence. A moderate stiffness lining (dotted lines) leads to an increase of up to 16\% in convergence compared to the higher stiffness lining (solid lines).
+When $d_1 = 16R_t$ (blue and yellow lines), the results of $U_{C}$ are similar to the isolated tunnel (black line). However, with a distance reduced to $d_1 = 4R_t$, the interaction between the tunnels becomes significant. A smaller $d_1$, the higher stiffness lining (yellow and blue solid lines) can restrict convergence by up to 46\% of the unlined (yellow and blue dashed lines) convergence. A moderate stiffness lining (dotted lines) leads to an increase of up to 16\% in convergence compared to the higher stiffness lining (solid lines).
 
 \begin{figure}[h!]
 	\centering
@@ -400,17 +400,15 @@ When $d_1 = 16R_t$ (blue and yellow lines), the results of $U_{C}$ are similar t
 \end{figure}
 \FloatBarrier
 
-When comparing results between twin lined tunnels with spacings of $16R_t$ and $4R_t$, differences of 6\% with higher stiffness lining (solid yellow and blue lines), 10\% with moderate stiffness lining (dotted yellow and blue lines), and 30\% without lining (dashed yellow and blue lines) are observed. These results show the direct impact of lining stiffness and the distance between twin tunnels on $U_{C}$ convergence.
+When comparing $U_C$ between twin tunnels with spacings of $16R_t$ and $4R_t$, differences of 6\% with higher stiffness lining (yellow and blue solid lines), 10\% with moderate stiffness lining (yellow and blue dotted lines), and 30\% without lining (yellow and blue dashed lines) are observed. These results show the direct impact of lining stiffness and the distance between twin tunnels on $U_{C}$ convergence.
 
-When analyzing the convergence $U_{D}$ at the point where the gallery meets the longitudinal tunnel, there is an increase of 16\% when using an moderate stiffness lining (dotted blue line) compared to a higher stiffness lining (solid blue line). However, when analyzing the difference between the $U_{C}$ and $U_{D}$, there is a difference of up to 12\% for the higher stiffness lining (solid blue line to $4R_t$ and $16R_t$) and up to 13\% for the moderate stiffness lining (dotted blue line to $4R_t$ and $16R_t$) for $d_1=4R_t$. In both figures, increased stiffness localizes the gallery's effect on the convergence profile, reducing it from $22.5R_g$ (without lining) to $10.5R_g$ and $7.5R_g$ (with lining) along the longitudinal tunnel. Tunnel proximity had minimal impact on this range.
+When analyzing the convergence $U_{D}$ at the point where the gallery meets the longitudinal tunnel, there is an increase of 16\% when using an moderate stiffness lining (blue dotted line) compared to a higher stiffness lining (blue solid line), for both distances $d_1$. However, when analyzing the difference between the $U_{C}$ and $U_{D}$, there is a difference of up to 12\% for the higher stiffness lining (blue solid line to $4R_t$ and $16R_t$) and up to 13\% for the moderate stiffness lining (blue dotted line to $4R_t$ and $16R_t$) for $d_1=4R_t$. In both figures it can be seen that the increase in stiffness reduces the extent of the disturbed region caused by the gallery in the longitudinal tunnel convergence profile. The range decreases from $22.5R_g$ (without lining) to $10.5R_g$ and $7.5R_g$ (with lining). Additionally, the proximity of the tunnel has a minimal impact on the length of this disturbed zone.
 
 % --------------------------------------------------------------------------
 \section{Conclusions}\label{sec:conclusion}
 % --------------------------------------------------------------------------
 
 Considering the constitutive parameters and tunneling conditions adopted, the analyses show that the lining has a profound impact on the convergence profile of the twin tunnels. It reduces overall convergence by up to 35\% and diminishes the localized convergence of the gallery by approximately a third compared to unlined scenario. In addition, a less rigid lining, approximately 3.5 times less stiff, increases convergence by 12\% and expands the localized effect by 40\% compared to the stiffer lining. Tunnel interaction becomes significant at $4R_t$ however has minimal impact in the range of gallery's localized effect along the longitudinal tunnel.
-
-%The analyses show that lining significantly affects the convergence profile of deep twin tunnels, reducing convergence by up to 35\% and the gallery's localized effect by a third compared to unlined scenario. A less rigid lining (3.5 times less) increased convergence by 12\% and expanded the localized effect by 40\% compared to the higher stiffness lining. Tunnel interaction becomes significant at $4R_t$ but has minimal impact in the range of gallery's localized effect.
 
 %-------------------------------------------------------------------------
 \vspace{20pt}
