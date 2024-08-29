@@ -252,7 +252,7 @@ In the above relationship, $\dstraine$ and $\dstrainp$, represent respectively t
 		\zerol, & \text{for } f \le 0 \\
 	\end{array}\right.
 \end{equation}
-where $\dot \lambda$ is the plasticity multiplier (obtained through the consistency condition  $\dot f = 0$) and $g$ is a potential flow function analogous to $f$ used to simulate the volume dilatation during the evolution of plastic deformations. However, for this analysis, associated plasticity was adopted, i.e., $g=f$. In this model, the Drucker-Prager plastic flow surface is given by
+where $f$ is the plastic flow surface, $\dot \lambda$ is the plasticity multiplier (obtained through the consistency condition  $\dot f = 0$) and $g$ is a potential flow function analogous to $f$ used to simulate the volume dilatation during the evolution of plastic deformations. However, for this analysis, associated plasticity was adopted, i.e., $g=f$. In this model, the Drucker-Prager plastic flow surface is employed and given by
 \begin{equation}
 	\label{eq:f_Drucker_Prager}
 	f(\stress,q) = f(I_1,J_2,q) = \beta_1 I_1 +\beta_2 \sqrt{J_2}-q(\alpha)
@@ -265,7 +265,7 @@ which $I_1$ is the first invariant of the stress tensor, $J_2$ is the second inv
 \end{equation}
 where $k = (1+\sin{\phi})/(1-\sin{\phi})$. The internal variable $\alpha$ is the equivalent plastic strain $\straineqp$ used to simulate strain hardening/softening phenomena. However, for this study, we adopt perfect plasticity, meaning that c is a constant. 
 
-A linear elastic constitutive model is used for the concrete lining, which can be expressed, within the framework of infinitesimal analysis, as $\dstress = \Dll : \dstraine$, where, $\dstraine$ and $\Dll$ are respectively the elastic strain rate and the fourth-order isotropic elastic constitutive tensor defined by the concrete lining Poisson ratio $\nu_c$ and elastic Young modulus $E_c$. In the analyses, for comparisons, the tunnel stiffness will be given by the following expression [\citenum{Panet1995}]:
+A linear elastic constitutive model is used for the concrete lining, which can be expressed, within the framework of infinitesimal analysis, as $\dstress = \Dll : \dstraine$, where, $\dstraine$ and $\Dll$ are respectively the elastic strain rate and the fourth-order isotropic elastic constitutive tensor defined by the concrete lining Poisson ratio $\nu_c$ and elastic Young modulus $E_c$. In the analyses, for comparisons, the tunnel lining stiffness will be given by the following expression [\citenum{Panet1995}]:
 
 \begin{equation} \label{eq:8}
 	K_c = \frac{E_c}{1+\nu_c}\frac{R_t^2-(R_t-e_t)^2}{(1-2\nu_c)R_t+(R_t-e_t)^2}
@@ -377,7 +377,7 @@ Further comparisons are illustrated in Fig.~\ref{MA_stresspaths}, which shows th
 % --------------------------------------------------------------------------
 \section{Numerical Results and Discussion}\label{sec:format}
 % --------------------------------------------------------------------------
-To develop the analysis, we employed Young's modulus $E = 1500$ MPa, Poisson ratio $\nu = 0.49$, $c = 4\sqrt{3}/2$, $\phi = 0^\circ$ and, isotropic initial stresses $\sigma_v = \sigma_h = 9$ MPa, which correspond to the constitutive parameters and tunneling conditions (450 m depth) in the incompressive clay rock mass in the Paris basin (in Aisne, France), as detailed in  \citet{rousset1988}, \citet{giraud1993} and, \citet{piepi1995}. For the lining, two stiffness values will be considered: $K_c = 969$ MPa and $K_c = 3403$ MPa. Assuming a Young's modulus $E_c = 30303$ MPa and Poisson's ratio $\nu_c = 0.2$, these values corresponds to lining thicknesses $e_t$ of $0.03R_t$ and $0.1R_t$. 
+To develop the analysis, we employed Young's modulus $E = 1500$ MPa, Poisson ratio $\nu = 0.49$, $c = 4\sqrt{3}/2$, $\phi = 0^\circ$ and, isotropic initial stresses $\sigma_v = \sigma_h = 9$ MPa, which correspond to the constitutive parameters and tunneling conditions (450 m depth) in the clay rock mass in the Paris basin (in Aisne, France), as detailed in  \citet{rousset1988}, \citet{giraud1993} and, \citet{piepi1995}. For the lining, two stiffness values will be considered: $K_c = 969$ MPa and $K_c = 3403$ MPa. Assuming a Young's modulus $E_c = 30303$ MPa and Poisson's ratio $\nu_c = 0.2$, these values corresponds to lining thicknesses $e_t$ of $0.03R_t$ and $0.1R_t$. 
 
 Denoting by $u_y$ the displacement component following the  $y$-axis, \cref{EP_d1_16Ri} and \cref{EP_d1_4Ri} displays the convergence curves $U_B = -u_y(B)/R_t$ that characterize the inward movement at the tunnel roof $B(x=0,y=R_t,z)$ as a function of normalized longitudinal distance to the facing for different conditions: without lining (NL), with elastic lining (EL), with (WG) and without gallary (NG) for $d_1 = 16R_t$ and $d_1 = 4R_t$. In these figures, $U_C$ represents  convergence at $z/R_t = -25$ (far from the effect of the excavation face and gallery), and $U_{D}$ is highlighted at the gallery position $D(x=0, y = R_t, z = L_1+L_2/2)$.
 
