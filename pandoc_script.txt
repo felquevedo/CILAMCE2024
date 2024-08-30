@@ -1,0 +1,3 @@
+pandoc --citeproc --bibliography=cas-refs.bib -s .\cas-sc-template.tex -f latex -t docx -o main2.docx
+
+pandoc -o out.docx -t docx template.tex 

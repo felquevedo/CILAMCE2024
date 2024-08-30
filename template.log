@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  29 AUG 2024 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  30 AUG 2024 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,25 +1006,26 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 230.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 230.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 247.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.0pt on input line 247.
 
-[1
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 246.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
+(Font)              scaled to size 8.0pt on input line 246.
+ [1
 
 {C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figures/lo
 go.png>]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 251.
+(Font)              scaled to size 7.3pt on input line 255.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 251.
-<Figures/Mesh1.pdf, id=71, 873.38435pt x 532.69443pt>
+(Font)              scaled to size 5.5pt on input line 255.
+<Figures/Mesh1.pdf, id=65, 873.38435pt x 532.69443pt>
 File: Figures/Mesh1.pdf Graphic file (type pdf)
 <use Figures/Mesh1.pdf>
-Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 295.
+Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 299.
 (pdftex.def)             Requested size: 436.6911pt x 266.34656pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1033,7 +1034,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figures/Diagram of excavations.pdf Graphic file (type pdf)
 <use Figures/Diagram of excavations.pdf>
 Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
- 304.
+ 308.
 (pdftex.def)             Requested size: 391.57701pt x 181.15991pt.
  [3 <./Figures/Mesh1.pdf> <./Figures/Diagram of excavations.pdf
 
@@ -1044,12 +1045,12 @@ nclusion: multiple pdfs with page group included in a single page
 File: Figures/MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
 <use Figures/MA_Comparisions_plastic_zones.pdf>
 Package pdftex.def Info: Figures/MA_Comparisions_plastic_zones.pdf  used on inp
-ut line 361.
+ut line 365.
 (pdftex.def)             Requested size: 448.60068pt x 136.01888pt.
 <Figures/MA_stresspaths.pdf, id=145, 657.88791pt x 677.71976pt>
 File: Figures/MA_stresspaths.pdf Graphic file (type pdf)
 <use Figures/MA_stresspaths.pdf>
-Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 371.
+Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 375.
 (pdftex.def)             Requested size: 394.7358pt x 406.63498pt.
 
 
@@ -1065,7 +1066,7 @@ File: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf Graphic file (type
 pdf)
 <use Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf 
- used on input line 390.
+ used on input line 394.
 (pdftex.def)             Requested size: 439.0362pt x 243.90898pt.
 <Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3642, 487.8225pt x 27
 1.0125pt>
@@ -1073,7 +1074,7 @@ File: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf Graphic file (type p
 df)
 <use Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf  
-used on input line 397.
+used on input line 401.
 (pdftex.def)             Requested size: 439.0362pt x 243.90898pt.
  [6 <./Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf> <./Figures/Conver
 gence Profiles - EP_d1_4Ri_anotate.pdf
@@ -1099,7 +1100,7 @@ Here is how much of TeX's memory you used:
  39897 multiletter control sequences out of 15000+600000
  550007 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,12n,77p,2767b,491s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 73i,12n,77p,2767b,493s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-t
 lf.enc}<C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/N
 ewTXBMI.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ne
@@ -1112,7 +1113,7 @@ s/type1/public/newtx/txsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/newtx/ztmb.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/newtx/ztmr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/newtx/ztmri.pfb>
-Output written on template.pdf (7 pages, 1553375 bytes).
+Output written on template.pdf (7 pages, 1553582 bytes).
 PDF statistics:
  4203 PDF objects out of 4296 (max. 8388607)
  43 named destinations out of 1000 (max. 500000)

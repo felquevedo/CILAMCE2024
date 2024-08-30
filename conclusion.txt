@@ -1,0 +1,6 @@
+Para os parâmetros constitutivos e as condições de tunelamento adotadas, a rigidez do revestimento foi muita importância na diminuição da convergência na região da galeria. A interação entre os túneis longitudinais tornou-se significativa a uma distância de 4Rt entre os eixos dos túneis e teve um impacto mínimo na abrangencia do efeito da galeria sobre o túnel longitudinal.
+
+
+Para os parâmetros constitutivos e as condições de tunelamento adotadas, a rigidez do revestimento teve um impacto significativo no perfil de convergências. A interação entre os túneis longitudinais tornou-se significativa a uma distância de 4Rt entre os eixos, contudo, essa distância teve um impacto mínimo na extensão do efeito localizado da galeria sobre o túnel longitudinal.
+
+For the constitutive parameters and tunneling conditions adopted, the stiffness of the lining had a significant impact on the convergence profile. The interaction between the longitudinal tunnels became significant at a distance of 4Rt between the tunnel axis, however, this distance had minimal impact on the extent of the localized effect of the gallery on the longitudinal tunnel.
