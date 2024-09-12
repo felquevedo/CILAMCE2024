@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  4 SEP 2024 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  12 SEP 2024 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1016,12 +1016,12 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 255.
 [2]
-<Figures/Mesh1.pdf, id=85, 873.38435pt x 532.69443pt>
+<Figures/Mesh1.pdf, id=83, 873.38435pt x 532.69443pt>
 File: Figures/Mesh1.pdf Graphic file (type pdf)
 <use Figures/Mesh1.pdf>
 Package pdftex.def Info: Figures/Mesh1.pdf  used on input line 299.
 (pdftex.def)             Requested size: 436.6911pt x 266.34656pt.
-<Figures/Diagram of excavations.pdf, id=89, 326.31583pt x 150.96735pt>
+<Figures/Diagram of excavations.pdf, id=87, 326.31583pt x 150.96735pt>
 File: Figures/Diagram of excavations.pdf Graphic file (type pdf)
 <use Figures/Diagram of excavations.pdf>
 Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
@@ -1032,13 +1032,13 @@ Package pdftex.def Info: Figures/Diagram of excavations.pdf  used on input line
 pdfTeX warning: pdflatex.exe (file ./Figures/Diagram of excavations.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/MA_Comparisions_plastic_zones.pdf, id=141, 659.7156pt x 200.03043pt>
+<Figures/MA_Comparisions_plastic_zones.pdf, id=139, 659.7156pt x 200.03043pt>
 File: Figures/MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
 <use Figures/MA_Comparisions_plastic_zones.pdf>
 Package pdftex.def Info: Figures/MA_Comparisions_plastic_zones.pdf  used on inp
 ut line 365.
 (pdftex.def)             Requested size: 448.60068pt x 136.01888pt.
-<Figures/MA_stresspaths.pdf, id=146, 657.88791pt x 677.71976pt>
+<Figures/MA_stresspaths.pdf, id=144, 657.88791pt x 677.71976pt>
 File: Figures/MA_stresspaths.pdf Graphic file (type pdf)
 <use Figures/MA_stresspaths.pdf>
 Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 375.
@@ -1047,17 +1047,17 @@ Package pdftex.def Info: Figures/MA_stresspaths.pdf  used on input line 375.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./Figures/MA_Comparisions_plastic_zones.pdf>] [5 <./Figures/MA_stresspaths.
-pdf>]
-<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=3642, 487.8225pt x 2
-71.0125pt>
+[4 <./Figures/MA_Comparisions_plastic_zones.pdf>]
+<Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=488, 487.8225pt x 27
+1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf Graphic file (type 
 pdf)
 <use Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf>
 Package pdftex.def Info: Figures/Convergence Profiles - EP_d1_16Ri_anotate.pdf 
  used on input line 394.
 (pdftex.def)             Requested size: 439.0362pt x 243.90898pt.
-<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3643, 487.8225pt x 27
+ [5 <./Figures/MA_stresspaths.pdf>]
+<Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=3641, 487.8225pt x 27
 1.0125pt>
 File: Figures/Convergence Profiles - EP_d1_4Ri_anotate.pdf Graphic file (type p
 df)
@@ -1083,13 +1083,13 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: 13BCB10D0A3574DA35CB122D412B7580;1170.
  ) 
 Here is how much of TeX's memory you used:
- 19956 strings out of 476404
- 328947 string characters out of 2789525
+ 19952 strings out of 476404
+ 328870 string characters out of 2789525
  1871324 words of memory out of 3000000
- 39899 multiletter control sequences out of 15000+600000
+ 39896 multiletter control sequences out of 15000+600000
  550007 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,13n,77p,2767b,503s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 73i,13n,77p,2767b,509s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-t
 lf.enc}<C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/N
 ewTXBMI.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ne
@@ -1102,9 +1102,9 @@ s/type1/public/newtx/txsys.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/newtx/ztmb.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/newtx/ztmr.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/newtx/ztmri.pfb>
-Output written on template.pdf (7 pages, 1554080 bytes).
+Output written on template.pdf (7 pages, 1553452 bytes).
 PDF statistics:
- 4204 PDF objects out of 4296 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 4201 PDF objects out of 4296 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
